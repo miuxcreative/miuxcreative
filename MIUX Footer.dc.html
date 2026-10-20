@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="assets/miux-defs.js"></script>
+<style>
+@font-face{font-family:"PP Neue Montreal";src:url("assets/fonts/PPNeueMontreal-Book.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"PP Neue Montreal Mono";src:url("assets/fonts/PPNeueMontrealMono-Book.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"At Amiga";src:url("assets/fonts/AtAmiga-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"PP Eiko";src:url("assets/fonts/PPEiko-LightItalic.otf") format("opentype");font-style:italic;font-weight:300;font-display:swap}
+a{text-decoration:none;color:inherit}a:hover{color:#61caf8}
+</style>
+</helmet>
+<footer ref="{{ rootRef }}" style="position:relative;overflow:hidden;isolation:isolate;background:#08090d;color:#f5f2ed;border-top:1px solid rgba(245,242,237,.15);font-family:'PP Neue Montreal','Helvetica Neue',sans-serif">
+  <div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 60% 50% at 85% 0%,rgba(97,202,248,.10),transparent 70%),radial-gradient(ellipse 50% 45% at 10% 100%,rgba(232,161,184,.10),transparent 70%)"></div>
+
+  <sc-if value="{{ showCta }}" hint-placeholder-val="{{ true }}">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px clamp(24px,6vw,96px);align-items:end;padding:clamp(96px,12vw,180px) clamp(22px,5vw,74px) clamp(64px,8vw,120px)">
+    <div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#e8a1b8">Log ∞ / End of transmission</span><span style="color:#9699a4">signal still open</span></div>
+      <h2 style="max-width:11ch;margin:24px 0 0;font-size:clamp(56px,8.6vw,160px);font-weight:400;line-height:.86;letter-spacing:-.055em;text-wrap:balance">{{ ctaTitle }}<sc-if value="{{ hasAccent }}" hint-placeholder-val="{{ false }}"> <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;letter-spacing:-.04em;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">{{ ctaAccent }}</em></sc-if></h2>
+    </div>
+    <div style="display:grid;gap:22px;max-width:440px">
+      <p style="margin:0;color:#c8c9ce;font-size:clamp(16px,1.4vw,19px);line-height:1.5;text-wrap:pretty">{{ ctaBody }}</p>
+      <a href="contact.html" data-cursor="SEND IT" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:0 24px;border-radius:0;background:#61caf8;color:#08090d;font:400 12px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease" style-hover="background:#e8a1b8"><span>{{ ctaButton }}</span><span style="font:400 26px/1 'At Amiga',Impact,sans-serif">↗</span></a>
+      <a href="mailto:hello@miuxcreative.com" style="justify-self:start;display:inline-flex;align-items:center;min-height:44px;color:#61caf8;font:400 13px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.04em;border-bottom:1px solid rgba(97,202,248,.35)" style-hover="color:#e8a1b8;border-color:#e8a1b8">hello@miuxcreative.com</a>
+    </div>
+  </div>
+
+  </sc-if>
+
+  <nav aria-label="Footer" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));margin:0 clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.16)">
+    <div style="display:grid;align-content:start;gap:4px;padding:28px 24px 36px 0">
+      <span style="margin-bottom:12px;color:#e8a1b8;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">01 · Services</span>
+      <a href="brand-systems.html" style="display:flex;align-items:center;min-height:40px;color:#f5f2ed;font:400 12px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="color:#61caf8;transform:translateX(6px)">Brand Systems</a>
+      <a href="digital-experiences.html" style="display:flex;align-items:center;min-height:40px;color:#f5f2ed;font:400 12px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="color:#61caf8;transform:translateX(6px)">Digital Experiences</a>
+      <a href="product-design.html" style="display:flex;align-items:center;min-height:40px;color:#f5f2ed;font:400 12px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="color:#61caf8;transform:translateX(6px)">Product Design</a>
+      <a href="ai-systems.html" style="display:flex;align-items:center;min-height:40px;color:#f5f2ed;font:400 12px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="color:#61caf8;transform:translateX(6px)">AI Systems</a>
+    </div>
+    <div style="display:grid;align-content:start;gap:4px;padding:28px 24px 36px 0">
+      <span style="margin-bottom:12px;color:#e8a1b8;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">02 · Studio</span>
+      <a href="work.html" style="display:flex;align-items:center;min-height:40px;color:#f5f2ed;font:400 12px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="color:#61caf8;transform:translateX(6px)">Work</a>
+      <a href="process.html" style="display:flex;align-items:center;min-height:40px;color:#f5f2ed;font:400 12px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="color:#61caf8;transform:translateX(6px)">Blueprint</a>
+      <a href="about.html" style="display:flex;align-items:center;min-height:40px;color:#f5f2ed;font:400 12px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="color:#61caf8;transform:translateX(6px)">About</a>
+      <a href="miami.html" style="display:flex;align-items:center;min-height:40px;color:#f5f2ed;font:400 12px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="color:#61caf8;transform:translateX(6px)">Miami</a>
+      <a href="contact.html" style="display:flex;align-items:center;min-height:40px;color:#f5f2ed;font:400 12px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="color:#61caf8;transform:translateX(6px)">Contact</a>
+    </div>
+    <div style="display:grid;align-content:start;gap:4px;padding:28px 24px 36px 0">
+      <span style="margin-bottom:12px;color:#e8a1b8;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">03 · Other channel</span>
+      <a href="https://madebymiu.com" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;min-height:40px;white-space:nowrap;color:#61caf8;font:400 clamp(18px,1.6vw,24px)/1 'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;transition:color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="color:#e8a1b8;transform:translateX(6px)">Made by Miu ↗</a>
+      <span style="max-width:24ch;color:#9699a4;font-size:15px;line-height:1.45">The lab. Art, motion, code and stranger ideas.</span>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:18px"><a href="https://www.behance.net/miuxcreative" target="_blank" rel="noopener" aria-label="Behance" title="Behance" style="display:grid;place-items:center;width:44px;height:44px;border:1px solid #f2eee8;border-radius:0;background:#f2eee8;color:#121314;font:500 17px/1 'PP Neue Montreal','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-.02em;text-transform:none;transition:background 200ms ease,color 200ms ease,border-color 200ms ease,transform 260ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#e8a1b8;border-color:#e8a1b8;color:#08090d;transform:translateY(-3px)">Bē</a><a href="https://dribbble.com/miuxcreative" target="_blank" rel="noopener" aria-label="Dribbble" title="Dribbble" style="display:grid;place-items:center;width:44px;height:44px;border:1px solid #f2eee8;border-radius:0;background:#f2eee8;color:#121314;font:500 17px/1 'PP Neue Montreal','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-.02em;text-transform:none;transition:background 200ms ease,color 200ms ease,border-color 200ms ease,transform 260ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#61caf8;border-color:#61caf8;color:#08090d;transform:translateY(-3px)">Dr</a><a href="https://www.linkedin.com/in/miuxcreative/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn" style="display:grid;place-items:center;width:44px;height:44px;border:1px solid #f2eee8;border-radius:0;background:#f2eee8;color:#121314;font:500 17px/1 'PP Neue Montreal','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-.02em;text-transform:none;transition:background 200ms ease,color 200ms ease,border-color 200ms ease,transform 260ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#e8a1b8;border-color:#e8a1b8;color:#08090d;transform:translateY(-3px)">in</a><a href="https://www.instagram.com/miuxcreative" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="display:grid;place-items:center;width:44px;height:44px;border:1px solid #f2eee8;border-radius:0;background:#f2eee8;color:#121314;font:500 17px/1 'PP Neue Montreal','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-.02em;text-transform:none;transition:background 200ms ease,color 200ms ease,border-color 200ms ease,transform 260ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#61caf8;border-color:#61caf8;color:#08090d;transform:translateY(-3px)">Ig</a><a href="https://www.pinterest.com/miuxcreative/" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest" style="display:grid;place-items:center;width:44px;height:44px;border:1px solid #f2eee8;border-radius:0;background:#f2eee8;color:#121314;font:500 17px/1 'PP Neue Montreal','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-.02em;text-transform:none;transition:background 200ms ease,color 200ms ease,border-color 200ms ease,transform 260ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#e8a1b8;border-color:#e8a1b8;color:#08090d;transform:translateY(-3px)">Pi</a><a href="https://substack.com/@madebymiu" target="_blank" rel="noopener" aria-label="Substack" title="Substack" style="display:grid;place-items:center;width:44px;height:44px;border:1px solid #f2eee8;border-radius:0;background:#f2eee8;color:#121314;font:500 17px/1 'PP Neue Montreal','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-.02em;text-transform:none;transition:background 200ms ease,color 200ms ease,border-color 200ms ease,transform 260ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#61caf8;border-color:#61caf8;color:#08090d;transform:translateY(-3px)">Ss</a></div>
+    </div>
+    <div style="display:grid;align-content:start;gap:4px;padding:28px 0 36px">
+      <span style="margin-bottom:12px;color:#e8a1b8;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">04 · Local time</span>
+      <span style="display:flex;align-items:baseline;gap:10px;font:400 clamp(34px,3.4vw,52px)/1 'At Amiga',Impact,sans-serif;letter-spacing:0;color:#f5f2ed">{{ time }}<span style="color:#61caf8;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em">{{ ampm }}</span></span>
+      <span style="display:flex;align-items:center;gap:8px;margin-top:8px;color:#9699a4;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><i aria-hidden="true" style="width:7px;height:7px;background:#61caf8;box-shadow:0 0 12px #61caf8"></i>Miami, FL · {{ tz }}</span>
+    </div>
+  </nav>
+
+  <div ref="{{ markRef }}" onPointerMove="{{ onMove }}" onPointerLeave="{{ onLeave }}" style="position:relative;margin:clamp(40px,5vw,80px) clamp(10px,2vw,28px) clamp(14px,1.6vw,24px);touch-action:pan-y">
+    <canvas ref="{{ glRef }}" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none"></canvas>
+    <svg ref="{{ svgRef }}" viewBox="0 0 1000 300" role="img" aria-label="MIUX" style="display:block;width:100%;height:auto;overflow:visible">
+      <defs>
+        <linearGradient id="miuxFootG" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#61caf8"></stop><stop offset=".3" stop-color="#88b7ca"></stop><stop offset=".55" stop-color="#8b79b4"></stop><stop offset=".78" stop-color="#de91b8"></stop><stop offset="1" stop-color="#ffb4a2"></stop>
+        </linearGradient>
+        <radialGradient id="miuxFootSpotG">
+          <stop offset="0" stop-color="#fff"></stop><stop offset=".45" stop-color="#fff" stop-opacity=".85"></stop><stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+        </radialGradient>
+        <mask id="miuxFootSpot" maskUnits="userSpaceOnUse" x="-2000" y="-2000" width="6000" height="6000">
+          <circle ref="{{ spotRef }}" cx="-500" cy="0" r="260" fill="url(#miuxFootSpotG)"></circle>
+        </mask>
+        <pattern id="miuxFootScan" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="2" fill="#61caf8" fill-opacity=".09"></rect></pattern>
+      </defs>
+      <text ref="{{ textRef }}" x="0" y="0" style="font-family:'At Amiga',Impact,sans-serif;font-size:400px;letter-spacing:0" fill="#111216" stroke="rgba(245,242,237,.16)" stroke-width="1.2">MIU<tspan fill="#1a1216" stroke="rgba(232,161,184,.35)">X</tspan></text>
+      <text x="0" y="0" style="font-family:'At Amiga',Impact,sans-serif;font-size:400px;letter-spacing:0" fill="url(#miuxFootScan)" opacity=".9">MIUX</text>
+      <text x="0" y="0" style="font-family:'At Amiga',Impact,sans-serif;font-size:400px;letter-spacing:0" fill="url(#miuxFootG)" mask="url(#miuxFootSpot)">MIUX</text>
+    </svg>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px 28px;padding:22px clamp(22px,5vw,74px) 26px;border-top:1px solid rgba(245,242,237,.1);color:#9699a4;font:400 10px/1.5 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.09em;text-transform:uppercase">
+    <span>© 2026 <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span> Creative · Miami, FL · with Yoshi &amp; Mushu</span>
+    <span style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px">
+      <a href="privacy.html" style="display:inline-flex;align-items:center;min-height:44px;color:#9699a4" style-hover="color:#61caf8">Privacy</a>
+      <button type="button" onClick="{{ toTop }}" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;white-space:nowrap;border:1px solid rgba(245,242,237,.22);border-radius:0;background:none;color:#f5f2ed;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;transition:background 200ms ease,color 200ms ease,border-color 200ms ease" style-hover="background:#61caf8;color:#08090d;border-color:#61caf8">Back to top <span style="font:400 15px/1 'At Amiga',Impact,sans-serif">↑</span></button>
+    </span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;cta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;ctaTitle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Tell me what you're building.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;CTA&quot;},&quot;ctaAccent&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;CTA&quot;},&quot;ctaBody&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;No formal brief required. Just what you're building and what's in the way.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;CTA&quot;},&quot;$preview&quot;:{&quot;width&quot;:&quot;1440px&quot;,&quot;height&quot;:&quot;1100px&quot;}}">
+const FOOT_VS = 'attribute vec2 p;varying vec2 uv;void main(){uv=p*.5+.5;uv.y=1.-uv.y;gl_Position=vec4(p,0.,1.);}';
+const FOOT_FS = `precision highp float;
+varying vec2 uv;uniform sampler2D tex;uniform vec2 res;uniform vec2 mouse;uniform float time;uniform float hover;
+float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
+float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}
+vec3 ramp(float t){t=fract(t);vec3 a=vec3(.380,.792,.973),b=vec3(.545,.475,.706),c=vec3(.910,.631,.722);
+ vec3 k=t<.5?mix(a,c,smoothstep(0.,.5,t)):mix(c,a,smoothstep(.5,1.,t));return mix(k,b,.12*sin(t*6.2832)*sin(t*6.2832));}
+void main(){
+ float asp=res.x/res.y;vec2 P=vec2(uv.x*asp,uv.y),M=vec2(mouse.x*asp,mouse.y);
+ float d=distance(P,M);vec2 dir=normalize(P-M+1e-5);
+ float rip=sin(d*34.-time*5.)*exp(-d*4.5)*.010*hover;
+ vec2 w=vec2(fbm(P*1.6+time*.07),fbm(P*1.6-time*.06+4.))-.5;
+ vec2 q=uv+dir*rip/vec2(asp,1.)+w*.004;
+ vec2 px=1.5/res;
+ float ca=.006*hover*exp(-d*3.);
+ float r=texture2D(tex,q+vec2(ca,0)).r,g=texture2D(tex,q).r,b=texture2D(tex,q-vec2(ca,0)).r;
+ float a=max(g,max(r,b));
+ float nb=texture2D(tex,q+vec2(px.x,0)).r+texture2D(tex,q-vec2(px.x,0)).r+texture2D(tex,q+vec2(0,px.y)).r+texture2D(tex,q-vec2(0,px.y)).r;
+ float edge=clamp((g*4.-nb)*1.6,0.,1.)+clamp(abs(g*4.-nb)*.8,0.,1.);
+ float flow=fbm(P*2.2+w*3.+vec2(time*.05,-time*.03));
+ vec3 col=ramp(uv.x*.5+flow*.6+time*.025);col=mix(vec3(dot(col,vec3(.33))),col,1.5);
+ float spot=exp(-d*d*(hover>.75?5.:9.));
+ float lum=.34+.3*flow+.85*spot*hover;
+ float scan=.82+.18*sin(gl_FragCoord.y*1.25+time*2.);
+ float grain=(h(gl_FragCoord.xy+time)-.5)*.06;
+ vec3 base=col*lum*scan+grain;
+ base+=edge*mix(vec3(.96,.95,.93)*.35,col*1.4,spot);
+ vec3 split=vec3(r,g,b);
+ vec3 o=base*mix(vec3(1.),split/max(a,1e-3),.6);
+ gl_FragColor=vec4(o*a,a);
+}`;
+class Component extends DCLogic {
+  state = { now: new Date() };
+  rootRef = React.createRef(); markRef = React.createRef(); svgRef = React.createRef(); textRef = React.createRef(); spotRef = React.createRef(); glRef = React.createRef();
+  target = null; pos = { x: .5, y: .5 }; hov = .5;
+  componentDidMount() {
+    this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ready = () => { this.fit(); this.initGL(); };
+    ready(); (document.fonts ? document.fonts.ready : Promise.resolve()).then(ready);
+    this.onResize = () => { this.fit(); this.sizeGL(); }; window.addEventListener('resize', this.onResize);
+    this.clock = setInterval(() => this.setState({ now: new Date() }), 15000);
+    this.visible = true;
+    if ('IntersectionObserver' in window && this.markRef.current) { this.io = new IntersectionObserver(es => { this.visible = es[0].isIntersecting; if (this.visible) this.kick(); }); this.io.observe(this.markRef.current); }
+    this.t0 = performance.now(); this.kick();
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); clearInterval(this.clock); window.removeEventListener('resize', this.onResize); this.io && this.io.disconnect(); }
+  kick() { if (!this.running) { this.running = true; this.raf = requestAnimationFrame(t => this.frame(t)); } }
+  frame(t) {
+    this.running = false;
+    const s = this.reduced ? 4 : (t - this.t0) / 1000;
+    const auto = { x: .5 + .38 * Math.sin(s * .4), y: .5 + .25 * Math.sin(s * .8) };
+    const g = this.target || auto, k = this.reduced ? 1 : .09;
+    this.pos.x += (g.x - this.pos.x) * k; this.pos.y += (g.y - this.pos.y) * k;
+    this.hov += ((this.target ? 1 : .45) - this.hov) * (this.reduced ? 1 : .06);
+    if (this.gl) this.draw(s); else this.drawSvg();
+    if (this.visible && (!this.reduced || this.target)) this.kick();
+  }
+  drawSvg() {
+    const c = this.spotRef.current, vb = this.vb; if (!c || !vb) return;
+    c.setAttribute('cx', (vb.x + this.pos.x * vb.w).toFixed(1)); c.setAttribute('cy', (vb.y + this.pos.y * vb.h).toFixed(1)); c.setAttribute('r', (vb.h * .55).toFixed(1));
+  }
+  fit() {
+    const tx = this.textRef.current, svg = this.svgRef.current; if (!tx || !svg) return;
+    try {
+      const b = tx.getBBox(); if (!b.width) return;
+      const ctx = (this.cv || (this.cv = document.createElement('canvas'))).getContext('2d');
+      ctx.font = "400 400px 'At Amiga'"; const m = ctx.measureText('MIUX');
+      const top = m.actualBoundingBoxAscent ? -m.actualBoundingBoxAscent : b.y, bot = m.actualBoundingBoxAscent ? m.actualBoundingBoxDescent : b.y + b.height;
+      const pad = 3, v = { x: b.x - pad, y: top - pad, w: b.width + pad * 2, h: bot - top + pad * 2 };
+      this.vb = v; svg.setAttribute('viewBox', `${v.x} ${v.y} ${v.w} ${v.h}`);
+    } catch (e) {}
+  }
+  initGL() {
+    if (this.gl || this.glFailed) { this.sizeGL(); return; }
+    const cv = this.glRef.current; if (!cv) return;
+    const gl = cv.getContext('webgl', { premultipliedAlpha: true, alpha: true, antialias: true });
+    if (!gl) { this.glFailed = true; return; }
+    const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) { console.warn(gl.getShaderInfoLog(s)); return null; } return s; };
+    const vs = sh(gl.VERTEX_SHADER, FOOT_VS), fs = sh(gl.FRAGMENT_SHADER, FOOT_FS); if (!vs || !fs) { this.glFailed = true; return; }
+    const pr = gl.createProgram(); gl.attachShader(pr, vs); gl.attachShader(pr, fs); gl.linkProgram(pr);
+    if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) { this.glFailed = true; return; }
+    gl.useProgram(pr);
+    const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(pr, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    this.u = ['tex', 'res', 'mouse', 'time', 'hover'].reduce((o, k) => (o[k] = gl.getUniformLocation(pr, k), o), {});
+    this.tex = gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D, this.tex);
+    [gl.TEXTURE_WRAP_S, gl.TEXTURE_WRAP_T].forEach(p => gl.texParameteri(gl.TEXTURE_2D, p, gl.CLAMP_TO_EDGE));
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    this.gl = gl; this.sizeGL();
+    const svg = this.svgRef.current; if (svg) [...svg.querySelectorAll('text')].forEach(t => t.style.opacity = 0);
+  }
+  sizeGL() {
+    const gl = this.gl, cv = this.glRef.current, vb = this.vb; if (!gl || !cv || !vb) return;
+    const r = cv.getBoundingClientRect(); if (!r.width) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2), W = Math.min(4096, Math.round(r.width * dpr)), H = Math.round(W * vb.h / vb.w);
+    cv.width = W; cv.height = H; gl.viewport(0, 0, W, H);
+    const tc = document.createElement('canvas'); tc.width = W; tc.height = H; const c = tc.getContext('2d');
+    const sc = W / vb.w; c.fillStyle = '#000'; c.fillRect(0, 0, W, H); c.fillStyle = '#fff';
+    c.font = `400 ${400 * sc}px 'At Amiga', Impact, sans-serif`; c.textBaseline = 'alphabetic'; c.fillText('MIUX', -vb.x * sc, -vb.y * sc);
+    gl.bindTexture(gl.TEXTURE_2D, this.tex); gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, tc);
+    this.kick();
+  }
+  draw(s) {
+    const gl = this.gl, u = this.u, cv = this.glRef.current; if (!cv.width) return;
+    gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.uniform1i(u.tex, 0); gl.uniform2f(u.res, cv.width, cv.height); gl.uniform2f(u.mouse, this.pos.x, this.pos.y); gl.uniform1f(u.time, s); gl.uniform1f(u.hover, this.hov);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  }
+  renderVals() {
+    const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit', hour12: true, timeZoneName: 'short' }).formatToParts(this.state.now);
+    const p = k => (parts.find(x => x.type === k) || {}).value || '';
+    return {
+      showCta: this.props.cta !== false, ctaTitle: this.props.ctaTitle ?? "Tell me what you're building.", ctaAccent: this.props.ctaAccent ?? '', hasAccent: !!this.props.ctaAccent, ctaButton: this.props.ctaButton ?? "Send the brief", ctaBody: this.props.ctaBody ?? "No formal brief required. Just what you're building and what's in the way.", rootRef: this.rootRef, markRef: this.markRef, svgRef: this.svgRef, textRef: this.textRef, spotRef: this.spotRef, glRef: this.glRef,
+      time: `${p('hour')}:${p('minute')}`, ampm: p('dayPeriod'), tz: p('timeZoneName'),
+      onMove: e => { const r = e.currentTarget.getBoundingClientRect(); this.target = { x: (e.clientX - r.left) / r.width, y: (e.clientY - r.top) / r.height }; this.kick(); },
+      onLeave: () => { this.target = null; this.kick(); },
+      toTop: () => window.scrollTo({ top: 0, behavior: this.reduced ? 'auto' : 'smooth' })
+    };
+  }
+}
+</script>
+</body>
+</html>

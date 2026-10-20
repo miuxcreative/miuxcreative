@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-29P64H6C6Z"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-29P64H6C6Z');</script>
+<title>The MIUX Blueprint | Creative Process &amp; Handoff</title>
+<meta name="description" content="How a MIUX project runs, in five stages: Listen, Map, Build, Hand over, Grow. What you see, what we do, and what you own at the end of each one.">
+<link rel="canonical" href="https://miuxcreative.com/process/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MIUX Creative">
+<meta property="og:title" content="The MIUX Blueprint | MIUX Creative">
+<meta property="og:description" content="Five stages, one system. Big ideas, clear next steps, and useful ownership at handoff.">
+<meta property="og:image" content="https://miuxcreative.com/assets/og-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"The MIUX Blueprint","url":"https://miuxcreative.com/process/","about":"MIUX Creative's five-stage project process"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://miuxcreative.com/"},{"@type":"ListItem","position":2,"name":"Process","item":"https://miuxcreative.com/process/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does a project take?","acceptedAnswer":{"@type":"Answer","text":"It depends on scope. A focused sprint can take a few weeks. A full brand and website runs longer. You get a timeline with the proposal, before anything starts."}},{"@type":"Question","name":"Do we have to start at Listen?","acceptedAnswer":{"@type":"Answer","text":"Yes, but it can be short. If the brief is clear and the brand is solid, Listen might be one call and an audit."}},{"@type":"Question","name":"How involved does our team need to be?","acceptedAnswer":{"@type":"Answer","text":"A short review each week and quick answers when questions come up. Map needs the most of your time, because that's where the decisions get made."}},{"@type":"Question","name":"What do we own at the end?","acceptedAnswer":{"@type":"Answer","text":"Everything made for you: source files, code, documentation and account access. Nothing stays locked on my side."}},{"@type":"Question","name":"Can MIUX join a project already in progress?","acceptedAnswer":{"@type":"Answer","text":"Yes. Agencies and in-house teams often bring MIUX in at Build. I still read everything first."}}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=Instrument+Serif:ital@1&amp;display=swap">
+<script src="assets/miux-defs.js"></script>
+<script src="assets/miux-fx.js"></script>
+<style>
+@font-face{font-family:"PP Neue Montreal";src:url("assets/fonts/PPNeueMontreal-Book.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"PP Neue Montreal Mono";src:url("assets/fonts/PPNeueMontrealMono-Book.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"At Amiga";src:url("assets/fonts/AtAmiga-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"PP Eiko";src:url("assets/fonts/PPEiko-LightItalic.otf") format("opentype");font-style:italic;font-weight:300;font-display:swap}
+*{box-sizing:border-box}
+html{background:#08090d;scroll-behavior:smooth}
+body{margin:0;background:#08090d;color:#f5f2ed;font-family:"PP Neue Montreal","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:#61caf8;text-decoration:none}
+a:hover{color:#e8a1b8}
+::selection{background:#61caf8;color:#08090d}
+:focus-visible{outline:1px solid #61caf8;outline-offset:6px}
+@media (hover:hover) and (pointer:fine){html[data-miux-cursor],html[data-miux-cursor] *{cursor:none!important}}
+@keyframes miux-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+<script src="assets/miux-nav.js"></script>
+</helmet>
+
+<nav aria-label="Primary" style="position:fixed;z-index:50;inset:0 0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding:20px clamp(22px,5vw,74px);border-bottom:1px solid rgba(255,255,255,.16);background:rgba(8,9,13,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#f5f2ed;font:400 10px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">
+  <a href="index.html" aria-label="MIUX Creative home" style="color:#f5f2ed;font:400 22px/1 'At Amiga',Impact,sans-serif;letter-spacing:-.06em;text-transform:none">MIU<i style="color:#e8a1b8;font-style:normal">X</i></a>
+  <div style="display:flex;justify-content:center;gap:clamp(16px,2.2vw,32px);white-space:nowrap">
+    <a href="services.html" style="display:inline-flex;align-items:center;gap:6px;color:#f5f2ed" style-hover="color:#61caf8">Services</a>
+    <a href="work.html" style="color:#f5f2ed" style-hover="color:#61caf8">Work</a>
+    <a href="about.html" style="color:#e8a1b8">About</a>
+  </div>
+  <a href="contact.html" data-analytics="start_project_click" style="justify-self:end;color:#61caf8;white-space:nowrap" style-hover="color:#e8a1b8">Make your move ↗</a>
+</nav>
+
+<section data-screen-label="01 Hero" style="position:relative;overflow:hidden;padding:clamp(150px,20vh,220px) clamp(22px,5vw,74px) clamp(64px,8vw,112px)">
+  <span aria-hidden="true" style="position:absolute;top:96px;right:clamp(22px,5vw,74px);font:400 clamp(120px,16vw,260px)/1 'At Amiga',Impact,sans-serif;color:rgba(97,202,248,.05);pointer-events:none;user-select:none">BP</span>
+  <div style="position:relative;max-width:1180px">
+    <div data-rise="" style="display:flex;flex-wrap:wrap;gap:8px 24px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#e8a1b8">The <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span> Blueprint</span><span style="color:#9699a4">Five stages · one system · Miami, FL</span></div>
+    <h1 data-rise="" style="margin:24px 0 0;font:400 clamp(56px,7.6vw,128px)/.88 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em">Big ideas. Clear <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;letter-spacing:-.04em;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">next steps.</em></h1>
+    <p data-rise="" style="max-width:44ch;margin:32px 0 0;color:#c8c9ce;font-size:clamp(17px,1.5vw,21px);line-height:1.45;text-wrap:pretty">This is how a <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span> project runs, from the first call to the month after launch. Same pieces the whole way through. They just keep getting more useful.</p>
+  </div>
+  <div data-rise="" style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin-top:clamp(56px,7vw,96px);border-top:1px solid rgba(245,242,237,.15)">
+    <sc-for list="{{ route }}" as="r" hint-placeholder-count="5">
+      <button type="button" onClick="{{ r.go }}" data-cursor="JUMP" style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-height:44px;padding:18px 12px 0 0;border:0;background:none;color:#f5f2ed;text-align:left;cursor:pointer;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;transition:color 200ms ease" style-hover="color:#61caf8">
+        <span style="display:block;width:18px;aspect-ratio:1049/935;clip-path:url(#miuxHex);background:{{ r.c }}"></span>
+        <span style="color:#9699a4">{{ r.no }}</span>
+        <span style="font-size:clamp(14px,1.4vw,18px);letter-spacing:-.01em;text-transform:none;font-family:'PP Neue Montreal','Helvetica Neue',sans-serif">{{ r.name }}</span>
+      </button>
+    </sc-for>
+  </div>
+</section>
+
+<section id="run" ref="{{ runRef }}" data-screen-label="02 The run" aria-label="The five stages" style="position:relative;height:600vh;border-top:1px solid rgba(245,242,237,.15)">
+  <div style="position:sticky;top:0;height:100vh;display:flex;flex-direction:column;padding:clamp(84px,11vh,104px) clamp(22px,5vw,74px) clamp(20px,3vh,36px);overflow:hidden">
+    <div style="position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px">
+      <sc-for list="{{ rail }}" as="r" hint-placeholder-count="5">
+        <button type="button" onClick="{{ r.go }}" aria-current="{{ r.cur }}" style="display:flex;align-items:center;gap:8px;min-height:44px;padding:0;border:0;border-top:2px solid {{ r.line }};background:none;color:{{ r.color }};text-align:left;cursor:pointer;font:400 10px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;transition:color 250ms ease,border-color 250ms ease">
+          <span style="opacity:.6">{{ r.no }}</span><span>{{ r.name }}</span>
+        </button>
+      </sc-for>
+      <span aria-hidden="true" style="position:absolute;left:0;top:0;height:2px;width:{{ fill }};background:#61caf8;pointer-events:none"></span>
+    </div>
+
+    <div style="flex:1;min-height:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(16px,4vw,72px);align-items:center;align-content:center;padding-top:clamp(12px,3vh,32px)">
+      <div style="position:relative;min-width:0">
+        <span aria-hidden="true" style="position:absolute;top:-.12em;right:0;font:400 clamp(100px,13vw,200px)/1 'At Amiga',Impact,sans-serif;color:rgba(97,202,248,.05);pointer-events:none;user-select:none">{{ s.no }}</span>
+        <div style="position:relative;opacity:{{ textOp }};transform:{{ textT }};transition:opacity 260ms ease,transform 420ms cubic-bezier(.16,1,.3,1)">
+          <div style="display:flex;flex-wrap:wrap;gap:6px 20px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#61caf8"><span style="opacity:.5;margin-right:8px">//</span>Stage {{ s.no }} / {{ s.name }}</span><span style="color:#9699a4">{{ s.when }}</span></div>
+          <h2 style="max-width:16ch;margin:16px 0 0;font-size:clamp(30px,4.2vw,64px);font-weight:400;line-height:.95;letter-spacing:-.045em;text-wrap:balance">{{ s.head }}</h2>
+          <div role="group" aria-label="Point of view" style="display:inline-flex;gap:4px;margin-top:clamp(16px,2.6vh,28px);padding:4px;border:1px solid rgba(245,242,237,.16);">
+            <button type="button" onClick="{{ viewYou }}" aria-pressed="{{ isYou }}" style="min-height:36px;padding:0 16px;border:0;background:{{ youBg }};color:{{ youColor }};cursor:pointer;font:400 10px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;transition:background 200ms ease,color 200ms ease">What you see</button>
+            <button type="button" onClick="{{ viewUs }}" aria-pressed="{{ isUs }}" style="min-height:36px;padding:0 16px;border:0;background:{{ usBg }};color:{{ usColor }};cursor:pointer;font:400 10px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;transition:background 200ms ease,color 200ms ease">What I'm doing</button>
+          </div>
+          <p style="max-width:46ch;margin:clamp(12px,2vh,20px) 0 0;color:#c8c9ce;font-size:clamp(15px,1.3vw,18px);line-height:1.55;text-wrap:pretty">{{ body }}</p>
+          <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;align-items:flex-start;gap:12px;margin-top:clamp(14px,2.6vh,28px)">
+            <svg viewBox="0 0 152 95" aria-hidden="true" style="flex:none;width:30px;height:auto;margin-top:16px;color:#61caf8"><use href="#miuxMiniM"></use></svg>
+            <div>
+              <div style="font:400 9px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#9699a4">Mini M</div>
+              <p style="margin:6px 0 0;padding:10px 14px;border-radius:2px;background:rgba(97,202,248,.06);border:1px solid rgba(97,202,248,.18);font:400 13px/1.45 'PP Neue Montreal Mono','IBM Plex Mono',monospace;color:#f5f2ed">{{ s.quip }}</p>
+            </div>
+          </div>
+          </sc-if>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:center;min-width:0">
+        <div role="img" aria-label="{{ figLabel }}" style="position:relative;width:{{ canvasW }};aspect-ratio:1;background:#0b0c10;border:1px solid rgba(245,242,237,.12);overflow:hidden">
+          <div style="position:absolute;inset:12px 14px auto;display:flex;justify-content:space-between;gap:12px;font:400 9px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;color:#9699a4;z-index:3"><span>Fig. {{ s.no }} · {{ s.name }}</span><span>MIUX-BP</span></div>
+          <div style="position:absolute;inset:auto 14px 12px;display:flex;justify-content:space-between;gap:12px;font:400 9px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;color:#9699a4;z-index:3"><span>{{ figCount }}</span><span>{{ pct }}</span></div>
+          <div style="position:absolute;inset:0;opacity:{{ linesOp }};transition:opacity 500ms ease">{{ lines }}</div>
+          <div style="position:absolute;top:14%;bottom:14%;left:34%;width:0;border-left:1px dashed rgba(245,242,237,.25);opacity:{{ splitOp }};transition:opacity 500ms ease"></div>
+          <div style="position:absolute;top:13%;left:5%;font:400 9px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#61caf8;opacity:{{ splitOp }};transition:opacity 500ms ease">MIUX</div>
+          <div style="position:absolute;top:13%;left:38%;font:400 9px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#e8a1b8;opacity:{{ splitOp }};transition:opacity 500ms ease">Your team</div>
+          <sc-for list="{{ hexes }}" as="h" hint-placeholder-count="19">
+            <div style="position:absolute;left:{{ h.x }};top:{{ h.y }};width:{{ h.w }};aspect-ratio:1049/935;opacity:{{ h.op }};transform:{{ h.t }};transition:left 1100ms cubic-bezier(.16,1,.3,1),top 1100ms cubic-bezier(.16,1,.3,1),width 900ms cubic-bezier(.16,1,.3,1),transform 1000ms cubic-bezier(.34,1.56,.64,1),opacity 500ms ease;transition-delay:{{ h.d }}">
+              <i style="position:absolute;inset:0;clip-path:url(#miuxHex);background:{{ h.c }};transition:background 500ms ease"></i>
+              <i style="position:absolute;inset:7%;clip-path:url(#miuxHex);background:#0b0c10;opacity:{{ h.io }};transition:opacity 450ms ease"></i>
+            </div>
+          </sc-for>
+          <sc-for list="{{ tags }}" as="t" hint-placeholder-count="6">
+            <span style="position:absolute;z-index:2;left:{{ t.x }};top:{{ t.y }};padding:5px 7px;border:.5px solid {{ t.b }};background:{{ t.bg }};color:{{ t.c }};font:400 9px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;opacity:{{ t.op }};transform:{{ t.t }};transition:opacity 350ms ease,transform 500ms cubic-bezier(.16,1,.3,1);transition-delay:{{ t.d }};pointer-events:none">{{ t.label }}</span>
+          </sc-for>
+          <div aria-hidden="true" style="position:absolute;z-index:2;left:{{ mx }};top:{{ my }};width:9%;transform:translate(-50%,-50%) rotate({{ mr }});transition:left 1200ms cubic-bezier(.34,1.3,.64,1),top 1200ms cubic-bezier(.34,1.3,.64,1),transform 800ms cubic-bezier(.34,1.56,.64,1)">
+            <div style="animation:miux-bob 2.4s ease-in-out infinite"><svg viewBox="0 0 152 95" style="display:block;width:100%;height:auto;color:{{ mc }};transition:color 400ms ease"><use href="#miuxMiniM"></use></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="03 Starting point" style="position:relative;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.15)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px clamp(24px,6vw,96px);align-items:end">
+    <div>
+      <div data-reveal="0" style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#e8a1b8">Where are you starting from?</div>
+      <h2 data-reveal="1" style="max-width:12ch;margin:24px 0 0;font-size:clamp(44px,6vw,98px);font-weight:400;line-height:.9;letter-spacing:-.05em">Same five stages. <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">Different weight.</em></h2>
+    </div>
+    <p data-reveal="2" style="max-width:42ch;margin:0;color:#c8c9ce;font-size:clamp(16px,1.4vw,19px);line-height:1.5">Every project starts at Listen. How long it stays there depends on what you walk in with. Pick the one that sounds like you.</p>
+  </div>
+  <div data-reveal="3" role="group" aria-label="Your situation" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(40px,5vw,64px)">
+    <sc-for list="{{ sits }}" as="o" hint-placeholder-count="4">
+      <button type="button" onClick="{{ o.pick }}" aria-pressed="{{ o.on }}" style="min-height:44px;padding:0 20px;border:1px solid {{ o.b }};background:{{ o.bg }};color:{{ o.c }};cursor:pointer;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,border-color 200ms ease">{{ o.label }}</button>
+    </sc-for>
+  </div>
+  <div data-reveal="4" style="position:relative;margin-top:clamp(56px,7vw,88px)">
+    <div aria-hidden="true" style="position:absolute;bottom:100%;left:{{ sitMx }};width:44px;margin-bottom:10px;transform:translateX(-50%);transition:left 700ms cubic-bezier(.34,1.56,.64,1)"><div style="animation:miux-bob 2.4s ease-in-out infinite"><svg viewBox="0 0 152 95" style="display:block;width:100%;height:auto;color:#61caf8"><use href="#miuxMiniM"></use></svg></div></div>
+    <div style="display:flex;gap:4px;height:clamp(96px,12vw,140px)">
+      <sc-for list="{{ segs }}" as="g" hint-placeholder-count="5">
+        <div style="flex-grow:{{ g.w }};flex-basis:0;min-width:0;display:flex;flex-direction:column;justify-content:space-between;padding:14px;background:{{ g.bg }};color:{{ g.c }};border:1px solid {{ g.b }};overflow:hidden;transition:flex-grow 700ms cubic-bezier(.16,1,.3,1),background 300ms ease,color 300ms ease">
+          <span style="font:400 10px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;opacity:.7">{{ g.no }}</span>
+          <span style="font-size:clamp(13px,1.4vw,20px);letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ g.name }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <p style="max-width:60ch;margin:24px 0 0;color:#c8c9ce;font-size:clamp(16px,1.4vw,19px);line-height:1.5">{{ sitNote }}</p>
+  </div>
+</section>
+
+<section data-screen-label="04 Outputs" style="position:relative;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.15)">
+  <div data-reveal="0" style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#e8a1b8">What you walk away with</div>
+  <h2 data-reveal="1" style="max-width:14ch;margin:24px 0 0;font-size:clamp(44px,6vw,98px);font-weight:400;line-height:.9;letter-spacing:-.05em">Every stage leaves <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">a file behind.</em></h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1px;margin-top:clamp(40px,5vw,64px);background:rgba(245,242,237,.12);border:1px solid rgba(245,242,237,.12)">
+    <sc-for list="{{ outputs }}" as="o" hint-placeholder-count="5">
+      <article data-reveal="{{ $index }}" style="display:flex;flex-direction:column;padding:clamp(22px,2.4vw,32px);background:#08090d">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#61caf8"><span style="opacity:.5;margin-right:8px">//</span>{{ o.no }} {{ o.name }}</span>
+          <span style="display:block;width:14px;aspect-ratio:1049/935;clip-path:url(#miuxHex);background:{{ o.c }}"></span>
+        </div>
+        <div style="margin-top:20px;border-top:.5px solid rgba(255,255,255,.1)">
+          <sc-for list="{{ o.files }}" as="f" hint-placeholder-count="3">
+            <div style="display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;padding:14px 0;border-bottom:.5px solid rgba(255,255,255,.1)">
+              <span style="display:flex;justify-content:center;padding:5px 0;border:.5px solid {{ f.b }};background:{{ f.bg }};color:{{ f.c }};font:400 9px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">{{ f.ext }}</span>
+              <div>
+                <div style="font-size:15px;line-height:1.3;color:#f5f2ed">{{ f.name }}</div>
+                <div style="margin-top:4px;font-size:13px;line-height:1.5;color:#9699a4">{{ f.desc }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<section id="start" data-screen-label="05 Start" style="position:relative;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);background:#61caf8;color:#121314">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px clamp(24px,6vw,96px);align-items:end">
+    <h2 data-reveal="0" style="margin:0;font-size:clamp(48px,7.4vw,118px);font-weight:400;line-height:.88;letter-spacing:-.05em">Start with the<br><em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300">full picture.</em></h2>
+    <div>
+      <p data-reveal="1" style="max-width:40ch;margin:0;color:rgba(18,19,20,.78);font-size:clamp(16px,1.4vw,19px);line-height:1.5">Send the brief, the half-finished deck, or a paragraph about what's not working. Stage 01 starts with a reply from a human.</p>
+      <a data-reveal="2" href="mailto:hello@miuxcreative.com?subject=Start%20at%20stage%2001" data-cursor="JUST DO THE THING" style="display:inline-flex;align-items:center;min-height:44px;margin-top:28px;padding:0 20px;border:1px solid #121314;background:#121314;color:#f5f2ed;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,border-color 200ms ease" style-hover="background:#e8a1b8;border-color:#e8a1b8;color:#121314">Start at stage 01 ↗</a>
+      <p data-reveal="3" style="margin:28px 0 0;padding-top:18px;border-top:1px solid rgba(18,19,20,.2);font:400 11px/1.5 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.06em;color:rgba(18,19,20,.78)">Want to see it in practice? <a href="work.html" style="color:#121314;text-decoration:underline;text-underline-offset:3px" style-hover="color:#08090d">Read the case files →</a></p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="06 FAQ" style="position:relative;overflow:hidden;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(40px,6vw,96px);align-items:start">
+  <div>
+    <div data-reveal="0" style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#e8a1b8">Blueprint / Common questions</div>
+    <h2 data-reveal="1" style="max-width:12ch;margin:24px 0 0;font-size:clamp(48px,7vw,110px);font-weight:400;line-height:.88;letter-spacing:-.05em">Questions about the <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">how.</em></h2>
+    <div data-reveal="2" aria-hidden="true" style="margin-top:40px;width:72px;animation:miux-bob 2.4s ease-in-out infinite"><svg viewBox="0 0 152 95" style="display:block;width:100%;height:auto;color:#61caf8"><use href="#miuxMiniM"></use></svg></div>
+  </div>
+  <div style="border-top:1px solid rgba(245,242,237,.15)">
+    <sc-for list="{{ faq }}" as="q" hint-placeholder-count="5">
+      <div data-reveal="{{ $index }}" style="border-bottom:1px solid rgba(245,242,237,.15)">
+        <button type="button" onClick="{{ q.toggle }}" aria-expanded="{{ q.open }}" style="display:flex;width:100%;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;border:0;background:none;color:{{ q.color }};font:400 clamp(20px,2vw,28px)/1.2 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.02em;text-align:left;cursor:pointer;transition:color 200ms ease" style-hover="color:#61caf8">
+          <span>{{ q.q }}</span>
+          <span aria-hidden="true" style="flex:none;width:18px;height:16px;clip-path:url(#miuxHex);background:{{ q.dot }};transform:rotate({{ q.rot }});transition:transform 300ms cubic-bezier(.34,1.56,.64,1),background 200ms ease"></span>
+        </button>
+        <div style="display:grid;grid-template-rows:{{ q.rows }};transition:grid-template-rows 400ms cubic-bezier(.16,1,.3,1)">
+          <div style="overflow:hidden"><p style="max-width:56ch;margin:0;padding:0 0 28px;color:#c8c9ce;font-size:17px;line-height:1.55">{{ q.a }}</p></div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<dc-import name="MIUX Footer" cta-title="Start at Listen." cta-body="Bring what you have. No formal brief required." hint-size="100%,1100px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;cursor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+const B = '#61caf8', K = '#e8a1b8', P = '#f5f2ed', V = '#8b79b4', D = '#2a2d36', G = '#3a3d47';
+const STAGES = [
+  { no: '01', name: 'Listen', when: 'Before any design', c: G,
+    head: 'Everything on the table. Even the weird stuff.',
+    you: 'You tell me what you want, what\'s broken and what can\'t change. Bring the half-finished deck and the logo your cousin made. It all counts.',
+    us: 'I audit the brand, the site, the stack and the competition, and talk to the people who\'ll use the thing. No designing yet. Just listening hard.',
+    quip: 'taking notes. a lot of notes.',
+    files: [['PDF', 'Discovery audit', 'Brand, site, stack and competitor review.'], ['MD', 'The brief, rewritten', 'Your brief in my words, so you can check I heard it right.'], ['CSV', 'Constraints list', 'Budget, deadlines, tools and the things that can\'t move.']] },
+  { no: '02', name: 'Map', when: 'Before any build', c: B,
+    head: 'Every piece gets a place.',
+    you: 'You see the plan before anything gets made: what I\'m building, in what order, and why. Push back here. It\'s the cheapest place to change your mind.',
+    us: 'Strategy, positioning, sitemap and system rules. I connect the pieces so the brand, the site and the tools all answer to the same idea.',
+    quip: 'connecting dots. literally.',
+    files: [['PDF', 'Strategy and positioning', 'Who it\'s for, what it says, and what it won\'t.'], ['FIG', 'Sitemap and flows', 'Every page and journey, before a pixel is styled.'], ['CSV', 'Roadmap and scope', 'What ships first, what waits, and who signs off.']] },
+  { no: '03', name: 'Build', when: 'Most of the time', c: K,
+    head: 'Design and code at the same desk.',
+    you: 'You see real screens with your real content every week. No mood boards standing in for decisions, and no big reveal in week six.',
+    us: 'Identity, interfaces, prototypes, code and AI workflows, built as one system. Every component gets a rule, so the tenth page is as good as the first.',
+    quip: 'stacking. carefully.',
+    files: [['FIG', 'Brand system and UI library', 'Logo, palette, type and components, with usage rules.'], ['WEB', 'Staging site or prototype', 'Reviewed on real devices, with real content.'], ['AI', 'Workflow setups', 'Agents, prompts and automations where they save real hours.']] },
+  { no: '04', name: 'Hand over', when: 'Launch', c: P,
+    head: 'The keys, the manual and the spare set.',
+    you: 'You launch with files you own, docs your team can read, and a walkthrough so nobody\'s guessing. Nothing stays locked in our accounts.',
+    us: 'QA on real devices, launch, documentation and training. I hand over the system, not a folder of exports.',
+    quip: 'it\'s yours now. be nice to it.',
+    files: [['ZIP', 'Source files', 'Every working file, organised the way your team will look for it.'], ['MD', 'System documentation', 'How it works, how to extend it, what not to touch.'], ['MP4', 'Training walkthrough', 'Recorded, so new hires get it too.']] },
+  { no: '05', name: 'Grow', when: 'After launch', c: V,
+    head: 'Launch day is when the real data shows up.',
+    you: 'A check-in after launch to look at what\'s working, what isn\'t, and what your team keeps asking for.',
+    us: 'I read the analytics, fix what the data flags, and plan the next pieces only if they\'ll earn their keep. The system takes new parts without starting over.',
+    quip: 'it grew. they do that.',
+    files: [['PDF', 'Post-launch review', 'What the numbers say, in plain language.'], ['CSV', 'Next-phase backlog', 'Ranked by impact, so you can decide what\'s next.']] }
+];
+const TAGS = [
+  [0, 'Budget', 8, 14], [0, 'Deadline', 60, 20], [0, 'Old logo', 14, 70], [0, 'The CRM nobody likes', 44, 84], [0, 'Competitors', 66, 58], [0, 'Gut feeling', 30, 40],
+  [1, 'Strategy', 5, 88], [1, 'Sitemap', 42, 88], [1, 'Roadmap', 78, 88],
+  [2, 'Identity', 6, 16], [2, 'Interface', 72, 16], [2, 'Code', 6, 84], [2, 'Workflows', 70, 84],
+  [3, 'Source files', 52, 16], [3, 'Docs', 82, 26], [3, 'Training', 50, 84], [3, 'Access', 84, 76],
+  [4, 'New page', 4, 12], [4, 'Next campaign', 62, 12], [4, 'One more tool', 56, 88]
+];
+const SITS = [
+  ['Just an idea and a deck', [3, 3, 4, 1, 1], 'Listen and Map do the heavy lifting. Most decisions get made before anything is designed, which is exactly where you want them.'],
+  ['A brand, but the site doesn\'t match', [1, 2, 5, 1, 1], 'A short Listen and a focused Map. We keep what works in the brand and build the site to fit it.'],
+  ['We know exactly what we need', [1, 1, 6, 1, 1], 'A quick Listen to check the spec, then straight into Build. Common for agencies and in-house teams who need senior hands.'],
+  ['We launched. It isn\'t working.', [2, 2, 3, 1, 3], 'We start with your data and your users, rebuild what\'s broken, and stay longer in Grow to prove the fix.']
+];
+const FAQ = [
+  ['How long does a project take?', 'It depends on scope. A focused sprint can take a few weeks. A full brand and website runs longer. You get a timeline with the proposal, before anything starts.'],
+  ['Do we have to start at Listen?', 'Yes, but it can be short. If the brief is clear and the brand is solid, Listen might be one call and an audit.'],
+  ['How involved does our team need to be?', 'A short review each week and quick answers when questions come up. Map needs the most of your time, because that\'s where the decisions get made.'],
+  ['What do we own at the end?', 'Everything made for you: source files, code, documentation and account access. Nothing stays locked on my side.'],
+  ['Can MIUX join a project already in progress?', 'Yes. Agencies and in-house teams often bring MIUX in at Build. I still read everything first.']
+];
+const EXT_C = { FIG: K, WEB: K, AI: K };
+
+// 37 hexes: axial rings 0..3, flat-top
+const AX = (() => {
+  const dirs = [[1, 0], [1, -1], [0, -1], [-1, 0], [-1, 1], [0, 1]], out = [[0, 0, 0]];
+  for (let k = 1; k <= 3; k++) { let q = -k, r = k; for (let d = 0; d < 6; d++) for (let s = 0; s < k; s++) { out.push([q, r, k]); q += dirs[d][0]; r += dirs[d][1]; } }
+  return out;
+})();
+const HR = 935 / 1049;
+const comb = (i, W, cx, cy, gap) => { const [q, r] = AX[i]; return [cx + q * .75 * W * gap, cy + (r + q / 2) * W * HR * gap]; };
+const rnd = n => { const x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+const MAP_COLS = [3, 4, 5, 4, 3];
+const MAP_POS = (() => { const out = []; MAP_COLS.forEach((n, c) => { for (let j = 0; j < n; j++) out.push([12 + c * 19, 50 + (j - (n - 1) / 2) * 17]); }); return out; })();
+const MAP_LINES = (() => {
+  const L = []; let base = 0;
+  MAP_COLS.forEach((n, c) => {
+    if (c < MAP_COLS.length - 1) { const nb = base + n, nn = MAP_COLS[c + 1];
+      for (let j = 0; j < n; j++) { const a = MAP_POS[base + j]; const near = []; for (let k = 0; k < nn; k++) near.push([Math.abs(MAP_POS[nb + k][1] - a[1]), nb + k]); near.sort((x, y) => x[0] - y[0]).slice(0, 2).forEach(([, t]) => L.push([a, MAP_POS[t]])); } }
+    base += n;
+  });
+  return L;
+})();
+const BUILD_C = i => { const ring = AX[i][2]; if (ring === 0) return [B, 0]; if (ring === 1) return i % 2 ? [P, 0] : [D, 0]; if (ring === 2) { const m = { 8: K, 14: V, 18: K, 11: B }; return m[i] ? [m[i], 0] : [D, i % 3 === 0 ? 1 : 0]; } return [B, 1]; };
+
+class Component extends DCLogic {
+  state = { stage: 0, shown: 0, vis: true, p: 0, view: 'you', sit: 0, faq: 0 };
+  runRef = React.createRef();
+  componentDidMount() {
+    const go = () => {
+      if (!window.MIUXFX) { this._w = setTimeout(go, 40); return; }
+      MIUXFX.injectDefs && MIUXFX.injectDefs(); document.documentElement.lang = 'en';
+      if (!MIUXFX.reduced()) document.querySelectorAll('[data-rise]').forEach((n, i) => n.animate([{ opacity: 0, transform: 'translateY(22px)' }, { opacity: 1, transform: 'none' }], { duration: 700, delay: 150 + i * 110, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'backwards' }));
+      if (this.props.cursor !== false && MIUXFX.mountCursor) this.unCursor = MIUXFX.mountCursor();
+      if (MIUXFX.observeReveals) this.unReveal = MIUXFX.observeReveals(document);
+    };
+    go();
+    this.onScroll = () => { if (this._raf) return; this._raf = requestAnimationFrame(() => { this._raf = 0; this.measure(); }); };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onScroll);
+    this.measure();
+  }
+  componentWillUnmount() {
+    clearTimeout(this._w); clearTimeout(this._sw); cancelAnimationFrame(this._raf);
+    window.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onScroll);
+    this.unCursor && this.unCursor(); this.unReveal && this.unReveal();
+  }
+  measure() {
+    const el = this.runRef.current; if (!el) return;
+    const r = el.getBoundingClientRect(), span = r.height - window.innerHeight;
+    const p = Math.max(0, Math.min(1, -r.top / (span || 1)));
+    const stage = Math.min(4, Math.floor(p * 5));
+    const pr = Math.round(p * 400) / 400;
+    if (pr !== this.state.p) this.setState({ p: pr });
+    const wide = window.innerWidth >= 760;
+    if (wide !== this.state.wide) this.setState({ wide });
+    if (stage !== this.state.stage) this.setStage(stage);
+  }
+  setStage(stage) {
+    this.setState({ stage, vis: false });
+    clearTimeout(this._sw);
+    this._sw = setTimeout(() => this.setState({ shown: this.state.stage, vis: true }), 200);
+  }
+  jump(i) {
+    const el = this.runRef.current; if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY, span = el.offsetHeight - window.innerHeight;
+    window.scrollTo({ top: top + span * (i + .5) / 5, behavior: MIUXFX && MIUXFX.reduced && MIUXFX.reduced() ? 'auto' : 'smooth' });
+  }
+  hex(i, st) {
+    const ring = AX[i][2], extra = ring === 3;
+    let x, y, w, rot = 0, sc = 1, op = 1, c, io;
+    if (st === 0) {
+      if (extra) { [x, y] = comb(i, 13, 50, 50, 1.06); w = 13; op = 0; sc = .4; c = B; io = 1; }
+      else { x = 10 + rnd(i) * 80; y = 14 + rnd(i + 40) * 72; w = 5 + rnd(i + 90) * 5; rot = (rnd(i + 7) - .5) * 70; c = i === 4 || i === 13 ? K : i === 9 ? B : G; io = i % 3 === 0 ? 0 : 1; }
+    } else if (st === 1) {
+      if (extra) { [x, y] = comb(i, 13, 50, 50, 1.06); w = 13; op = 0; sc = .4; c = B; io = 1; }
+      else { [x, y] = MAP_POS[i]; w = 9; c = i === 9 ? K : B; io = i === 9 ? 0 : 1; }
+    } else if (st === 2 || st === 3) {
+      const W = st === 2 ? 14 : 10.5, cx = st === 2 ? 50 : 67;
+      [x, y] = comb(i, W, cx, 50, st === 2 ? 1.06 : 1.03); w = W; [c, io] = BUILD_C(i);
+      if (extra) { op = 0; sc = .4; }
+      if (st === 3) rot = 0;
+    } else {
+      [x, y] = comb(i, 11, 50, 50, 1.06); w = 11; [c, io] = BUILD_C(i);
+      if (extra) { op = .85; io = 1; c = i % 4 === 0 ? V : B; }
+    }
+    const d = (st === 4 && extra ? 200 + (i - 19) * 45 : i * 22) + 'ms';
+    return { x: x + '%', y: y + '%', w: w + '%', op, c, io, d, t: `translate(-50%,-50%) rotate(${rot}deg) scale(${sc})` };
+  }
+  renderVals() {
+    const st = this.state, S = STAGES[st.shown], h = React.createElement;
+    const mini = [[50, 50, -8, P], [12, 18, 0, P], [50, 50, 0, '#08090d'], [17, 52, -12, B], [50, 50, 0, '#08090d']][st.stage];
+    const sitW = SITS[st.sit][1], tot = sitW.reduce((a, b) => a + b, 0), maxI = sitW.indexOf(Math.max(...sitW));
+    let acc = 0; for (let i = 0; i < maxI; i++) acc += sitW[i];
+    const pv = (on) => ({ bg: on ? B : 'transparent', c: on ? '#08090d' : '#c8c9ce' });
+    const you = pv(st.view === 'you'), us = pv(st.view === 'us');
+    return {
+      runRef: this.runRef,
+      wide: st.wide !== false, canvasW: st.wide === false ? 'min(100%,40vh)' : 'min(100%,62vh)',
+      route: STAGES.map((s, i) => ({ no: s.no, name: s.name, c: s.c === G ? '#9699a4' : s.c, go: () => this.jump(i) })),
+      rail: STAGES.map((s, i) => ({ no: s.no, name: s.name, cur: i === st.stage ? 'step' : 'false', line: 'rgba(245,242,237,.14)', color: i === st.stage ? B : i < st.stage ? P : '#9699a4', go: () => this.jump(i) })),
+      fill: (st.p * 100).toFixed(2) + '%',
+      s: S, body: st.view === 'you' ? S.you : S.us,
+      textOp: st.vis ? 1 : 0, textT: st.vis ? 'none' : 'translateY(10px)',
+      isYou: st.view === 'you', isUs: st.view === 'us',
+      youBg: you.bg, youColor: you.c, usBg: us.bg, usColor: us.c,
+      viewYou: () => this.setState({ view: 'you' }), viewUs: () => this.setState({ view: 'us' }),
+      figLabel: 'Diagram: stage ' + S.no + ', ' + S.name,
+      figCount: (st.stage === 4 ? 37 : 19) + ' pieces',
+      pct: Math.round(st.p * 100) + '%',
+      hexes: AX.map((_, i) => this.hex(i, st.stage)),
+      tags: TAGS.map(([sg, label, x, y], j) => { const on = sg === st.stage, tone = sg === 0 ? 'muted' : sg === 3 ? 'pink' : 'teal';
+        return { label, x: x + '%', y: y + '%', op: on ? 1 : 0, t: on ? 'none' : 'translateY(6px)', d: on ? (300 + (j % 6) * 70) + 'ms' : '0ms',
+          c: tone === 'pink' ? K : tone === 'teal' ? B : '#c8c9ce', b: tone === 'pink' ? 'rgba(232,161,184,.3)' : tone === 'teal' ? 'rgba(97,202,248,.3)' : 'rgba(255,255,255,.16)', bg: tone === 'pink' ? 'rgba(232,161,184,.06)' : tone === 'teal' ? 'rgba(97,202,248,.06)' : '#0b0c10' }; }),
+      linesOp: st.stage === 1 ? 1 : 0, splitOp: st.stage === 3 ? 1 : 0,
+      lines: h('svg', { viewBox: '0 0 100 100', preserveAspectRatio: 'none', style: { position: 'absolute', inset: 0, width: '100%', height: '100%' } },
+        MAP_LINES.map(([a, b], k) => h('line', { key: k, x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: 'rgba(97,202,248,.4)', strokeWidth: 1, strokeDasharray: '3 4', vectorEffect: 'non-scaling-stroke' }))),
+      mx: mini[0] + '%', my: mini[1] + '%', mr: mini[2] + 'deg', mc: mini[3],
+      sits: SITS.map((o, i) => { const on = st.sit === i; return { label: o[0], on, bg: on ? B : 'transparent', c: on ? '#08090d' : P, b: on ? B : 'rgba(245,242,237,.25)', pick: () => this.setState({ sit: i }) }; }),
+      segs: STAGES.map((s, i) => { const top = i === maxI; return { no: s.no, name: s.name, w: sitW[i], bg: top ? B : '#121314', c: top ? '#08090d' : P, b: top ? B : 'rgba(245,242,237,.12)' }; }),
+      sitMx: ((acc + sitW[maxI] / 2) / tot * 100).toFixed(2) + '%',
+      sitNote: SITS[st.sit][2],
+      outputs: STAGES.map(s => ({ no: s.no, name: s.name, c: s.c === G ? '#9699a4' : s.c,
+        files: s.files.map(f => { const pink = !!EXT_C[f[0]]; return { ext: f[0], name: f[1], desc: f[2], c: pink ? K : B, b: pink ? 'rgba(232,161,184,.3)' : 'rgba(97,202,248,.3)', bg: pink ? 'rgba(232,161,184,.06)' : 'rgba(97,202,248,.06)' }; }) })),
+      faq: FAQ.map((f, i) => { const open = st.faq === i; return { q: f[0], a: f[1], open, rows: open ? '1fr' : '0fr', rot: open ? '90deg' : '0deg', dot: open ? K : B, color: open ? B : P, toggle: () => this.setState({ faq: open ? -1 : i }) }; })
+    };
+  }
+}
+</script>
+</body>
+</html>
