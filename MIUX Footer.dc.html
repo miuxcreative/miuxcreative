@@ -208,7 +208,7 @@ class Component extends DCLogic {
     const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit', hour12: true, timeZoneName: 'short' }).formatToParts(this.state.now);
     const p = k => (parts.find(x => x.type === k) || {}).value || '';
     return {
-      showCta: this.props.cta !== false, ctaTitle: this.props.ctaTitle ?? "Tell me what you're building.", ctaAccent: this.props.ctaAccent ?? '', hasAccent: !!this.props.ctaAccent, ctaButton: this.props.ctaButton ?? "Send the brief", ctaBody: this.props.ctaBody ?? "No formal brief required. Just what you're building and what's in the way.", rootRef: this.rootRef, markRef: this.markRef, svgRef: this.svgRef, textRef: this.textRef, spotRef: this.spotRef, glRef: this.glRef,
+      showCta: this.props.cta !== false, ...(() => { let t = (this.props.ctaTitle ?? "Tell me what you're building.").trim(), acc = this.props.ctaAccent ?? ''; if (!acc) { const i = t.lastIndexOf(' '); if (i > 0) { acc = t.slice(i + 1); t = t.slice(0, i); } } return { ctaTitle: t, ctaAccent: acc, hasAccent: !!acc }; })(), ctaButton: this.props.ctaButton ?? "Send the brief", ctaBody: this.props.ctaBody ?? "No formal brief required. Just what you're building and what's in the way.", rootRef: this.rootRef, markRef: this.markRef, svgRef: this.svgRef, textRef: this.textRef, spotRef: this.spotRef, glRef: this.glRef,
       time: `${p('hour')}:${p('minute')}`, ampm: p('dayPeriod'), tz: p('timeZoneName'),
       onMove: e => { const r = e.currentTarget.getBoundingClientRect(); this.target = { x: (e.clientX - r.left) / r.width, y: (e.clientY - r.top) / r.height }; this.kick(); },
       onLeave: () => { this.target = null; this.kick(); },

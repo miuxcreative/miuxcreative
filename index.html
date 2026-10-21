@@ -65,25 +65,10 @@ a:hover{color:#e8a1b8}
     <a href="about.html" style="color:#f5f2ed" style-hover="color:#61caf8">About</a>
   </div>
   <a href="contact.html" data-analytics="start_project_click" style="justify-self:end;color:#61caf8;white-space:nowrap" style-hover="color:#e8a1b8">Make your move ↗</a>
-  <i ref="{{navBar}}" aria-hidden="true" style="position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,#61caf8,#8b79b4 53%,#e8a1b8);transform-origin:0 50%;transform:scaleX(0)"></i>
+  <i ref="{{navBar}}" aria-hidden="true" style="position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,#61caf8,#8b79b4 53%,#e8a1b8);box-shadow:0 0 12px rgba(97,202,248,.55);transform-origin:0 50%;transform:scaleX(0)"></i>
 </nav>
 
-<sc-if value="{{ guideOn }}" hint-placeholder-val="{{ false }}">
-  <aside aria-label="Mission log progress" style="position:fixed;z-index:40;right:28px;top:50%;height:52vh;transform:translateY(-50%);width:24px">
-    <i aria-hidden="true" style="position:absolute;left:11px;top:0;bottom:0;width:1px;background:rgba(245,242,237,.15)"></i>
-    <sc-for list="{{ chapters }}" as="c" hint-placeholder-count="7">
-      <button type="button" onClick="{{ c.go }}" aria-label="{{ c.aria }}" data-cursor="{{ c.cursor }}" style="position:absolute;left:5px;top:{{ c.top }};width:14px;height:13px;padding:0;border:0;transform:translateY(-50%);clip-path:url(#miuxHex);background:{{ c.bg }};cursor:pointer;transition:background 200ms ease"></button>
-    </sc-for>
-    <div ref="{{ guideMini }}" style="position:absolute;left:-10px;top:0;width:44px;transform:translateY(-50%);transition:top 380ms cubic-bezier(.16,1,.3,1)">
-      <div style="animation:miux-bob 2.4s ease-in-out infinite">
-        <svg viewBox="0 0 152 95" style="display:block;width:44px;height:28px;color:#61caf8;overflow:visible" aria-hidden="true"><use href="#miuxMiniM"></use></svg>
-      </div>
-      <div role="status" style="position:absolute;right:56px;top:50%;width:max-content;max-width:240px;padding:10px 12px;border:1px solid rgba(97,202,248,.3);background:#0d0e11;color:#f5f2ed;font:400 11px/1.45 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.02em;transform:translateY(-50%);opacity:{{ bubbleOpacity }};transition:opacity 260ms ease;pointer-events:none">
-        <span style="display:block;margin-bottom:6px;color:#61caf8;font:400 13px/1 'At Amiga',Impact,sans-serif">Mini M</span>{{ quip }}
-      </div>
-    </div>
-  </aside>
-</sc-if>
+
 
 <sc-if value="{{ heroMech }}" hint-placeholder-val="{{ true }}">
 <section id="log-00" data-screen-label="00 Boot" ref="{{ heroRef }}" style="position:relative;min-height:100vh;overflow:hidden;padding:clamp(110px,15vh,150px) clamp(22px,5vw,74px) clamp(48px,7vh,88px);display:flex;align-items:center;background:radial-gradient(60% 60% at 68% 50%,#0d1218 0%,#08090d 70%)">
@@ -128,7 +113,7 @@ a:hover{color:#e8a1b8}
     <p data-rise="" style="margin:clamp(18px,2vw,28px) 0 0;font:400 clamp(30px,3.2vw,56px)/1 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.045em;color:#f5f2ed">Brand, web, product and AI. <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">One system.</em></p>
     <p data-rise="" style="margin:clamp(18px,2vw,26px) 0 0;white-space:nowrap;color:#e8a1b8;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Available for selected projects</p>
     <div data-rise="" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(28px,3vw,40px);pointer-events:auto">
-      <a href="#log-06" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:15px 22px;border-radius:0;background:#61caf8;color:#08090d;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#e8a1b8;color:#08090d;transform:translateY(-2px)" style-focus="outline:1px solid #e8a1b8;outline-offset:4px">Make your move ↗</a>
+      <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:15px 22px;border-radius:0;background:#61caf8;color:#08090d;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#e8a1b8;color:#08090d;transform:translateY(-2px)" style-focus="outline:1px solid #e8a1b8;outline-offset:4px">Tell me what you're building ↗</a>
       <a href="#log-01" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:14px 21px;border-radius:0;border:1px solid #61caf8;color:#61caf8;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#61caf8;color:#121314;transform:translateY(-2px)" style-focus="outline:1px solid #e8a1b8;outline-offset:4px">Read the log ↓</a>
     </div>
   </div>
@@ -139,7 +124,7 @@ a:hover{color:#e8a1b8}
   <div ref="{{ combRef }}" aria-hidden="true" style="display:none"></div>
   <sc-if value="{{ heroImage }}" hint-placeholder-val="{{ false }}">
     <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#08090d">
-      <img ref="{{ imgRef }}" src="assets/hero-miux6.webp" alt="" style="position:absolute;top:0;right:-4%;width:auto;height:100%;min-width:72%;object-fit:cover;object-position:62% 46%;filter:saturate(1.08) contrast(1.04) brightness(.94);-webkit-mask-image:radial-gradient(ellipse 62% 78% at 64% 50%,#000 38%,rgba(0,0,0,.55) 64%,transparent 92%);mask-image:radial-gradient(ellipse 62% 78% at 64% 50%,#000 38%,rgba(0,0,0,.55) 64%,transparent 92%);transform:scale(1.06);transition:transform 900ms cubic-bezier(.16,1,.3,1)">
+      <img ref="{{ imgRef }}" src="assets/hero-miux6.png" alt="" style="position:absolute;top:0;right:-4%;width:auto;height:100%;min-width:72%;object-fit:cover;object-position:62% 46%;filter:saturate(1.08) contrast(1.04) brightness(.94);-webkit-mask-image:radial-gradient(ellipse 62% 78% at 64% 50%,#000 38%,rgba(0,0,0,.55) 64%,transparent 92%);mask-image:radial-gradient(ellipse 62% 78% at 64% 50%,#000 38%,rgba(0,0,0,.55) 64%,transparent 92%);transform:scale(1.06);transition:transform 900ms cubic-bezier(.16,1,.3,1)">
       <div style="position:absolute;inset:0;background:linear-gradient(90deg,#08090d 0%,rgba(8,9,13,.96) 28%,rgba(8,9,13,.55) 48%,rgba(8,9,13,0) 70%)"></div>
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,9,13,.85) 0%,rgba(8,9,13,0) 18%,rgba(8,9,13,0) 74%,#08090d 100%)"></div>
       <div style="position:absolute;inset:0;background:radial-gradient(ellipse 40% 50% at 70% 56%,rgba(97,202,248,.14),transparent 70%),radial-gradient(ellipse 30% 40% at 84% 30%,rgba(232,161,184,.12),transparent 70%);mix-blend-mode:screen"></div>
@@ -158,13 +143,13 @@ a:hover{color:#e8a1b8}
       <svg viewBox="0 0 152 95" aria-hidden="true" style="width:26px;height:auto;flex:none;color:#61caf8"><use href="#miuxMiniM"></use></svg>
       <span style="white-space:nowrap">Miami, Florida</span>
     </div>
-    <h1 aria-label="MIUX Creative" style="margin:clamp(20px,2.4vw,32px) 0 0;font-family:'At Amiga',Impact,sans-serif;font-weight:400;color:#f5f2ed">
+    <div role="presentation" aria-label="MIUX Creative" style="margin:clamp(20px,2.4vw,32px) 0 0;font-family:'At Amiga',Impact,sans-serif;font-weight:400;color:#f5f2ed">
       <span data-fit-ref="" style="display:block;overflow:hidden;padding-top:.04em;font-size:clamp(96px,11.6vw,212px);line-height:.8;letter-spacing:-.01em"><span data-drop="" style="display:inline-block">MIUX</span></span>
       <span data-fit="" style="display:block;overflow:hidden;padding-top:.06em;font-size:clamp(46px,5.6vw,102px);line-height:.9;letter-spacing:.06em"><span data-drop="" style="display:inline-block">CREATIVE</span></span>
-    </h1>
+    </div>
     <p data-rise="" data-fit="" style="margin:clamp(18px,2vw,28px) 0 0;font:300 italic clamp(40px,4.4vw,78px)/1.05 'PP Eiko','Instrument Serif',serif;letter-spacing:-.02em"><span style="display:inline-block;padding:.04em .22em .14em .04em;margin:-.04em -.18em -.14em -.04em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">Available for selected projects.</span></p>
     <div data-rise="" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(28px,3vw,40px);pointer-events:auto">
-      <a href="#log-06" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:15px 22px;border-radius:0;background:#61caf8;color:#08090d;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#e8a1b8;color:#08090d;transform:translateY(-2px)" style-focus="outline:1px solid #e8a1b8;outline-offset:4px">Make your move ↗</a>
+      <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:15px 22px;border-radius:0;background:#61caf8;color:#08090d;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#e8a1b8;color:#08090d;transform:translateY(-2px)" style-focus="outline:1px solid #e8a1b8;outline-offset:4px">Tell me what you're building ↗</a>
       <a href="#log-01" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:14px 21px;border-radius:0;border:1px solid #61caf8;color:#61caf8;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#61caf8;color:#121314;transform:translateY(-2px)" style-focus="outline:1px solid #e8a1b8;outline-offset:4px">Read the log ↓</a>
     </div>
   </div>
@@ -191,14 +176,14 @@ a:hover{color:#e8a1b8}
         <svg viewBox="0 0 152 95" aria-hidden="true" style="width:26px;height:auto;flex:none;color:#61caf8"><use href="#miuxMiniM"></use></svg>
         <span style="white-space:nowrap">Miami, Florida · working across time zones</span>
       </div>
-      <h1 aria-label="MIUX Creative" style="margin:clamp(20px,2.4vw,32px) 0 0;font-family:'At Amiga',Impact,sans-serif;font-weight:400;color:#f5f2ed">
+      <div role="presentation" aria-label="MIUX Creative" style="margin:clamp(20px,2.4vw,32px) 0 0;font-family:'At Amiga',Impact,sans-serif;font-weight:400;color:#f5f2ed">
         <span data-fit-ref="" style="display:block;overflow:hidden;padding-top:.04em;font-size:clamp(96px,11.6vw,212px);line-height:.8;letter-spacing:-.01em"><span data-drop="" style="display:inline-block">MIUX</span></span>
         <span data-fit="" style="display:block;overflow:hidden;padding-top:.06em;font-size:clamp(46px,5.6vw,102px);line-height:.9;letter-spacing:.06em"><span data-drop="" style="display:inline-block">CREATIVE</span></span>
-      </h1>
+      </div>
       <p data-rise="" style="margin:clamp(24px,2.6vw,36px) 0 0;color:#f5f2ed;font-size:clamp(17px,1.5vw,22px);line-height:1.3">Freelancing since 2006 · <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span> established 2020</p>
       <p data-rise="" data-fit="" style="margin:6px 0 0;font:300 italic clamp(40px,4.8vw,84px)/1.05 'PP Eiko','Instrument Serif',serif;letter-spacing:-.02em"><span style="display:inline-block;padding:.04em .22em .14em .04em;margin:-.04em -.18em -.14em -.04em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">Available for selected projects.</span></p>
       <div data-rise="" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(28px,3vw,40px);pointer-events:auto">
-        <a href="#log-06" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:15px 22px;border-radius:0;background:#61caf8;color:#08090d;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#e8a1b8;color:#08090d;transform:translateY(-2px)" style-focus="outline:1px solid #e8a1b8;outline-offset:4px">Make your move ↗</a>
+        <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:15px 22px;border-radius:0;background:#61caf8;color:#08090d;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#e8a1b8;color:#08090d;transform:translateY(-2px)" style-focus="outline:1px solid #e8a1b8;outline-offset:4px">Tell me what you're building ↗</a>
         <a href="#log-01" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:14px 21px;border-radius:0;border:1px solid #61caf8;color:#61caf8;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="background:#61caf8;color:#121314;transform:translateY(-2px)" style-focus="outline:1px solid #e8a1b8;outline-offset:4px">Read the log ↓</a>
       </div>
     </div>
@@ -210,22 +195,23 @@ a:hover{color:#e8a1b8}
 </section>
 </sc-if>
 
-<section id="log-01" data-screen-label="01 Protocol" style="position:relative;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.15);background:#121314">
+<section id="log-01" data-screen-label="01 Protocol" style="position:relative;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.12);background:#08090d">
   <span aria-hidden="true" style="position:absolute;top:48px;right:clamp(22px,5vw,74px);font:400 clamp(120px,16vw,260px)/1 'At Amiga',Impact,sans-serif;color:rgba(97,202,248,.05);pointer-events:none;user-select:none">01</span>
+  
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(48px,6vw,80px)">
     <div>
       <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">
-        <span style="color:#e8a1b8">Log 01 / Protocol</span><span style="color:#9699a4">T+00:01 · what MIUX does</span>
+        <span style="color:#e8a1b8">Log 01 / Protocol</span><span style="color:#9699a4">what MIUX does</span>
       </div>
-      <h2 data-reveal="1" style="margin:24px 0 0;font-size:clamp(40px,5vw,84px);font-weight:400;line-height:.9;letter-spacing:-.05em">What <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span> <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">does.</em></h2>
+      <h2 data-reveal="1" style="margin:24px 0 0;font-size:clamp(48px,7.4vw,118px);font-weight:400;line-height:.88;letter-spacing:-.05em">What <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">MIUX</span> <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;color:#f5f2ed">does.</em></h2>
     </div>
-    <p data-reveal="2" style="max-width:40ch;margin:0;color:#9699a4;font-size:clamp(16px,1.4vw,19px);line-height:1.5">Start with a brand, a website, a product or a workflow. Whichever you pick is built as the foundation of a system, so the next piece is faster to make, easier to share, and the company starts to look and work like one team.</p>
   </div>
   <div style="border-top:1px solid rgba(245,242,237,.15)">
     <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
       <article data-reveal="{{ $index }}" onPointerEnter="{{ s.hover }}" onPointerLeave="{{ s.leave }}" style="position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:20px 40px;padding:clamp(28px,4vw,52px) 0;border-bottom:1px solid rgba(245,242,237,.15)">
         <a href="{{ s.href }}" aria-label="{{ s.label }}" onFocus="{{ s.hover }}" onBlur="{{ s.leave }}" style="position:absolute;inset:0;z-index:0" style-focus="outline:1px solid #e8a1b8;outline-offset:4px"></a>
         <span style="position:relative;z-index:1;pointer-events:none;flex:0 0 64px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#61caf8">{{ s.index }}</span>
+        <span aria-hidden="true" style="position:relative;z-index:1;pointer-events:none;flex:0 0 auto;display:block;width:clamp(84px,10vw,150px);aspect-ratio:3/2;overflow:hidden;background:#121314;border:1px solid rgba(245,242,237,.16)"><img data-src="{{ s.thumbA }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:{{ s.thumbT }};transition:transform 900ms cubic-bezier(.18,.8,.22,1)"><img data-src="{{ s.thumbB }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ s.thumbOp }};transition:opacity 420ms ease"></span>
         <h3 style="position:relative;z-index:1;flex:1 1 520px;min-width:0;margin:0;font-weight:400">{{ s.combo }}</h3>
         <div style="position:relative;z-index:1;pointer-events:none;flex:1 1 260px;max-width:420px">
           <p style="margin:0;color:#c8c9ce;font-size:16px;line-height:1.5;text-wrap:pretty">{{ s.desc }}</p>
@@ -243,328 +229,248 @@ a:hover{color:#e8a1b8}
       </article>
     </sc-for>
   </div>
-  <p style="display:flex;align-items:center;gap:10px;margin:24px 0 0;color:#a3a7b3;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><i style="width:7px;height:7px;background:#61caf8;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)"></i>Hover or tap a name. Tidy at rest, weird when poked.</p>
+  <p data-reveal="2" style="max-width:52ch;margin:clamp(32px,4vw,48px) 0 0;color:#9699a4;font-size:clamp(16px,1.4vw,19px);line-height:1.5;text-wrap:pretty">Start with a brand, a website, a product or a workflow. Whichever you pick is built as the foundation of a system, so the next piece is faster to make, easier to share, and the company starts to look and work like one team.</p>
 </section>
 
-<section id="log-02" data-screen-label="02 Talking shop" style="position:relative;overflow:hidden;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.15)">
+<section id="log-02" data-screen-label="02 Case files" ref="{{ pSecRef }}" style="position:relative;overflow:hidden;padding:clamp(72px,8vw,120px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.12);background:#08090d">
   <span aria-hidden="true" style="position:absolute;top:48px;right:clamp(22px,5vw,74px);font:400 clamp(120px,16vw,260px)/1 'At Amiga',Impact,sans-serif;color:rgba(97,202,248,.05);pointer-events:none;user-select:none">02</span>
+  <div style="position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+    <div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#e8a1b8">Log 02 / Case files</span><span style="color:#9699a4">files declassified</span></div>
+      <h2 style="margin:24px 0 0;font-size:clamp(48px,7.4vw,118px);font-weight:400;line-height:.88;letter-spacing:-.05em">Case files, <em style="font-family:'PP Eiko',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">open.</em></h2>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px">
+      <button type="button" onClick="{{ pprev }}" aria-label="Previous file" style="display:grid;place-items:center;width:50px;height:50px;border:1px solid rgba(245,242,237,.5);border-radius:0;background:none;color:#f5f2ed;font-size:20px;cursor:pointer" style-hover="background:#61caf8;border-color:#61caf8;color:#08090d">←</button>
+      <span style="min-width:72px;text-align:center;font:400 11px/1 'PP Neue Montreal Mono',monospace;letter-spacing:.12em;color:#9699a4">{{ pcount }}</span>
+      <button type="button" onClick="{{ pnext }}" aria-label="Next file" style="display:grid;place-items:center;width:50px;height:50px;border:1px solid rgba(245,242,237,.5);border-radius:0;background:none;color:#f5f2ed;font-size:20px;cursor:pointer" style-hover="background:#61caf8;border-color:#61caf8;color:#08090d">→</button>
+      <a href="work.html" style="display:inline-flex;align-items:center;gap:24px;height:50px;padding:0 22px;border:1px solid rgba(245,242,237,.5);border-radius:0;color:#f5f2ed;font:400 11px/1 'PP Neue Montreal Mono',monospace;letter-spacing:.1em;text-transform:uppercase" style-hover="border-color:#61caf8;color:#61caf8">All case files <span>↗</span></a>
+    </div>
+  </div>
+
+  <div role="tablist" aria-label="Case files" style="position:relative;display:flex;flex-wrap:wrap;gap:6px 28px;margin-top:clamp(24px,3vw,40px)">
+    <sc-for list="{{ ptabs }}" as="t" hint-placeholder-count="4">
+      <button type="button" role="tab" aria-selected="{{ t.sel }}" onClick="{{ t.pick }}" style="display:flex;align-items:baseline;gap:10px;padding:8px 0;border:0;border-bottom:1px solid {{ t.line }};border-radius:0;background:none;color:{{ t.fg }};font:400 11px/1.3 'PP Neue Montreal Mono',monospace;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap;cursor:pointer;transition:color 300ms ease,border-color 300ms ease" style-hover="color:#f5f2ed"><b style="font-weight:400;color:{{ t.ac }}">{{ t.n }}</b><span>{{ t.name }}</span></button>
+    </sc-for>
+  </div>
+
+  <sc-if value="{{ pbig }}" hint-placeholder-val="{{ true }}">
+  <div style="position:relative;container-type:inline-size;width:min(100%,max(640px,calc((100vh - 340px) * 1.63)));margin:clamp(20px,2.4vw,32px) auto 0">
+    <div style="position:relative;width:100%;aspect-ratio:16/9.8">
+      <sc-for list="{{ pfiles }}" as="f" hint-placeholder-count="1">
+        <a href="{{ f.href }}" aria-label="{{ f.label }}" aria-hidden="{{ f.hide }}" tabindex="{{ f.tab }}" onPointerEnter="{{ f.enter }}" onPointerLeave="{{ f.leave }}" style="position:absolute;inset:0;isolation:isolate;display:block;color:#f5f2ed;pointer-events:{{ f.pe }}" style-focus="outline:1px solid #e8a1b8;outline-offset:12px">
+
+          <div aria-hidden="true" style="position:absolute;left:1cqw;top:15.5cqw;width:91cqw;height:44cqw;z-index:1;transform:{{ f.backT }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1) {{ f.dl0 }},opacity 520ms ease {{ f.dl0 }};background-color:#1f1c19;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .85 0 0 0 0 .78 0 0 0 0 .66 0 0 0 .11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E&quot;),linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.45));clip-path:polygon(0 6%,58% 6%,61% 0,82% 0,85% 6%,100% 6%,100% 100%,0 100%);box-shadow:inset 0 0 0 1px rgba(220,200,170,.08)"></div>
+
+          <div aria-hidden="true" style="position:absolute;left:44cqw;top:9.5cqw;width:46cqw;height:38cqw;z-index:2;background:#cfc4ab;transform:{{ f.sh1T }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1) {{ f.dl1 }},opacity 520ms ease {{ f.dl1 }};box-shadow:0 .6cqw 2cqw rgba(0,0,0,.5)"></div>
+          <div aria-hidden="true" style="position:absolute;left:47cqw;top:10.5cqw;width:44cqw;height:38cqw;z-index:2;background:#ddd3bd;transform:{{ f.sh2T }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1) {{ f.dl1 }},opacity 520ms ease {{ f.dl1 }};box-shadow:0 .6cqw 2cqw rgba(0,0,0,.45)"></div>
+
+          <div aria-hidden="true" style="position:absolute;left:50cqw;top:12cqw;width:45cqw;height:40cqw;z-index:3;transform:{{ f.sepT }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1) {{ f.dl2 }},opacity 520ms ease {{ f.dl2 }};filter:drop-shadow(0 .5cqw 1.4cqw rgba(0,0,0,.5))">
+            <div style="position:absolute;right:-2.7cqw;top:5cqw;display:flex;align-items:center;justify-content:center;width:2.8cqw;height:18cqw;background:{{ f.sepC }};clip-path:polygon(0 0,100% 7%,100% 93%,0 100%);color:#08090d"><span style="writing-mode:vertical-rl;white-space:nowrap;font:400 max(9px,.85cqw)/1 'PP Neue Montreal Mono',monospace;letter-spacing:.14em;text-transform:uppercase">{{ f.name }}</span></div>
+            <div style="position:absolute;inset:0;background-color:{{ f.sepC }};background-image:linear-gradient(180deg,rgba(255,255,255,.1),rgba(0,0,0,.18))"></div>
+          </div>
+
+          <div aria-hidden="true" style="position:absolute;left:4cqw;top:1.5cqw;width:52cqw;height:42cqw;z-index:4;padding:2cqw 2.4cqw 2cqw 4cqw;color:#2b2723;font:400 max(9px,.95cqw)/1.9cqw 'PP Neue Montreal Mono',monospace;background-color:#ece3cf;background-image:linear-gradient(90deg,transparent 2.8cqw,rgba(200,80,90,.45) 2.8cqw,rgba(200,80,90,.45) calc(2.8cqw + 1px),transparent calc(2.8cqw + 1px)),repeating-linear-gradient(180deg,transparent 0 calc(1.9cqw - 1px),rgba(70,110,150,.22) calc(1.9cqw - 1px) 1.9cqw),radial-gradient(ellipse at 85% 15%,rgba(150,110,50,.18),transparent 45%),url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .28 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);background-position:0 0,0 2cqw,0 0,0 0;box-shadow:0 1cqw 2.4cqw rgba(0,0,0,.55),inset 0 0 3cqw rgba(120,90,40,.16);transform:{{ f.briefT }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1) {{ f.dl3 }},opacity 520ms ease {{ f.dl3 }}">
+            <svg viewBox="0 0 24 56" style="position:absolute;right:5cqw;top:-1.8cqw;width:1.6cqw;height:auto;overflow:visible"><path d="M7 14v30a6 6 0 0 0 12 0V9a4.5 4.5 0 0 0-9 0v31" fill="none" stroke="#a9adb3" stroke-width="2.4" stroke-linecap="round"></path></svg>
+            <div style="display:flex;justify-content:space-between;gap:1cqw;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap"><span>Project brief</span><span style="margin-right:4cqw">{{ f.code }}</span></div>
+            <div style="display:grid;grid-template-columns:5.4cqw minmax(0,1fr);gap:0 .8cqw;margin-top:1.9cqw">
+              <span style="color:#6b645a">Client</span><span>/ {{ f.client }}</span>
+              <span style="color:#6b645a">Focus</span><span>/ {{ f.focus }}</span>
+              <span style="color:#6b645a">Status</span><span>/ {{ f.status }}</span>
+              <span style="color:#6b645a">Year</span><span>/ {{ f.year }}</span>
+            </div>
+            <div style="margin-top:1.9cqw;color:#6b645a;letter-spacing:.12em;text-transform:uppercase">The ask</div>
+            <p style="max-width:40cqw;margin:0;text-wrap:pretty">{{ f.brief }}</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;max-width:40cqw;margin-top:1.9cqw">
+              <span style="font-family:'PP Eiko',serif;font-style:italic;font-size:1.8cqw;color:#2a4a6b">Miu</span>
+              <span style="padding:.4cqw .7cqw;border:max(1.5px,.12cqw) solid #a8436b;color:#a8436b;letter-spacing:.16em;text-transform:uppercase;transform:rotate(-7deg)">Approved</span>
+            </div>
+          </div>
+
+          <div aria-hidden="true" style="position:absolute;left:65cqw;top:4.5cqw;width:27cqw;height:17.5cqw;z-index:5;overflow:hidden;border-radius:.3cqw;box-shadow:0 .8cqw 2.4cqw rgba(0,0,0,.6),inset 0 0 0 1px rgba(0,0,0,.4);transform:{{ f.p3T }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1) {{ f.dl4 }},opacity 520ms ease {{ f.dl4 }}"><img data-src="{{ f.img3 }}" alt="" style="width:100%;height:100%;object-fit:cover;filter:{{ f.imgF }};transition:filter 700ms ease"></div>
+          <div aria-hidden="true" style="position:absolute;left:60cqw;top:7cqw;width:27cqw;height:17.5cqw;z-index:6;overflow:hidden;border-radius:.3cqw;box-shadow:0 .8cqw 2.4cqw rgba(0,0,0,.6),inset 0 0 0 1px rgba(0,0,0,.4);transform:{{ f.p2T }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1) {{ f.dl4 }},opacity 520ms ease {{ f.dl4 }}"><img data-src="{{ f.img2 }}" alt="" style="width:100%;height:100%;object-fit:cover;filter:{{ f.imgF }};transition:filter 700ms ease"></div>
+          <div aria-hidden="true" style="position:absolute;left:21cqw;top:11cqw;width:72cqw;height:47cqw;z-index:7;overflow:hidden;border-radius:.35cqw;box-shadow:0 1.2cqw 3.4cqw rgba(0,0,0,.7),0 .2cqw .4cqw rgba(0,0,0,.5);transform:{{ f.p1T }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1) {{ f.dl5 }},opacity 520ms ease {{ f.dl5 }}">
+            <img data-src="{{ f.img }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:{{ f.imgF }};transform:{{ f.imgS }};transition:filter 700ms ease,transform 1400ms cubic-bezier(.18,.8,.22,1)">
+            <span style="position:absolute;inset:0;opacity:{{ f.ageOp }};transition:opacity 700ms ease;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.3' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .6 0 0 0 0 .55 0 0 0 0 .45 0 0 0 .45 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E&quot;);mix-blend-mode:overlay"></span>
+            <span style="position:absolute;inset:0;box-shadow:inset 0 0 6cqw rgba(30,18,6,.55);background:linear-gradient(90deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 22%),linear-gradient(160deg,rgba(255,240,215,.08),rgba(0,0,0,0) 40%)"></span>
+          </div>
+
+          <div style="position:absolute;left:0;top:21.5cqw;width:44cqw;height:38cqw;z-index:8;transform:{{ f.folderT }};transform-origin:0 100%;opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1) {{ f.dl6 }},opacity 520ms ease {{ f.dl6 }};filter:drop-shadow(1.4cqw 1.6cqw 2.4cqw rgba(0,0,0,.7))">
+            <div style="position:absolute;inset:0;clip-path:polygon(0 8%,5% 8%,8% 0,38% 0,41% 8%,100% 8%,100% 100%,0 100%);background-color:#2a2622;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .85 0 0 0 0 .78 0 0 0 0 .66 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E&quot;),radial-gradient(ellipse at 78% 70%,rgba(150,120,80,.14),transparent 38%),radial-gradient(ellipse at 20% 30%,rgba(0,0,0,.3),transparent 45%),linear-gradient(165deg,rgba(255,240,210,.06),rgba(0,0,0,.3));box-shadow:inset 0 0 0 1px rgba(220,200,170,.1),inset 0 0 4cqw rgba(0,0,0,.55),inset -.3cqw 0 0 rgba(220,200,170,.08)"></div>
+            <span style="position:absolute;left:8%;top:0;width:30%;height:8%;display:flex;align-items:center;justify-content:center;font:400 max(10px,1cqw)/1 'PP Neue Montreal Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#61caf8">File {{ f.n }}</span>
+            <div style="position:relative;display:flex;flex-direction:column;height:100%;padding:calc(8% + 2cqw) 3cqw 2.6cqw">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1cqw">
+                <span></span>
+                <span style="padding:.6cqw .9cqw;border:max(1.5px,.12cqw) solid #e8a1b8;color:#e8a1b8;font:400 max(10px,1.05cqw)/1 'PP Neue Montreal Mono',monospace;letter-spacing:.16em;text-transform:uppercase;transform:rotate({{ f.rot }});opacity:.85;white-space:nowrap">{{ f.stamp }}</span>
+              </div>
+              <div style="margin-top:auto">
+                <span style="display:block;font-size:5.4cqw;font-weight:400;line-height:.95;letter-spacing:-.04em">{{ f.l1 }}<br><em style="font-family:'PP Eiko',serif;font-weight:300">{{ f.l2 }}</em></span>
+                <div style="height:1px;margin:1.6cqw 0 1.3cqw;background:rgba(245,242,237,.18)"></div>
+                <div style="display:flex;flex-wrap:wrap;gap:.7cqw">
+                  <sc-for list="{{ f.tags }}" as="t" hint-placeholder-count="3"><span style="padding:.6cqw .8cqw;border:1px solid rgba(245,242,237,.35);font:400 max(9px,.85cqw)/1 'PP Neue Montreal Mono',monospace;letter-spacing:.1em;text-transform:uppercase">{{ t }}</span></sc-for>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+  <sc-if value="{{ psmall }}" hint-placeholder-val="{{ false }}">
+  <div style="position:relative;container-type:inline-size;margin-top:24px">
+    <div style="position:relative;width:100%;aspect-ratio:10/17">
+      <sc-for list="{{ pfiles }}" as="f" hint-placeholder-count="1">
+        <a href="{{ f.href }}" aria-label="{{ f.label }}" aria-hidden="{{ f.hide }}" tabindex="{{ f.tab }}" style="position:absolute;inset:0;isolation:isolate;display:block;color:#f5f2ed;pointer-events:{{ f.pe }}">
+          <div aria-hidden="true" style="position:absolute;left:8cqw;top:2cqw;width:78cqw;height:70cqw;z-index:1;padding:4cqw 5cqw;background:#ece3cf;color:#2b2723;font:400 3cqw/5cqw 'PP Neue Montreal Mono',monospace;background-image:repeating-linear-gradient(180deg,transparent 0 calc(5cqw - 1px),rgba(70,110,150,.22) calc(5cqw - 1px) 5cqw);box-shadow:0 2cqw 5cqw rgba(0,0,0,.55);transform:{{ f.mBriefT }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1),opacity 520ms ease">
+            <div style="display:flex;justify-content:space-between;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap"><span>Project brief</span><span>{{ f.code }}</span></div>
+            <div style="margin-top:2cqw">Client / {{ f.client }}</div>
+            <div>Focus / {{ f.focus }}</div>
+          </div>
+          <div aria-hidden="true" style="position:absolute;left:10cqw;top:12cqw;width:84cqw;height:120cqw;z-index:2;background:{{ f.sepC }};box-shadow:0 2cqw 4cqw rgba(0,0,0,.5);transform:{{ f.mSepT }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1),opacity 520ms ease"><div style="position:absolute;right:-5.6cqw;top:10cqw;display:flex;align-items:center;justify-content:center;width:5.8cqw;height:38cqw;background:{{ f.sepC }};clip-path:polygon(0 0,100% 7%,100% 93%,0 100%);color:#08090d"><span style="writing-mode:vertical-rl;white-space:nowrap;font:400 2.4cqw/1 'PP Neue Montreal Mono',monospace;letter-spacing:.14em;text-transform:uppercase">{{ f.name }}</span></div></div>
+          <div aria-hidden="true" style="position:absolute;left:8cqw;top:92cqw;width:80cqw;height:50cqw;z-index:3;overflow:hidden;border-radius:.6cqw;box-shadow:0 2cqw 5cqw rgba(0,0,0,.65);transform:{{ f.mP3T }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1),opacity 520ms ease"><img data-src="{{ f.img3 }}" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+          <div aria-hidden="true" style="position:absolute;left:12cqw;top:56cqw;width:80cqw;height:50cqw;z-index:4;overflow:hidden;border-radius:.6cqw;box-shadow:0 2cqw 5cqw rgba(0,0,0,.65);transform:{{ f.mP2T }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1),opacity 520ms ease"><img data-src="{{ f.img2 }}" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+          <div aria-hidden="true" style="position:absolute;left:4cqw;top:18cqw;width:88cqw;height:55cqw;z-index:5;overflow:hidden;border-radius:.6cqw;box-shadow:0 2cqw 5cqw rgba(0,0,0,.65);transform:{{ f.mP1T }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1),opacity 520ms ease"><img data-src="{{ f.img }}" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;left:0;bottom:0;width:100%;height:58cqw;z-index:6;transform:{{ f.mFolderT }};opacity:{{ f.lo }};transition:transform 820ms cubic-bezier(.18,.8,.22,1),opacity 520ms ease;filter:drop-shadow(0 -2cqw 4cqw rgba(0,0,0,.6))">
+            <div style="position:absolute;inset:0;clip-path:polygon(0 10%,5% 10%,8% 0,44% 0,47% 10%,100% 10%,100% 100%,0 100%);background-color:#2a2622;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='pm'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .85 0 0 0 0 .78 0 0 0 0 .66 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23pm)'/%3E%3C/svg%3E&quot;),linear-gradient(165deg,rgba(255,240,210,.06),rgba(0,0,0,.3));box-shadow:inset 0 0 0 1px rgba(220,200,170,.1),inset 0 0 8cqw rgba(0,0,0,.55)"></div>
+            <span style="position:absolute;left:8%;top:0;width:36%;height:10%;display:flex;align-items:center;justify-content:center;font:400 2.8cqw/1 'PP Neue Montreal Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#61caf8">File {{ f.n }}</span>
+            <div style="position:relative;display:flex;flex-direction:column;height:100%;padding:calc(10% + 5cqw) 6cqw 6cqw">
+              <span style="align-self:flex-end;padding:1.4cqw 2cqw;border:1.5px solid #e8a1b8;color:#e8a1b8;font:400 2.6cqw/1 'PP Neue Montreal Mono',monospace;letter-spacing:.16em;text-transform:uppercase;transform:rotate({{ f.rot }});white-space:nowrap">{{ f.stamp }}</span>
+              <div style="margin-top:auto">
+                <span style="display:block;font-size:11cqw;font-weight:400;line-height:.95;letter-spacing:-.04em">{{ f.l1 }}<br><em style="font-family:'PP Eiko',serif;font-weight:300">{{ f.l2 }}</em></span>
+                <div style="display:flex;flex-wrap:wrap;gap:1.6cqw;margin-top:4cqw"><sc-for list="{{ f.tags }}" as="t" hint-placeholder-count="3"><span style="padding:1.4cqw 2cqw;border:1px solid rgba(245,242,237,.35);font:400 2.4cqw/1 'PP Neue Montreal Mono',monospace;letter-spacing:.1em;text-transform:uppercase">{{ t }}</span></sc-for></div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+  <p style="position:relative;margin:clamp(28px,3vw,48px) 0 0;color:#7d808a;font:400 10px/1.6 'PP Neue Montreal Mono',monospace;letter-spacing:.12em;text-transform:uppercase">{{ phint }}</p>
+</section>
+
+<section id="log-03" data-screen-label="03 Blueprint" style="position:relative;overflow:hidden;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.12);background:#08090d">
+  <span aria-hidden="true" style="position:absolute;top:48px;right:clamp(22px,5vw,74px);font:400 clamp(120px,16vw,260px)/1 'At Amiga',Impact,sans-serif;color:rgba(97,202,248,.05);pointer-events:none;user-select:none">03</span>
   <div style="position:relative">
-    <div style="position:relative">
-    <div style="position:relative;z-index:1">
-    <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">
-      <span style="color:#e8a1b8">Log 02 / Talking shop</span><span style="color:#9699a4">T+00:02 · the brief, unpacked</span>
+    <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#e8a1b8">Log 03 / Blueprint</span><span style="color:#9699a4">brief in, system out</span></div>
+    <h2 data-reveal="1" style="margin:24px 0 0;font-size:clamp(48px,7.4vw,118px);font-weight:400;line-height:.88;letter-spacing:-.05em">Here's how <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">it actually goes.</em></h2>
+    <div data-reveal="2" style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:24px 48px;margin-top:clamp(24px,3vw,36px)">
+      <p style="max-width:44ch;margin:0;color:#c8c9ce;font-size:clamp(17px,1.5vw,21px);line-height:1.5">You see the plan before work starts and every piece as it's made. Nothing disappears into a black box for six weeks.</p>
+      <a href="process.html" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:15px 22px;border-radius:0;background:#61caf8;color:#08090d;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase" style-hover="background:#e8a1b8;color:#08090d">See the full Blueprint ↗</a>
     </div>
-    <h2 data-reveal="1" style="max-width:14ch;margin:24px 0 0;font-size:clamp(48px,7.4vw,118px);font-weight:400;line-height:.88;letter-spacing:-.05em;text-wrap:balance">First, <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">the real brief.</em></h2>
-    <p data-reveal="2" style="max-width:52ch;margin:36px 0 0;color:#c8c9ce;font-size:clamp(17px,1.55vw,22px);line-height:1.5;text-wrap:pretty"><span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span> starts with what you want, then what you need, what your team and stack can already do, and what can't change. It's a puzzle, and puzzles are where design gets good.</p>
-    </div>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,500px),1fr));gap:12px;margin-top:clamp(56px,7vw,96px)">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px">
-        <div data-reveal="0" style="display:flex;flex-direction:column;min-height:clamp(340px,30vw,440px);padding:clamp(24px,2.4vw,32px);background:#e8a1b8;color:#121314">
-          <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">01 / Brief</span>
-          <strong style="display:block;margin:clamp(40px,5vw,72px) 0 0;font-size:clamp(28px,2.5vw,40px);font-weight:400;line-height:.98;letter-spacing:-.045em;text-wrap:balance">Wants, needs,<br><em style="white-space:nowrap;font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;font-style:italic">non‑negotiables.</em></strong>
-          <p style="max-width:34ch;margin:auto 0 0;padding-top:32px;font:400 13px/1.6 'PP Neue Montreal Mono','IBM Plex Mono',monospace">What you asked for, what's missing, and the limits the work fits inside.</p>
-        </div>
-        <div data-reveal="1" style="display:flex;flex-direction:column;min-height:clamp(340px,30vw,440px);padding:clamp(24px,2.4vw,32px);background:#61caf8;color:#121314">
-          <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">02 / Fit</span>
-          <strong style="display:block;margin:clamp(40px,5vw,72px) 0 0;font-size:clamp(28px,2.5vw,40px);font-weight:400;line-height:.98;letter-spacing:-.045em;text-wrap:balance">Built for <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;font-style:italic">your business.</em></strong>
-          <p style="max-width:34ch;margin:auto 0 0;padding-top:32px;font:400 13px/1.6 'PP Neue Montreal Mono','IBM Plex Mono',monospace">Positioning and structure tested on your real content, team and deadlines.</p>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px">
-        <div data-reveal="2" style="display:flex;flex-direction:column;min-height:clamp(340px,30vw,440px);padding:clamp(24px,2.4vw,32px);background:#f2eee8;color:#121314">
-          <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">03 / Upgrade</span>
-          <strong style="display:block;margin:clamp(40px,5vw,72px) 0 0;font-size:clamp(28px,2.5vw,40px);font-weight:400;line-height:.98;letter-spacing:-.045em;text-wrap:balance">Squeeze, <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;font-style:italic">don't break.</em></strong>
-          <p style="max-width:34ch;margin:auto 0 0;padding-top:32px;font:400 13px/1.6 'PP Neue Montreal Mono','IBM Plex Mono',monospace"><span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#176b96">MIUX</span> upgrades what you already have so it runs leaner, then adds new tools where they pay off.</p>
-        </div>
-        <div data-reveal="3" style="display:flex;flex-direction:column;min-height:clamp(340px,30vw,440px);padding:clamp(24px,2.4vw,32px);background:#ffb4a2;color:#121314">
-          <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">04 / Ownership</span>
-          <strong style="display:block;margin:clamp(40px,5vw,72px) 0 0;font-size:clamp(28px,2.5vw,40px);font-weight:400;line-height:.98;letter-spacing:-.045em;text-wrap:balance">Foundations <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;font-style:italic">that travel.</em></strong>
-          <p style="max-width:34ch;margin:auto 0 0;padding-top:32px;font:400 13px/1.6 'PP Neue Montreal Mono','IBM Plex Mono',monospace">Systems your team can scale and evolve after the project wraps.</p>
-        </div>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,max(calc((100% - 36px) / 4),min(calc((100% - 12px) / 2),calc((880px - 100%) * 999)),calc((420px - 100%) * 999))),1fr));gap:12px;margin-top:clamp(56px,7vw,100px)">
+      <a href="process.html#run" data-reveal="0" data-cursor="BLUEPRINT" style="display:flex;flex-direction:column;min-height:clamp(340px,30vw,440px);padding:clamp(24px,2.4vw,32px);background:#e8a1b8;color:#121314;transition:transform 400ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)">
+        <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">01 / Listen</span>
+        <strong style="display:block;margin:clamp(40px,5vw,72px) 0 0;font-size:clamp(28px,2.5vw,40px);font-weight:400;line-height:.98;letter-spacing:-.045em;text-wrap:balance">Listen,<br><em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300">really listen.</em></strong>
+        <p style="max-width:34ch;margin:auto 0 0;padding-top:32px;font:400 13px/1.6 'PP Neue Montreal Mono','IBM Plex Mono',monospace">What you want, what you need, and the non-negotiables the work fits inside.</p>
+      </a>
+      <a href="process.html#run" data-reveal="1" data-cursor="BLUEPRINT" style="display:flex;flex-direction:column;min-height:clamp(340px,30vw,440px);padding:clamp(24px,2.4vw,32px);background:#61caf8;color:#121314;transition:transform 400ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)">
+        <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">02 / Map</span>
+        <strong style="display:block;margin:clamp(40px,5vw,72px) 0 0;font-size:clamp(28px,2.5vw,40px);font-weight:400;line-height:.98;letter-spacing:-.045em;text-wrap:balance">Map, so every<br><em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300">piece has a place.</em></strong>
+        <p style="max-width:34ch;margin:auto 0 0;padding-top:32px;font:400 13px/1.6 'PP Neue Montreal Mono','IBM Plex Mono',monospace">Positioning, structure, wireframes and prototypes, tested on your real content. <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:inherit">MIUX</span> audits what you have first. Squeeze, don't break.</p>
+      </a>
+      <a href="process.html#run" data-reveal="2" data-cursor="BLUEPRINT" style="display:flex;flex-direction:column;min-height:clamp(340px,30vw,440px);padding:clamp(24px,2.4vw,32px);background:#f2eee8;color:#121314;transition:transform 400ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)">
+        <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">03 / Build</span>
+        <strong style="display:block;margin:clamp(40px,5vw,72px) 0 0;font-size:clamp(28px,2.5vw,40px);font-weight:400;line-height:.98;letter-spacing:-.045em;text-wrap:balance">Build, design and<br><em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300">code at one desk.</em></strong>
+        <p style="max-width:34ch;margin:auto 0 0;padding-top:32px;font:400 13px/1.6 'PP Neue Montreal Mono','IBM Plex Mono',monospace">Your brand, site, product or workflow built in one place, so nothing gets lost in a handoff.</p>
+      </a>
+      <a href="process.html#run" data-reveal="3" data-cursor="BLUEPRINT" style="display:flex;flex-direction:column;min-height:clamp(340px,30vw,440px);padding:clamp(24px,2.4vw,32px);background:#ffb4a2;color:#121314;transition:transform 400ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)">
+        <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">04 / Hand over + Grow</span>
+        <strong style="display:block;margin:clamp(40px,5vw,72px) 0 0;font-size:clamp(28px,2.5vw,40px);font-weight:400;line-height:.98;letter-spacing:-.045em;text-wrap:balance">Foundations<br><em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300">that travel.</em></strong>
+        <p style="max-width:34ch;margin:auto 0 0;padding-top:32px;font:400 13px/1.6 'PP Neue Montreal Mono','IBM Plex Mono',monospace">The keys, the manual and the spare set. Then launch day brings the real data, and the system keeps evolving.</p>
+      </a>
     </div>
   </div>
 </section>
 
-<section id="log-03" data-screen-label="03 Blueprint" style="position:relative;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);background:#61caf8;color:#121314">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(48px,6vw,80px)">
-    <div>
-      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">
-        <span>Log 03 / Blueprint</span><span style="color:rgba(18,19,20,.65)">T+00:03 · five stages, one system</span>
-      </div>
-      <h2 data-reveal="1" style="margin:24px 0 0;font-size:clamp(48px,7.4vw,118px);font-weight:400;line-height:.88;letter-spacing:-.05em">Here's how <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300">it actually goes.</em></h2>
-    </div>
-    <div data-reveal="2" style="display:grid;gap:24px;justify-items:start">
-      <p style="max-width:40ch;margin:0;color:rgba(18,19,20,.72);font-size:clamp(16px,1.4vw,19px);line-height:1.5">You see the plan before work starts and every piece as it's made. Nothing disappears into a black box for six weeks.</p>
-      <a href="process.html" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:15px 22px;border-radius:0;background:#08090d;color:#f5f2ed;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease" style-hover="background:#e8a1b8;color:#08090d">See the full Blueprint ↗</a>
-    </div>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,max(150px,calc((100% - 4px) / 5))),1fr));gap:1px;background:rgba(18,19,20,.25);border:1px solid rgba(18,19,20,.25)">
-    <a href="process.html#run" data-reveal="0" data-cursor="BLUEPRINT" style="display:flex;flex-direction:column;min-height:clamp(280px,24vw,340px);padding:clamp(22px,2.4vw,32px);background:#61caf8;color:#121314;transition:background 300ms cubic-bezier(.18,.8,.22,1),color 300ms ease" style-hover="background:#08090d;color:#f5f2ed">
-      <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;opacity:.72">Before any design</span>
-      <strong style="margin:clamp(28px,3vw,44px) 0 0;font:400 clamp(56px,5vw,84px)/.75 'At Amiga',Impact,sans-serif;letter-spacing:0">01</strong>
-      <h3 style="margin:auto 0 0;padding-top:28px;white-space:nowrap;font-size:clamp(24px,2.2vw,36px);font-weight:400;line-height:1;letter-spacing:-.03em">Listen</h3>
-      <p style="min-height:4.35em;margin:10px 0 0;font-size:15px;line-height:1.45;opacity:.82;text-wrap:pretty">Everything on the table. Even the weird stuff.</p>
-    </a>
-    <a href="process.html#run" data-reveal="1" data-cursor="BLUEPRINT" style="display:flex;flex-direction:column;min-height:clamp(280px,24vw,340px);padding:clamp(22px,2.4vw,32px);background:#61caf8;color:#121314;transition:background 300ms cubic-bezier(.18,.8,.22,1),color 300ms ease" style-hover="background:#08090d;color:#f5f2ed">
-      <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;opacity:.72">Before any build</span>
-      <strong style="margin:clamp(28px,3vw,44px) 0 0;font:400 clamp(56px,5vw,84px)/.75 'At Amiga',Impact,sans-serif;letter-spacing:0">02</strong>
-      <h3 style="margin:auto 0 0;padding-top:28px;white-space:nowrap;font-size:clamp(24px,2.2vw,36px);font-weight:400;line-height:1;letter-spacing:-.03em">Map</h3>
-      <p style="min-height:4.35em;margin:10px 0 0;font-size:15px;line-height:1.45;opacity:.82;text-wrap:pretty">Every piece gets a place.</p>
-    </a>
-    <a href="process.html#run" data-reveal="2" data-cursor="BLUEPRINT" style="display:flex;flex-direction:column;min-height:clamp(280px,24vw,340px);padding:clamp(22px,2.4vw,32px);background:#61caf8;color:#121314;transition:background 300ms cubic-bezier(.18,.8,.22,1),color 300ms ease" style-hover="background:#08090d;color:#f5f2ed">
-      <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;opacity:.72">Most of the time</span>
-      <strong style="margin:clamp(28px,3vw,44px) 0 0;font:400 clamp(56px,5vw,84px)/.75 'At Amiga',Impact,sans-serif;letter-spacing:0">03</strong>
-      <h3 style="margin:auto 0 0;padding-top:28px;white-space:nowrap;font-size:clamp(24px,2.2vw,36px);font-weight:400;line-height:1;letter-spacing:-.03em">Build</h3>
-      <p style="min-height:4.35em;margin:10px 0 0;font-size:15px;line-height:1.45;opacity:.82;text-wrap:pretty">Design and code at the same desk.</p>
-    </a>
-    <a href="process.html#run" data-reveal="3" data-cursor="BLUEPRINT" style="display:flex;flex-direction:column;min-height:clamp(280px,24vw,340px);padding:clamp(22px,2.4vw,32px);background:#61caf8;color:#121314;transition:background 300ms cubic-bezier(.18,.8,.22,1),color 300ms ease" style-hover="background:#08090d;color:#f5f2ed">
-      <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;opacity:.72">Launch</span>
-      <strong style="margin:clamp(28px,3vw,44px) 0 0;font:400 clamp(56px,5vw,84px)/.75 'At Amiga',Impact,sans-serif;letter-spacing:0">04</strong>
-      <h3 style="margin:auto 0 0;padding-top:28px;white-space:nowrap;font-size:clamp(24px,2.2vw,36px);font-weight:400;line-height:1;letter-spacing:-.03em">Hand over</h3>
-      <p style="min-height:4.35em;margin:10px 0 0;font-size:15px;line-height:1.45;opacity:.82;text-wrap:pretty">The keys, the manual and the spare set.</p>
-    </a>
-    <a href="process.html#run" data-reveal="0" data-cursor="BLUEPRINT" style="display:flex;flex-direction:column;min-height:clamp(280px,24vw,340px);padding:clamp(22px,2.4vw,32px);background:#61caf8;color:#121314;transition:background 300ms cubic-bezier(.18,.8,.22,1),color 300ms ease" style-hover="background:#08090d;color:#f5f2ed">
-      <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;opacity:.72">After launch</span>
-      <strong style="margin:clamp(28px,3vw,44px) 0 0;font:400 clamp(56px,5vw,84px)/.75 'At Amiga',Impact,sans-serif;letter-spacing:0">05</strong>
-      <h3 style="margin:auto 0 0;padding-top:28px;white-space:nowrap;font-size:clamp(24px,2.2vw,36px);font-weight:400;line-height:1;letter-spacing:-.03em">Grow</h3>
-      <p style="min-height:4.35em;margin:10px 0 0;font-size:15px;line-height:1.45;opacity:.82;text-wrap:pretty">Launch day is when the real data shows up.</p>
-    </a>
-  </div>
-</section>
-
-<section id="log-04" data-screen-label="04 Receipts" style="position:relative;overflow:hidden;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.15)">
+<section id="log-04" data-screen-label="04 Receipts" ref="{{ rcRef }}" style="position:relative;overflow:hidden;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.12);background:#08090d">
   <span aria-hidden="true" style="position:absolute;top:48px;right:clamp(22px,5vw,74px);font:400 clamp(120px,16vw,260px)/1 'At Amiga',Impact,sans-serif;color:rgba(97,202,248,.05);pointer-events:none;user-select:none">04</span>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(56px,7vw,96px)">
+  
+  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(48px,7vw,120px);align-items:start">
     <div>
-      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">
-        <span style="color:#e8a1b8">Log 04 / Receipts</span><span style="color:#9699a4">T+00:04 · printing… please hold</span>
-      </div>
+      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#e8a1b8">Log 04 / Receipts</span><span style="color:#9699a4">printing… please hold</span></div>
       <h2 data-reveal="1" style="margin:24px 0 0;font-size:clamp(48px,7.4vw,118px);font-weight:400;line-height:.88;letter-spacing:-.05em">Twenty years, <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">itemized.</em></h2>
-    </div>
-    <p data-reveal="2" style="max-width:40ch;margin:0;color:#9699a4;font-size:clamp(16px,1.4vw,19px);line-height:1.5">Every project gets logged in the <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span> knowledge vault, the same AI system I build for clients. Here's the total so far. No returns, no exchanges, plenty of repeat customers.</p>
-  </div>
-  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(56px,7vw,120px);align-items:center">
-    <div data-reveal="1" style="justify-self:center;width:min(100%,440px);transform:rotate(-1.5deg);transition:transform 600ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:rotate(0deg) translateY(-6px)">
-      <article aria-label="MIUX receipt" style="padding:44px clamp(24px,3vw,40px) 48px;background:#f2eee8;color:#121314;font:400 12px/1.5 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.04em;-webkit-mask:radial-gradient(circle at 8px 0,transparent 6px,#000 6.5px) top/16px 51% repeat-x,radial-gradient(circle at 8px 100%,transparent 6px,#000 6.5px) bottom/16px 51% repeat-x;mask:radial-gradient(circle at 8px 0,transparent 6px,#000 6.5px) top/16px 51% repeat-x,radial-gradient(circle at 8px 100%,transparent 6px,#000 6.5px) bottom/16px 51% repeat-x;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))">
-        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center">
-          <svg viewBox="0 0 152 95" aria-hidden="true" style="display:block;width:44px;height:auto;color:#121314"><use href="#miuxMiniM"></use></svg>
-          <span style="font:400 26px/1 'At Amiga',Impact,sans-serif;letter-spacing:-.06em">MIU<i style="color:#a8436b;font-style:normal">X</i></span>
-          <span style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#55565c">Creative studio · Miami, FL</span>
+      <p data-reveal="2" style="max-width:40ch;margin:28px 0 0;color:#9699a4;font-size:clamp(16px,1.4vw,19px);line-height:1.5">No returns, no exchanges, plenty of repeat customers.</p>
+      <button type="button" onClick="{{ rcReprint }}" style="display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:14px 20px;border:1px solid #61caf8;border-radius:0;background:none;color:#61caf8;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;cursor:pointer" style-hover="background:#61caf8;color:#08090d">Print another ↻</button>
+      <div data-reveal="2" style="container-type:inline-size;margin-top:clamp(48px,6vw,80px)">
+        <div style="display:flex;flex-wrap:wrap;gap:6px 20px;margin-bottom:18px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#61caf8">■ Projects by type</span><span style="color:#e8a1b8">■ Brands by industry</span></div>
+        <div style="--w:clamp(104px,calc(100cqw / 3.25),150px);--h:calc(var(--w) * .8913);position:relative;width:calc(var(--w) * 3.25);height:calc(var(--h) * 2.5)">
+        <div style="position:absolute;left:calc(var(--w) * 0.00);top:calc(var(--h) * 0);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:#61caf8;transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)"><div style="position:absolute;inset:0;clip-path:url(#miuxHex);background:#61caf8;color:#121314;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 20%;text-align:center"><strong style="font:400 calc(var(--w) * .27)/.85 'At Amiga',Impact,sans-serif">52</strong><span style="font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;">Digital experiences</span></div></div>
+        <div style="position:absolute;left:calc(var(--w) * 0.75);top:calc(var(--h) * .5);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.55),rgba(232,161,184,.45));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)"><div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 20%;text-align:center"><strong style="font:400 calc(var(--w) * .27)/.85 'At Amiga',Impact,sans-serif">51</strong><span style="font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#9699a4">Branding</span></div></div>
+        <div style="position:absolute;left:calc(var(--w) * 1.50);top:calc(var(--h) * 0);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.55),rgba(232,161,184,.45));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)"><div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 20%;text-align:center"><strong style="font:400 calc(var(--w) * .27)/.85 'At Amiga',Impact,sans-serif">48</strong><span style="font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#9699a4">Graphic design</span></div></div>
+        <div style="position:absolute;left:calc(var(--w) * 2.25);top:calc(var(--h) * .5);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.55),rgba(232,161,184,.45));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)"><div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 20%;text-align:center"><strong style="font:400 calc(var(--w) * .27)/.85 'At Amiga',Impact,sans-serif">27</strong><span style="font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#9699a4">Product</span></div></div>
+        <div style="position:absolute;left:calc(var(--w) * 0.00);top:calc(var(--h) * 1);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:#e8a1b8;transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)"><div style="position:absolute;inset:0;clip-path:url(#miuxHex);background:#e8a1b8;color:#121314;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 20%;text-align:center"><strong style="font:400 calc(var(--w) * .27)/.85 'At Amiga',Impact,sans-serif">11</strong><span style="font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;">Professional services</span></div></div>
+        <div style="position:absolute;left:calc(var(--w) * 0.75);top:calc(var(--h) * 1.5);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.55),rgba(232,161,184,.45));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)"><div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 20%;text-align:center"><strong style="font:400 calc(var(--w) * .27)/.85 'At Amiga',Impact,sans-serif">10</strong><span style="font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#9699a4">Hospitality</span></div></div>
+        <div style="position:absolute;left:calc(var(--w) * 1.50);top:calc(var(--h) * 1);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.55),rgba(232,161,184,.45));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)"><div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 20%;text-align:center"><strong style="font:400 calc(var(--w) * .27)/.85 'At Amiga',Impact,sans-serif">9</strong><span style="font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#9699a4">Fitness & wellness</span></div></div>
+        <div style="position:absolute;left:calc(var(--w) * 2.25);top:calc(var(--h) * 1.5);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.55),rgba(232,161,184,.45));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-6px)"><div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 20%;text-align:center"><strong style="font:400 calc(var(--w) * .27)/.85 'At Amiga',Impact,sans-serif">9</strong><span style="font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#9699a4">Food & beverage</span></div></div>
         </div>
-        <div aria-hidden="true" style="height:0;margin:18px 0;border-top:1.5px dashed rgba(18,19,20,.45)"></div>
-        <div style="display:grid;gap:4px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#55565c"><div style="display:flex;align-items:baseline;gap:8px;"><span style="white-space:nowrap">Receipt</span><span aria-hidden="true" style="flex:1;border-bottom:1.5px dotted rgba(18,19,20,.4);transform:translateY(-3px)"></span><span style="white-space:nowrap">#2004–2026</span></div><div style="display:flex;align-items:baseline;gap:8px;"><span style="white-space:nowrap">Cashier</span><span aria-hidden="true" style="flex:1;border-bottom:1.5px dotted rgba(18,19,20,.4);transform:translateY(-3px)"></span><span style="white-space:nowrap">Mini M</span></div></div>
-        <div aria-hidden="true" style="height:0;margin:18px 0;border-top:1.5px dashed rgba(18,19,20,.45)"></div>
-        <div data-reveal="0" style="padding:14px 0;border-bottom:1px solid rgba(18,19,20,.12)">
-          <div style="display:flex;align-items:baseline;gap:10px">
-            <strong style="flex:0 0 auto;min-width:3.2ch;font:400 clamp(40px,4vw,56px)/.85 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em">80+</strong>
+        <p style="margin:18px 0 0;color:#7d808a;font:400 10px/1.5 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase">From the knowledge vault · as of Oct 9, 2026</p>
+      </div>
+    </div>
+    <div style="justify-self:center;width:min(100%,440px)">
+      <div style="transform:rotate(-2.5deg);transform-origin:50% 0;transition:transform 600ms cubic-bezier(.18,.8,.22,1);filter:drop-shadow(0 34px 44px rgba(0,0,0,.55))" style-hover="transform:rotate(0deg) translateY(-6px)"><div style="overflow:hidden;padding-top:6px">
+        <div onPointerEnter="{{ rcTug }}" onPointerLeave="{{ rcLet }}" style="transform:{{ rcT }};transition:{{ rcTr }}">
+          <article aria-label="MIUX receipt" style="padding:34px clamp(24px,3vw,40px) 44px;background:#f2eee8;color:#121314;font:400 12px/1.5 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.04em;-webkit-mask:radial-gradient(circle at 8px 0,transparent 6px,#000 6.5px) top/16px 51% repeat-x,radial-gradient(circle at 8px 100%,transparent 6px,#000 6.5px) bottom/16px 51% repeat-x;mask:radial-gradient(circle at 8px 0,transparent 6px,#000 6.5px) top/16px 51% repeat-x,radial-gradient(circle at 8px 100%,transparent 6px,#000 6.5px) bottom/16px 51% repeat-x">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center">
+              <svg viewBox="0 0 152 95" aria-hidden="true" style="display:block;width:40px;height:auto;color:#121314"><use href="#miuxMiniM"></use></svg>
+              <span style="font:400 26px/1 'At Amiga',Impact,sans-serif;letter-spacing:0;color:#176b96">MIUX</span>
+              <span style="display:inline-block;margin-top:4px;padding:5px 9px;border:1.5px solid #a8436b;color:#a8436b;font-size:10px;letter-spacing:.18em;text-transform:uppercase;transform:rotate(-6deg)">Paid in full</span>
+              <span style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#55565c">Creative studio · Miami, FL · #2004–2026</span>
+            </div>
+            <div aria-hidden="true" style="height:0;margin:18px 0 6px;border-top:1.5px dashed rgba(18,19,20,.45)"></div>
+          <div style="display:flex;align-items:baseline;gap:10px;padding:14px 0 8px">
+            <strong style="flex:0 0 auto;min-width:3.2ch;font:400 clamp(40px,4vw,56px)/.85 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em" data-rc="80" data-rs="+">80+</strong>
             <span style="white-space:nowrap;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Brands</span>
             <span aria-hidden="true" style="flex:1;min-width:16px;border-bottom:1.5px dotted rgba(18,19,20,.4);transform:translateY(-3px)"></span>
             <span style="white-space:nowrap;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#a8436b">Trusted</span>
           </div>
-          <p style="margin:8px 0 0;max-width:36ch;font-size:12px;line-height:1.5;color:#55565c">Trusted by startups, small businesses and global teams.</p>
-        </div>
-        <div data-reveal="1" style="padding:14px 0;border-bottom:1px solid rgba(18,19,20,.12)">
-          <div style="display:flex;align-items:baseline;gap:10px">
-            <strong style="flex:0 0 auto;min-width:3.2ch;font:400 clamp(40px,4vw,56px)/.85 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em">215</strong>
+          <p style="margin:-4px 0 0;padding-bottom:12px;max-width:36ch;font-size:12px;line-height:1.5;color:#55565c;border-bottom:1px solid rgba(18,19,20,.12)">Trusted by startups, small businesses and global teams.</p>
+          <div style="display:flex;align-items:baseline;gap:10px;padding:14px 0 8px">
+            <strong style="flex:0 0 auto;min-width:3.2ch;font:400 clamp(40px,4vw,56px)/.85 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em" data-rc="215" data-rs="">215</strong>
             <span style="white-space:nowrap;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Projects</span>
             <span aria-hidden="true" style="flex:1;min-width:16px;border-bottom:1.5px dotted rgba(18,19,20,.4);transform:translateY(-3px)"></span>
             <span style="white-space:nowrap;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#a8436b">Shipped</span>
           </div>
-          <p style="margin:8px 0 0;max-width:36ch;font-size:12px;line-height:1.5;color:#55565c">Brand identities, websites, products and systems brought to life.</p>
-        </div>
-        <div data-reveal="2" style="padding:14px 0;border-bottom:1px solid rgba(18,19,20,.12)">
-          <div style="display:flex;align-items:baseline;gap:10px">
-            <strong style="flex:0 0 auto;min-width:3.2ch;font:400 clamp(40px,4vw,56px)/.85 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em">20+</strong>
+          <p style="margin:-4px 0 0;padding-bottom:12px;max-width:36ch;font-size:12px;line-height:1.5;color:#55565c;border-bottom:1px solid rgba(18,19,20,.12)">Brand identities, websites, products and systems brought to life.</p>
+          <div style="display:flex;align-items:baseline;gap:10px;padding:14px 0 8px">
+            <strong style="flex:0 0 auto;min-width:3.2ch;font:400 clamp(40px,4vw,56px)/.85 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em" data-rc="20" data-rs="+">20+</strong>
             <span style="white-space:nowrap;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Years</span>
             <span aria-hidden="true" style="flex:1;min-width:16px;border-bottom:1.5px dotted rgba(18,19,20,.4);transform:translateY(-3px)"></span>
             <span style="white-space:nowrap;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#a8436b">In practice</span>
           </div>
-          <p style="margin:8px 0 0;max-width:36ch;font-size:12px;line-height:1.5;color:#55565c">Multidisciplinary design experience, first project logged in 2004.</p>
-        </div>
-        <div data-reveal="3" style="padding:14px 0;border-bottom:1px solid rgba(18,19,20,.12)">
-          <div style="display:flex;align-items:baseline;gap:10px">
-            <strong style="flex:0 0 auto;min-width:3.2ch;font:400 clamp(40px,4vw,56px)/.85 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em">20+</strong>
+          <p style="margin:-4px 0 0;padding-bottom:12px;max-width:36ch;font-size:12px;line-height:1.5;color:#55565c;border-bottom:1px solid rgba(18,19,20,.12)">Multidisciplinary design experience, first project logged in 2004.</p>
+          <div style="display:flex;align-items:baseline;gap:10px;padding:14px 0 8px">
+            <strong style="flex:0 0 auto;min-width:3.2ch;font:400 clamp(40px,4vw,56px)/.85 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em" data-rc="20" data-rs="+">20+</strong>
             <span style="white-space:nowrap;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Clients</span>
             <span aria-hidden="true" style="flex:1;min-width:16px;border-bottom:1.5px dotted rgba(18,19,20,.4);transform:translateY(-3px)"></span>
             <span style="white-space:nowrap;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#a8436b">Came back</span>
           </div>
-          <p style="margin:8px 0 0;max-width:36ch;font-size:12px;line-height:1.5;color:#55565c">Sixteen of them three times or more.</p>
-        </div>
-        <div data-reveal="4" style="padding:14px 0;border-bottom:1px solid rgba(18,19,20,.12)">
-          <div style="display:flex;align-items:baseline;gap:10px">
-            <strong style="flex:0 0 auto;min-width:3.2ch;font:400 clamp(40px,4vw,56px)/.85 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em">8</strong>
+          <p style="margin:-4px 0 0;padding-bottom:12px;max-width:36ch;font-size:12px;line-height:1.5;color:#55565c;border-bottom:1px solid rgba(18,19,20,.12)">Sixteen of them three times or more.</p>
+          <div style="display:flex;align-items:baseline;gap:10px;padding:14px 0 8px">
+            <strong style="flex:0 0 auto;min-width:3.2ch;font:400 clamp(40px,4vw,56px)/.85 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em" data-rc="10" data-rs="">10</strong>
             <span style="white-space:nowrap;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Countries</span>
             <span aria-hidden="true" style="flex:1;min-width:16px;border-bottom:1.5px dotted rgba(18,19,20,.4);transform:translateY(-3px)"></span>
             <span style="white-space:nowrap;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#a8436b">Reach</span>
           </div>
-          <p style="margin:8px 0 0;max-width:36ch;font-size:12px;line-height:1.5;color:#55565c">Miami-based, collaborating across time zones.</p>
+          <p style="margin:-4px 0 0;padding-bottom:12px;max-width:36ch;font-size:12px;line-height:1.5;color:#55565c;border-bottom:1px solid rgba(18,19,20,.12)">Miami-based, collaborating across time zones.</p>
+            <div style="display:flex;align-items:baseline;gap:8px;margin-top:16px;font-size:14px;letter-spacing:.1em;text-transform:uppercase"><span style="white-space:nowrap">Total</span><span aria-hidden="true" style="flex:1;border-bottom:1.5px dotted rgba(18,19,20,.4);transform:translateY(-3px)"></span><span style="white-space:nowrap">One design eye</span></div>
+            <div aria-hidden="true" style="height:0;margin:18px 0;border-top:1.5px dashed rgba(18,19,20,.45)"></div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+              <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase">*** Thank you, come again ***</span>
+              <div aria-hidden="true" style="width:100%;height:40px;background:repeating-linear-gradient(90deg,#121314 0 2px,transparent 2px 4px,#121314 4px 5px,transparent 5px 8px,#121314 8px 11px,transparent 11px 12px,#121314 12px 13px,transparent 13px 16px)"></div>
+              <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#55565c">Keep for your records. Mini M already did.</span>
+            </div>
+          </article>
         </div>
-        <div aria-hidden="true" style="height:0;margin:18px 0;border-top:1.5px dashed rgba(18,19,20,.45)"></div>
-        <div style="display:grid;gap:6px;text-transform:uppercase;letter-spacing:.1em"><div style="display:flex;align-items:baseline;gap:8px;"><span style="white-space:nowrap">Handoffs</span><span aria-hidden="true" style="flex:1;border-bottom:1.5px dotted rgba(18,19,20,.4);transform:translateY(-3px)"></span><span style="white-space:nowrap">0</span></div><div style="display:flex;align-items:baseline;gap:8px;"><span style="white-space:nowrap">Templates</span><span aria-hidden="true" style="flex:1;border-bottom:1.5px dotted rgba(18,19,20,.4);transform:translateY(-3px)"></span><span style="white-space:nowrap">0</span></div><div style="display:flex;align-items:baseline;gap:8px;font-size:14px;"><span style="white-space:nowrap">Total</span><span aria-hidden="true" style="flex:1;border-bottom:1.5px dotted rgba(18,19,20,.4);transform:translateY(-3px)"></span><span style="white-space:nowrap">One design eye</span></div></div>
-        <div aria-hidden="true" style="height:0;margin:18px 0;border-top:1.5px dashed rgba(18,19,20,.45)"></div>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
-          <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase">*** Thank you, come again ***</span>
-          <div aria-hidden="true" style="width:100%;height:44px;background:repeating-linear-gradient(90deg,#121314 0 2px,transparent 2px 4px,#121314 4px 5px,transparent 5px 8px,#121314 8px 11px,transparent 11px 12px,#121314 12px 13px,transparent 13px 16px)"></div>
-          <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#55565c">Keep for your records. Mini M already did.</span>
-        </div>
-      </article>
-    </div>
-    <div style="--w:clamp(92px,8.4vw,128px);--h:calc(var(--w) * .8913);display:grid;gap:clamp(36px,4vw,56px);justify-self:center;max-width:100%;overflow:hidden">
-      <figure data-reveal="0" style="margin:0">
-        <figcaption style="display:flex;flex-wrap:wrap;gap:6px 14px;margin-bottom:16px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#f5f2ed">Project types</span><span style="color:#a3a7b3">projects by service</span></figcaption>
-        <div style="position:relative;width:calc(var(--w) * 3.4);height:calc(var(--h) * 1.54)">
-          <div style="position:absolute;left:calc(var(--w) * 0.00);top:0;width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:#61caf8;transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:0;clip-path:url(#miuxHex);background:#61caf8;color:#121314;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">52</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;">Digital experiences</span>
-            </div>
-          </div>
-          <div style="position:absolute;left:calc(var(--w) * 0.80);top:calc(var(--h) * .54);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.5),rgba(232,161,184,.4));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">51</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9699a4;">Branding</span>
-            </div>
-          </div>
-          <div style="position:absolute;left:calc(var(--w) * 1.60);top:0;width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.5),rgba(232,161,184,.4));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">48</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9699a4;">Graphic design</span>
-            </div>
-          </div>
-          <div style="position:absolute;left:calc(var(--w) * 2.40);top:calc(var(--h) * .54);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.5),rgba(232,161,184,.4));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">27</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9699a4;">Product</span>
-            </div>
-          </div>
-        </div>
-      </figure>
-      <figure data-reveal="1" style="margin:0">
-        <figcaption style="display:flex;flex-wrap:wrap;gap:6px 14px;margin-bottom:16px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#f5f2ed">Top industries</span><span style="color:#a3a7b3">brands by industry</span></figcaption>
-        <div style="position:relative;width:calc(var(--w) * 3.4);height:calc(var(--h) * 1.54)">
-          <div style="position:absolute;left:calc(var(--w) * 0.00);top:0;width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:#e8a1b8;transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:0;clip-path:url(#miuxHex);background:#e8a1b8;color:#121314;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">11</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;">Professional services</span>
-            </div>
-          </div>
-          <div style="position:absolute;left:calc(var(--w) * 0.80);top:calc(var(--h) * .54);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.5),rgba(232,161,184,.4));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">10</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9699a4;">Hospitality</span>
-            </div>
-          </div>
-          <div style="position:absolute;left:calc(var(--w) * 1.60);top:0;width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.5),rgba(232,161,184,.4));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">9</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9699a4;">Fitness & wellness</span>
-            </div>
-          </div>
-          <div style="position:absolute;left:calc(var(--w) * 2.40);top:calc(var(--h) * .54);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.5),rgba(232,161,184,.4));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">9</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9699a4;">Food & beverage</span>
-            </div>
-          </div>
-        </div>
-      </figure>
-      <figure data-reveal="2" style="margin:0">
-        <figcaption style="display:flex;flex-wrap:wrap;gap:6px 14px;margin-bottom:16px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#f5f2ed">Service combos</span><span style="color:#a3a7b3">brands using 2+ services</span></figcaption>
-        <div style="position:relative;width:calc(var(--w) * 3.4);height:calc(var(--h) * 1.54)">
-          <div style="position:absolute;left:calc(var(--w) * 0.00);top:0;width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:#ffb4a2;transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:0;clip-path:url(#miuxHex);background:#ffb4a2;color:#121314;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">58%</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;">Multi-service brands</span>
-            </div>
-          </div>
-          <div style="position:absolute;left:calc(var(--w) * 0.80);top:calc(var(--h) * .54);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.5),rgba(232,161,184,.4));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">12</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9699a4;">Brand + digital</span>
-            </div>
-          </div>
-          <div style="position:absolute;left:calc(var(--w) * 1.60);top:0;width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.5),rgba(232,161,184,.4));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">7</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9699a4;">+ Graphic design</span>
-            </div>
-          </div>
-          <div style="position:absolute;left:calc(var(--w) * 2.40);top:calc(var(--h) * .54);width:var(--w);height:var(--h);clip-path:url(#miuxHex);background:linear-gradient(150deg,rgba(97,202,248,.5),rgba(232,161,184,.4));transition:transform 300ms cubic-bezier(.18,.8,.22,1)" style-hover="transform:translateY(-4px)">
-            <div style="position:absolute;inset:1.5px;clip-path:url(#miuxHex);background:#0d0e11;color:#f5f2ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 16%;text-align:center">
-              <strong style="font:400 calc(var(--w) * .26)/.85 'At Amiga',Impact,sans-serif">6</strong>
-              <span style="font:400 10px/1.25 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9699a4;">+ Media creation</span>
-            </div>
-          </div>
-        </div>
-      </figure>
-      <p style="margin:0;color:#a3a7b3;font:400 10px/1.5 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase">From the knowledge vault · as of Oct 9, 2026 · provisional</p>
+      </div></div>
     </div>
   </div>
 </section>
 
-<section id="log-05" data-screen-label="05 Case files" style="position:relative;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.15);background:#121314;color:#f5f2ed">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(64px,8vw,110px)">
-    <div>
-      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">
-        <span style="color:#e8a1b8">Log 05 / Case files</span><span style="color:#9699a4">T+00:05 · files declassified</span>
-      </div>
-      <h2 data-reveal="1" style="margin:24px 0 0;font-size:clamp(48px,7.4vw,118px);font-weight:400;line-height:.88;letter-spacing:-.05em">Case files, <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">open.</em></h2>
-    </div>
-    <p data-reveal="2" style="max-width:40ch;margin:0;color:#9699a4;font-size:clamp(16px,1.4vw,19px);line-height:1.5">Every file comes straight out of the knowledge vault: the brief, what got built, and where it's working now. Hover a tab to peek. Click to open the file.</p>
-  </div>
-
-  <div data-reveal="0" style="position:relative;max-width:1400px;margin:0 auto">
-    <sc-for list="{{ files }}" as="f" hint-placeholder-count="3">
-      <article onPointerEnter="{{ f.enter }}" onPointerLeave="{{ f.leave }}" style="position:relative;z-index:{{ f.z }};margin-top:{{ f.mt }};transform:{{ f.lift }};transition:transform 420ms cubic-bezier(.18,.8,.22,1);filter:drop-shadow(0 -14px 24px rgba(0,0,0,.35))">
-        <div style="position:relative;display:flex;padding-left:{{ f.tabLeft }}">
-          <span style="position:relative;display:flex;align-items:center;gap:14px;min-width:min(100%,280px);padding:14px 34px 12px;background:{{ f.tabBg }};color:{{ f.tabFg }};clip-path:polygon(0 100%,7% 0,93% 0,100% 100%);transition:background 420ms ease,color 250ms ease;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><b style="font-weight:400;color:{{ f.tabAccent }}">File {{ f.idx }}</b><span>{{ f.name }}</span></span>
-          <span aria-hidden="true" style="position:absolute;margin-left:calc(min(100%,280px) - 64px);top:{{ f.miniTop }};opacity:{{ f.miniOp }};transition:top 420ms cubic-bezier(.34,1.56,.64,1),opacity 200ms ease"><svg viewBox="0 0 152 95" style="display:block;width:34px;height:auto;color:#61caf8"><use href="#miuxMiniM"></use></svg></span>
-        </div>
-        <div style="position:relative;overflow:hidden;background:{{ f.bg }};color:{{ f.fg }};border:{{ f.border }};border-top:1px solid {{ f.line }};transition:background 420ms cubic-bezier(.18,.8,.22,1),color 250ms ease">
-          <button type="button" onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" data-cursor="{{ f.cursor }}" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:20px 32px;width:100%;padding:clamp(22px,3vw,36px) clamp(22px,3vw,40px);border:0;background:none;color:inherit;text-align:left;cursor:pointer;font:inherit">
-            <span style="position:relative;z-index:2;min-width:0">
-              <span aria-label="{{ f.name }}" style="display:flex;flex-wrap:wrap;align-items:baseline;font-size:clamp(40px,5.4vw,88px);line-height:.95;letter-spacing:-.045em">
-                <sc-for list="{{ f.letters }}" as="l" hint-placeholder-count="0"><span aria-hidden="true" style="font-family:{{ l.ff }};font-style:{{ l.fs }};font-weight:{{ l.fw }};color:{{ l.c }};font-size:{{ l.sz }};white-space:pre;transition:color 90ms linear">{{ l.ch }}</span></sc-for>
-              </span>
-              <span style="display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:16px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:{{ f.muted }}"><span><b style="font-weight:700;color:{{ f.stamp }}">Client</b> · {{ f.client }}</span><span><b style="font-weight:700;color:{{ f.stamp }}">Industry</b> · {{ f.industry }}</span><span><b style="font-weight:700;color:{{ f.stamp }}">Services</b> · {{ f.services }}</span></span>
-            </span>
-            <span style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-end;gap:14px">
-              <span aria-hidden="true" style="padding:8px 12px;border:2px solid {{ f.stamp }};color:{{ f.stamp }};font:400 13px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;transform:rotate({{ f.stampRot }});opacity:.85">{{ f.stampText }}</span>
-              <span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">{{ f.sign }}</span>
-            </span>
-            <span aria-hidden="true" style="position:absolute;z-index:1;right:clamp(150px,16vw,240px);bottom:-.12em;font:400 clamp(96px,10vw,170px)/.7 'At Amiga',Impact,sans-serif;opacity:{{ f.arrowOp }};pointer-events:none;transition:opacity 300ms ease">
-              <span style="position:absolute;inset:0;color:{{ f.ghost }};opacity:.22;transform:{{ f.ghost2 }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),opacity 300ms ease,color 300ms ease">↗</span>
-              <span style="position:absolute;inset:0;color:{{ f.ghost }};opacity:.36;transform:{{ f.ghost1 }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),opacity 300ms ease,color 300ms ease">↗</span>
-              <span style="position:relative;display:block;color:{{ f.arrowC }};transform:{{ f.arrowT }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),opacity 300ms ease,color 300ms ease">↗</span>
-            </span>
-          </button>
-          <div style="max-height:{{ f.maxH }};overflow:hidden;transition:max-height 620ms cubic-bezier(.18,.8,.22,1)">
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(24px,3vw,48px);padding:0 clamp(22px,3vw,40px) clamp(26px,3vw,40px)">
-              <div style="position:relative;aspect-ratio:16/10;min-height:160px;overflow:hidden;background:#121314">
-                <div style="position:absolute;inset:0;transform:scale({{ f.imgScale }});transition:transform 800ms cubic-bezier(.18,.8,.22,1)"><image-slot id="{{ f.slot }}" shape="rect" placeholder="{{ f.ph }}"></image-slot></div>
-              </div>
-              <div style="display:flex;flex-direction:column">
-                <dl style="display:grid;margin:0;border-top:1px solid {{ f.line }}">
-                  <div style="display:grid;grid-template-columns:130px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid {{ f.line }}"><dt style="font:700 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:{{ f.stamp }}">The brief</dt><dd style="margin:0;font-size:15px;line-height:1.45;color:{{ f.muted }}">{{ f.brief }}</dd></div>
-                  <div style="display:grid;grid-template-columns:130px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid {{ f.line }}"><dt style="font:700 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:{{ f.stamp }}">What got built</dt><dd style="margin:0;font-size:15px;line-height:1.45;color:{{ f.muted }}">{{ f.built }}</dd></div>
-                  <div style="display:grid;grid-template-columns:130px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid {{ f.line }}"><dt style="font:700 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:{{ f.stamp }}">In use</dt><dd style="margin:0;font-size:15px;line-height:1.45;color:{{ f.muted }}">{{ f.use }}</dd></div>
-                </dl>
-                <a href="{{ f.href }}" data-cursor="NOSY?" style="align-self:flex-start;margin-top:auto;padding-top:28px;color:inherit;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;font-size:11px;border-bottom:1px solid currentColor;padding-bottom:6px">Read the full case file ↗</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </sc-for>
-  </div>
-</section>
-
-<section id="log-06" data-screen-label="06 Transmission" style="position:relative;overflow:hidden;min-height:92vh;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(44px,8vw,140px);align-items:end;background:linear-gradient(115deg,#08090d 0%,#08090d 57%,#0d1218 100%)">
+<section id="log-05" data-screen-label="05 Transmission" style="border-top:1px solid rgba(245,242,237,.12);position:relative;overflow:hidden;padding:clamp(56px,7vw,100px) clamp(22px,5vw,74px) clamp(96px,12vw,170px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(44px,8vw,140px);align-items:end;background:linear-gradient(115deg,#08090d 0%,#08090d 57%,#0d1218 100%)">
   <div style="position:relative;z-index:1">
     <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">
-      <span style="color:#e8a1b8">Log 06 / Transmission</span><span style="color:#9699a4">T+00:06 · channel open · Miami, FL</span>
+      <span style="color:#e8a1b8">Log 05 / Transmission</span><span style="color:#9699a4">channel open · Miami, FL</span>
     </div>
     <h2 data-reveal="1" style="max-width:9ch;margin:24px 0 0;font-size:clamp(58px,8vw,140px);font-weight:400;line-height:.82;letter-spacing:-.08em">Your <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">move.</em></h2>
     <p data-reveal="2" style="max-width:36ch;margin:30px 0 0;color:#c8c9ce;font-size:clamp(17px,1.5vw,22px);line-height:1.45">Tell me what you're building. You'll hear back from a human, along with a few questions you'll be glad someone asked.</p>
@@ -597,14 +503,13 @@ const AMIGA = "'At Amiga',Impact,sans-serif";
 const EIKO = "'PP Eiko','Instrument Serif',serif";
 const AMI = `<span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none">`;
 const GRADED = [1, .92, .8, .65, .5, .36, .24, .14];
-const CHAPTERS = ['Boot', 'Protocol', 'Talking shop', 'Blueprint', 'Receipts', 'Case files', 'Transmission'];
+const CHAPTERS = ['Boot', 'Protocol', 'Case files', 'Blueprint', 'Receipts', 'Transmission'];
 const QUIPS = [
   "booting… that's me. hi.",
   "hover the names. trust me.",
-  "short version: one studio, zero handoffs.",
-  "five stages. I've memorized them.",
-  "I printed these myself.",
   "go on, peek. you're cleared.",
+  "four steps. I've memorized them.",
+  "I printed these myself.",
   "go on. say hi. I'll be here."
 ];
 const COMPOSITIONS = [
@@ -625,7 +530,13 @@ const FILES = [
     brief: "Two coaches launching a team-building company needed a brand, a logo, a website and proposals they could pitch with.",
     built: "A vibrant identity, the launch's visual world (lighting, projections, game cards, swag), printed collateral, event photo and video, and a WordPress site both sides could update.",
     use: "The site ran on the client's own domain for over three years, January 2022 to March 2025. Now retired." },
-  { name: 'Omnis', slot: 'home-work-omnis', ph: 'Omnis · project image', href: 'work-omnis.html' },
+  { name: 'Omnis', slot: 'home-work-omnis', src: 'assets/omnis/omnis-hero.jpg', ph: 'Omnis · project image', href: 'work-omnis.html',
+    client: "Omnis Marine · maritime security, Greece",
+    industry: "Maritime security",
+    services: "Branding · Creative Direction · Digital Experiences · Print",
+    brief: "A new maritime security company arrived with a name and the freedom to build.",
+    built: "Logo, identity system, website and print, all made from scratch.",
+    use: "Ten years later they came back for a digital refresh: same values, a sharper experience." },
   { name: 'RF Studios', slot: 'home-work-2', ph: 'rfstudio1.png · project image', href: 'work-rf-studios.html',
     client: "RF Studios · luxury aerial studio, Miami Beach · 2023–2024",
     industry: "Fitness + wellness · training",
@@ -634,6 +545,31 @@ const FILES = [
     built: "Brand identity and a generative mandala system, 21 graphic deliverables from signage to merch, interior visualisation, photo and video, a booking and e-commerce website, and a mobile app design.",
     use: "Brand and website live, taking bookings (checked 9/9). App not live." }
 ].map(f => Object.assign({ client: '[ from record ]', industry: '[ from record ]', services: '[ from record ]', brief: '[ from the project record ]', built: '[ from the project record ]', use: '[ from the project record ]' }, f));
+const CF = [
+  { name: 'Kaleidoscope Teams', href: 'work-kaleidoscope.html', thumb: 'assets/kaleidoscope/kt-1.png', ac: '#e8a1b8', services: 'Branding · Creative Direction · Digital Experiences · Graphic Design · Media Creation',
+    brief: "Two coaches launching a team-building company needed a brand, a logo, a website and proposals they could pitch with.",
+    use: "The site ran on the client's own domain for over three years, January 2022 to March 2025. Now retired." },
+  { name: 'Omnis', href: 'work-omnis.html', thumb: 'assets/omnis/omnis-identity.jpg', ac: '#61caf8', services: 'Branding · Creative Direction · Digital Experiences · Print',
+    brief: "A new maritime security company arrived with a name and the freedom to build.",
+    use: "Ten years later they came back for a digital refresh: same values, a sharper experience." },
+  { name: 'RF Studios', href: 'work-rf-studios.html', thumb: 'assets/rf/rf-billboard-web.jpg', ac: '#ffb4a2', services: 'Branding · Graphic Design · Media Creation · Digital Experiences · Product',
+    brief: "A luxury studio opening in South Beach needed an identity that read as both serene and bold, plus a full booking and commerce platform for 50+ class formats.",
+    use: "Brand and website live, taking bookings (checked 9/9). App not live." }
+];
+const RC_N = [[80, '+'], [215, ''], [20, '+'], [20, '+'], [10, '']];
+const SVC_CARD = ['assets/omnis/omnis-identity.jpg', 'assets/omnis/omnis-web-tablet-web.jpg', 'assets/kaleidoscope/kt-main.png', 'assets/mini-m-3d.png'];
+const SVC_THUMB = [['assets/rf/rf-mandala-wall-web.jpg', 'assets/omnis/omnis-identity.jpg'], ['assets/omnis/omnis-hero-laptop-web.jpg', 'assets/omnis/omnis-web-tablet-web.jpg'], ['assets/royafit/royafit-site-web.jpg', 'assets/kaleidoscope/kt-main.png'], ['assets/kaleidoscope/kt-3.png', 'assets/mini-m-3d.png']];
+const PFILES = [
+  { l1: 'Kaleidoscope', l2: 'Teams', href: 'work-kaleidoscope.html', img: 'assets/kaleidoscope/kt-main.png', img2: 'assets/kaleidoscope/kt-3.png', img3: 'assets/kaleidoscope/kt-2.png', stamp: 'Declassified', rot: '-6deg', code: 'KT-001', year: '2021–22', client: 'Kaleidoscope Teams', focus: 'Brand, web, media', status: 'Ran 2022–2025',
+    brief: "Two coaches launching a team-building company needed a brand, a logo, a website and proposals they could pitch with.", tags: ['Branding', 'Web', 'Media'], sepC: '#61caf8' },
+  { l1: 'Omnis', l2: 'Marine', href: 'work-omnis.html', img: 'assets/omnis/omnis-hero.jpg', img2: 'assets/omnis/omnis-identity.jpg', img3: 'assets/omnis/omnis-cards-web.jpg', stamp: 'Archived', rot: '-4deg', code: 'OM-002', year: '2014 / 2024', client: 'Omnis Marine', focus: 'Identity, web, print', status: 'Back for a refresh',
+    brief: "A new maritime security company arrived with a name and the freedom to build.", tags: ['Identity', 'Web', 'Print'], sepC: '#e8a1b8' },
+  { l1: 'RF', l2: 'Studios', href: 'work-rf-studios.html', img: 'assets/rf/rf-mandala-wall-web.jpg', img2: 'assets/rf/rf-billboard-web.jpg', img3: 'assets/rf/rf-poster-web.jpg', stamp: 'Active system', rot: '-5deg', code: 'RF-003', year: '2023–24', client: 'RF Studios', focus: 'Brand, web, product', status: 'Live, taking bookings',
+    brief: "A luxury South Beach studio needed an identity both serene and bold, plus booking and commerce for 50+ class formats.", tags: ['Branding', 'Web', 'Product'], sepC: '#ffb4a2' },
+  { l1: 'Roya', l2: 'Fit', href: 'work-royafit.html', img: 'assets/royafit/royafit-squad-hero-web.jpg', img2: 'assets/royafit/royafit-site-web.jpg', img3: 'assets/royafit/royafit-wall-web.jpg', stamp: 'Field notes', rot: '-3deg', code: 'RY-004', year: '2016', client: 'RoyaFit', focus: 'Brand, web, photography', status: 'Launched 2016',
+    brief: "Miami's first fitness concierge needed a brand and a site to launch with.", tags: ['Branding', 'Web', 'Photography'], sepC: '#e8a1b8' }
+];
+const PAD2 = n => String(n).padStart(2, '0');
 const SVC_HREF = ['services.html#brand-systems', 'services.html#digital-experiences', 'services.html#product-design', 'ai-systems.html'];
 const CHARTS = [
   { title: 'Service mix', cx: 0, cy: 0, items: [['Digital Experiences', 26], ['Branding', 24], ['Graphic Design', 20], ['Product', 12], ['Media Creation', 10], ['Creative Direction', 8]] },
@@ -683,6 +619,10 @@ class Component extends DCLogic {
   timers = []; comboTimers = {};
 
   componentDidMount() {
+    { const el = this.pSecRef.current; if (el && window.ResizeObserver) { this._pro = new ResizeObserver(() => { const s = el.clientWidth < 640; if (s !== !!this.state.psmall) this.setState({ psmall: s }); }); this._pro.observe(el); } }
+    requestAnimationFrame(() => this.syncImgs());
+    this._rcIO = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !this._rcDone) { this._rcDone = true; this.printReceipt(); } }), { threshold: .3 });
+    requestAnimationFrame(() => this.rcRef.current && this._rcIO.observe(this.rcRef.current));
     const go = () => {
       if (!window.MIUXFX || !window.MIUX_GEO) { this._w = setTimeout(go, 40); return; }
       MIUXFX.injectDefs(); document.documentElement.lang = 'en';
@@ -707,14 +647,40 @@ class Component extends DCLogic {
     this.setState({ narrow: innerWidth < 1100 });
     this.flashBubble();
   }
+  rcRef = React.createRef();
+  printReceipt() {
+    cancelAnimationFrame(this._rcRaf);
+    const red = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const nums = this.rcRef.current ? [...this.rcRef.current.querySelectorAll('[data-rc]')] : [];
+    const put = k => nums.forEach(el => { el.textContent = Math.round(+el.dataset.rc * k) + el.dataset.rs; });
+    this.setState({ rcP: 0, rcAnim: false }, () => requestAnimationFrame(() => requestAnimationFrame(() => {
+      this.setState({ rcP: 1, rcAnim: !red });
+      if (red) { put(1); return; }
+      const t0 = performance.now(), D = 2200, ease = t => 1 - Math.pow(1 - t, 3);
+      const tick = t => { const k = Math.min(1, (t - t0) / D); put(ease(k)); if (k < 1) this._rcRaf = requestAnimationFrame(tick); };
+      put(0); this._rcRaf = requestAnimationFrame(tick);
+    })));
+  }
+
+  pSecRef = React.createRef();
+  pGo(i) {
+    const n = (i + PFILES.length) % PFILES.length, st = this.state; if (n === (st.pa || 0) || st.pout) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { this.setState({ pa: n, ph: false }); return; }
+    this.setState({ pout: true, ph: false });
+    clearTimeout(this._pt); this._pt = setTimeout(() => this.setState({ pa: n, pout: false }), 420);
+  }
   componentWillUnmount() {
+    clearTimeout(this._pt); this._pro && this._pro.disconnect();
+    cancelAnimationFrame(this._rcRaf); this._rcIO && this._rcIO.disconnect();
     removeEventListener('scroll', this._s); removeEventListener('resize', this._r); removeEventListener('pointermove', this._pm);
     this._dead = true; cancelAnimationFrame(this._glRaf); this.stopMechField && this.stopMechField(); this.unLens && this.unLens();
     clearTimeout(this._w); clearTimeout(this._bt); this.timers.forEach(clearTimeout);
     this.unCursor && this.unCursor(); this.unReveal && this.unReveal(); (this.unQ || []).forEach(f => f && f());
     cancelAnimationFrame(this._raf); this.stopField && this.stopField(); (this.unMech || []).forEach(f => f && f());
   }
+  syncImgs() { document.querySelectorAll('img[data-src]').forEach(el => { const s = el.getAttribute('data-src'); if (s && !s.includes('{{') && el.getAttribute('src') !== s) el.setAttribute('src', s); }); }
   componentDidUpdate(prev) {
+    this.syncImgs();
     if (window.MIUXFX) document.querySelectorAll('[data-mech]:not([data-built])').forEach(n => (this.unMech = this.unMech || []).push(MIUXFX.mech(n, n === this.mechHost.current ? { now: true } : undefined)));
     if (prev.hero !== this.props.hero && window.MIUXFX) requestAnimationFrame(() => this.startMech());
     if (prev.cursor !== this.props.cursor && window.MIUXFX) {
@@ -724,7 +690,7 @@ class Component extends DCLogic {
     if (prev.intro !== this.props.intro && window.MIUXFX) this.runSequence(this.skipIntro());
     if (prev.hero !== this.props.hero && window.MIUXFX) requestAnimationFrame(() => { this.runSequence(true); this.fitHero(); });
   }
-  skipIntro() { return this.props.intro === 'skip' || MIUXFX.reduced(); }
+  skipIntro() { return this.props.intro === 'skip' || MIUXFX.reduced() || innerWidth < 760; }
   later(fn, ms) { this.timers.push(setTimeout(fn, ms)); }
 
   runSequence(skip) {
@@ -959,7 +925,7 @@ class Component extends DCLogic {
     if (this.navBar.current) this.navBar.current.style.transform = `scaleX(${p})`;
     let ch = 0;
     CHAPTERS.forEach((_, i) => { const s = document.getElementById('log-0' + i); if (s && s.getBoundingClientRect().top < innerHeight * .45) ch = i; });
-    if (this.guideMini.current) this.guideMini.current.style.top = (ch / 6 * 100) + '%';
+    if (this.guideMini.current) this.guideMini.current.style.top = (ch / 5 * 100) + '%';
     if (ch !== this.state.chapter) { this.setState({ chapter: ch, quip: null }); this.flashBubble(); }
   }
   flashBubble() { this.setState({ bubble: true }); clearTimeout(this._bt); this._bt = setTimeout(() => this.setState({ bubble: false }), 4200); }
@@ -1050,7 +1016,7 @@ class Component extends DCLogic {
       guideOn: this.props.guide === true && !st.narrow,
       quip: st.quip || QUIPS[st.chapter],
       bubbleOpacity: st.bubble ? 1 : 0,
-      chapters: CHAPTERS.map((c, i) => ({ top: (i / 6 * 100) + '%', bg: i === st.chapter ? '#61caf8' : (i < st.chapter ? 'rgba(97,202,248,.45)' : 'rgba(245,242,237,.22)'), aria: `Log 0${i} ${c}`, cursor: c.toUpperCase().slice(0, 8), go: () => this.scrollTo(i) })),
+      chapters: CHAPTERS.map((c, i) => ({ top: (i / 5 * 100) + '%', bg: i === st.chapter ? '#61caf8' : (i < st.chapter ? 'rgba(97,202,248,.45)' : 'rgba(245,242,237,.22)'), aria: `Log 0${i} ${c}`, cursor: c.toUpperCase().slice(0, 8), go: () => this.scrollTo(i) })),
       files: FILES.map((f, i) => {
         const open = st.open === i, peek = st.peek === i && !open, act = st.peek === i, mix = (st.mix || {})[i];
         const look = this.props.folderLook || 'cream tabs', hov = this.props.fileHover || 'shuffle';
@@ -1078,7 +1044,43 @@ class Component extends DCLogic {
           leave: () => { this.setState({ peek: null }); this.restFile(i); }
         });
       }),
-      services: COMPOSITIONS.map((c, i) => { const on = st.svc === i; return { index: '02.' + (i + 1), desc: c.desc, tags: c.tags, combo: this.comboEl(c, i), href: SVC_HREF[i], label: c.name + ' page', hover: () => { this.setState({ svc: i }); this.reveal(i); }, leave: () => { this.setState(s => s.svc === i ? { svc: null } : null); this.rest(i); }, arrowOp: on ? 1 : 0, arrowT: on ? 'translate(0,0)' : 'translate(-30%,30%)', ghost1: on ? 'translate(-.13em,.13em)' : 'translate(-30%,30%)', ghost2: on ? 'translate(-.26em,.26em)' : 'translate(-30%,30%)', arrowColor: on ? '#e8a1b8' : '#61caf8' }; }),
+      ...[0, 1, 2, 3].reduce((o, i) => { const on = st.svcCard === i; o['sc' + i] = { enter: () => this.setState({ svcCard: i }), leave: () => this.setState(s => s.svcCard === i ? { svcCard: null } : null),
+        scale: on ? 'scale(1.08)' : 'scale(1)', fillT: on ? 'translateY(0)' : 'translateY(101%)', fg: on ? '#08090d' : '#f5f2ed', numC: on ? '#08090d' : '#61caf8', stampC: on ? '#08090d' : '#e8a1b8',
+        tagB: on ? 'rgba(8,9,13,.4)' : 'rgba(245,242,237,.35)', descH: on ? '220px' : '0px', descPad: on ? '14px' : '0px', descOp: on ? 1 : 0 }; return o; }, {}),
+      ...(() => { const ci = st.cf || 0, C = CF[ci], o = { cf: { ...C, idx: String(ci + 1).padStart(2, '0') }, cfCount: String(ci + 1).padStart(2, '0') + ' / ' + String(CF.length).padStart(2, '0'),
+        cfTabs: CF.map((c, i) => ({ name: c.name, thumb: c.thumb, idx: String(i + 1).padStart(2, '0'), on: i === ci ? 'true' : 'false', pick: () => this.setState({ cf: i }),
+          fg: i === ci ? '#f5f2ed' : '#7d808a', ac: i === ci ? c.ac : '#7d808a', bar: i === ci ? c.ac : 'transparent' })) };
+        CF.forEach((_, i) => { o['cfOp' + i] = i === ci ? 1 : 0; o['cfSc' + i] = i === ci ? 'scale(1.06)' : 'scale(1)'; }); return o; })(),
+      rcRef: this.rcRef, rcReprint: () => this.printReceipt(),
+      rcT: !st.rcP ? 'translateY(-100%)' : (st.rcTug ? 'translateY(10px)' : 'none'),
+      rcTr: st.rcAnim ? 'transform 2400ms cubic-bezier(.22,.9,.24,1)' : 'transform 400ms cubic-bezier(.18,.8,.22,1)',
+      rcTug: () => this.setState({ rcTug: true, rcAnim: false }), rcLet: () => this.setState({ rcTug: false }),
+      ...(() => { const a = st.pa || 0, h = !!st.ph, out = !!st.pout, small = !!st.psmall; return {
+      pSecRef: this.pSecRef, psmall: small, pbig: !small, phint: small ? 'Tap the file to open it · arrows or tabs to flip' : 'Hover the file to develop it · arrows or tabs to flip',
+      pcount: PAD2(a + 1) + ' / ' + PAD2(PFILES.length),
+      pprev: () => this.pGo(a - 1), pnext: () => this.pGo(a + 1),
+      ptabs: PFILES.map((f, i) => ({ n: PAD2(i + 1), name: f.l1 + ' ' + f.l2, sel: i === a ? 'true' : 'false', pick: () => this.pGo(i),
+        line: i === a ? '#61caf8' : 'transparent', fg: i === a ? '#f5f2ed' : '#7d808a', ac: i === a ? '#61caf8' : '#55565c' })),
+      pfiles: PFILES.map((f, i) => { const act = i === a, set = act && !out, on = set && h;
+        const D = (x, y, r) => `translate(${x}cqw,${y}cqw) rotate(${r}deg)`;
+        const dl = k => set ? (k * 70) + 'ms' : (k * 25) + 'ms';
+        return { ...f, n: PAD2(i + 1), name: f.l1 + ' ' + f.l2, label: f.l1 + ' ' + f.l2 + ' case file',
+        pe: act ? 'auto' : 'none', hide: act ? 'false' : 'true', tab: act ? '0' : '-1', lo: set ? 1 : 0,
+        dl0: dl(0), dl1: dl(1), dl2: dl(2), dl3: dl(3), dl4: dl(4), dl5: dl(5), dl6: dl(6),
+        enter: () => this.setState({ ph: true }), leave: () => this.setState({ ph: false }),
+        backT: set ? 'rotate(-.6deg)' : D(0, 8, -4),
+        sh1T: set ? 'rotate(2.5deg)' : D(14, -10, 18), sh2T: set ? 'rotate(-1.8deg)' : D(-8, -14, -16),
+        briefT: !set ? D(-14, -22, -14) : on ? 'translateY(-2.4cqw) rotate(-1.2deg)' : 'rotate(-.8deg)',
+        sepT: !set ? D(26, -12, 16) : on ? 'translate(1.4cqw,-2.2cqw) rotate(1deg)' : 'rotate(.6deg)',
+        p1T: !set ? D(18, 14, 10) : on ? 'translate(.4cqw,-.8cqw) rotate(-.8deg)' : 'rotate(1deg)',
+        p2T: !set ? D(22, -16, 22) : on ? 'translate(1.2cqw,-1.4cqw) rotate(1deg)' : 'rotate(-2.5deg)',
+        p3T: !set ? D(26, -10, 28) : on ? 'translate(2.6cqw,-.8cqw) rotate(8deg)' : 'rotate(5deg)',
+        folderT: !set ? D(-18, 14, -10) : on ? 'rotate(-1.2deg)' : 'none',
+        mBriefT: set ? 'rotate(-2deg)' : D(-20, -30, -14), mSepT: set ? 'rotate(1deg)' : D(30, -10, 14),
+        mP1T: set ? 'rotate(-1.5deg)' : D(30, -20, 16), mP2T: set ? 'rotate(2.5deg)' : D(-30, 0, -18), mP3T: set ? 'rotate(-2deg)' : D(30, 20, 20), mFolderT: set ? 'none' : D(0, 40, -6),
+        imgF: on ? 'none' : 'sepia(.5) saturate(.7) contrast(1.1) brightness(.88)', imgS: on ? 'scale(1.03)' : 'scale(1)', ageOp: on ? 0 : 1 }; })
+      }; })(),
+      services: COMPOSITIONS.map((c, i) => { const on = st.svc === i; return { card: SVC_CARD[i], descH: on ? '200px' : '0px', descPad: on ? '12px' : '0px', descOp: on ? 1 : 0, thumbA: SVC_THUMB[i][0], thumbB: SVC_THUMB[i][1], thumbOp: on ? 1 : 0, thumbT: on ? 'scale(1.08)' : 'scale(1)', index: '02.' + (i + 1), desc: c.desc, tags: c.tags, combo: this.comboEl(c, i), href: SVC_HREF[i], label: c.name + ' page', hover: () => { this.setState({ svc: i }); this.reveal(i); }, leave: () => { this.setState(s => s.svc === i ? { svc: null } : null); this.rest(i); }, arrowOp: on ? 1 : 0, arrowT: on ? 'translate(0,0)' : 'translate(-30%,30%)', ghost1: on ? 'translate(-.13em,.13em)' : 'translate(-30%,30%)', ghost2: on ? 'translate(-.26em,.26em)' : 'translate(-30%,30%)', arrowColor: on ? '#e8a1b8' : '#61caf8' }; }),
       charts: CHARTS.map((c, ci) => {
         const hov = st.wedge[ci], it = c.items[hov != null ? hov : 0];
         return { title: c.title, left: SL(c.cx), top: ST(c.cy), fan: this.fanEl(c, ci), k: c.title, v: it[1], n: it[0], kColor: hov != null ? '#e8a1b8' : '#61caf8' };

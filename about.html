@@ -12,6 +12,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-29P64H6C6Z');</script>
 <title>Milena Mikić, Founder of MIUX | Miami Creative Studio</title>
 <link rel="canonical" href="https://miuxcreative.com/about">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","url":"https://miuxcreative.com/about","name":"About MIUX Creative","mainEntity":{"@type":"Person","name":"Milena Mikić","jobTitle":"Founder and designer","worksFor":{"@type":"Organization","name":"MIUX Creative","url":"https://miuxcreative.com/"},"homeLocation":{"@type":"Place","name":"Miami, FL"},"birthPlace":{"@type":"Place","name":"Belgrade, Serbia"},"sameAs":["https://www.madebymiu.com/"]}}</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Meet Milena Mikić, the Miami-based multidisciplinary designer behind MIUX Creative and Made by Miu: brand, web, product and AI systems.">
 <meta property="og:type" content="website">
@@ -25,6 +26,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=Instrument+Serif:ital@1&amp;display=swap">
 <script src="assets/miux-defs.js"></script>
 <script src="assets/miux-fx.js"></script>
+<script src="assets/miux-mech.js"></script>
 <script src="assets/image-slot.js"></script>
 <style>
 @font-face{font-family:"PP Neue Montreal";src:url("assets/fonts/PPNeueMontreal-Book.otf") format("opentype");font-weight:400;font-display:swap}
@@ -39,6 +41,7 @@ a:hover{color:#e8a1b8}
 ::selection{background:#61caf8;color:#08090d}
 :focus-visible{outline:1px solid #61caf8;outline-offset:6px}
 @media (hover:hover) and (pointer:fine){html[data-miux-cursor],html[data-miux-cursor] *{cursor:none!important}}
+@keyframes miux-marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes miux-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -55,95 +58,61 @@ a:hover{color:#e8a1b8}
   <a href="contact.html" data-analytics="start_project_click" style="justify-self:end;color:#61caf8;white-space:nowrap" style-hover="color:#e8a1b8">Make your move ↗</a>
 </nav>
 
-<sc-if value="{{ guideOn }}" hint-placeholder-val="{{ false }}">
-  <aside aria-label="Dossier progress" style="position:fixed;z-index:40;right:28px;top:50%;height:44vh;transform:translateY(-50%);width:24px">
-    <i aria-hidden="true" style="position:absolute;left:11px;top:0;bottom:0;width:1px;background:rgba(245,242,237,.15)"></i>
-    <sc-for list="{{ chapters }}" as="c" hint-placeholder-count="5">
-      <button type="button" onClick="{{ c.go }}" aria-label="{{ c.aria }}" data-cursor="{{ c.cursor }}" style="position:absolute;left:5px;top:{{ c.top }};width:14px;height:13px;padding:0;border:0;transform:translateY(-50%);clip-path:url(#miuxHex);background:{{ c.bg }};cursor:pointer;transition:background 200ms ease"></button>
-    </sc-for>
-    <div ref="{{ guideMini }}" style="position:absolute;left:-10px;top:0;width:44px;transform:translateY(-50%);transition:top 380ms cubic-bezier(.16,1,.3,1)">
-      <div style="animation:miux-bob 2.4s ease-in-out infinite">
-        <svg viewBox="0 0 152 95" style="display:block;width:44px;height:28px;color:{{ guideColor }};overflow:visible;transition:color 300ms ease" aria-hidden="true"><use href="#miuxMiniM"></use></svg>
-      </div>
-      <div role="status" style="position:absolute;right:56px;top:50%;width:max-content;max-width:240px;padding:10px 12px;border:1px solid rgba(97,202,248,.3);background:#0d0e11;color:#f5f2ed;font:400 11px/1.45 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.02em;transform:translateY(-50%);opacity:{{ bubbleOpacity }};transition:opacity 260ms ease;pointer-events:none">
-        <span style="display:block;margin-bottom:6px;color:#61caf8;font:400 13px/1 'At Amiga',Impact,sans-serif">Mini M</span>{{ quip }}
-      </div>
-    </div>
-  </aside>
-</sc-if>
 
-<section id="log-00" data-screen-label="00 Operator" onPointerMove="{{ heroMove }}" onPointerLeave="{{ heroLeave }}" style="position:relative;min-height:100vh;overflow:hidden;padding:clamp(120px,16vh,160px) clamp(22px,5vw,74px) clamp(56px,8vh,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:clamp(40px,5vw,80px);align-items:center">
-  <div style="position:relative;z-index:2;min-width:0">
-    <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">
-      <span style="color:#e8a1b8">About <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span></span><span style="color:#9699a4">Log 00 / Operator · clearance: public</span>
-    </div>
-    <h1 data-reveal="1" style="margin:28px 0 0;font-weight:400;color:#f5f2ed">
-      <span onMouseEnter="{{ nameIn }}" onMouseLeave="{{ nameOut }}" onClick="{{ nameTap }}" data-cursor="POKE IT" style="display:block;font:400 clamp(64px,8.4vw,150px)/.86 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.04em;cursor:default"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Milena Mikić.</span>{{ nameTitle }}</span>
-      <span style="display:inline-block;margin-top:clamp(18px,2vw,28px);padding:.04em .22em .14em .04em;margin-right:-.18em;font:300 italic clamp(36px,4.2vw,74px)/1.05 'PP Eiko','Instrument Serif',serif;letter-spacing:-.02em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent;text-wrap:balance">Founder, designer, connector of dots.</span>
-    </h1>
-    <dl data-reveal="2" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:620px;margin:clamp(40px,5vw,64px) 0 0;border-top:1px solid rgba(245,242,237,.15)">
-      <div style="padding:18px 16px 0 0"><dt style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#9699a4">Based</dt><dd style="margin:10px 0 0;font-size:clamp(18px,1.6vw,24px);letter-spacing:-.02em">Miami</dd></div>
-      <div style="padding:18px 16px 0;border-left:1px solid rgba(245,242,237,.15)"><dt style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#9699a4">Freelancing since</dt><dd style="margin:10px 0 0;font:400 clamp(24px,2.2vw,34px)/1 'At Amiga',Impact,sans-serif;color:#61caf8">2006</dd></div>
-      <div style="padding:18px 0 0 16px;border-left:1px solid rgba(245,242,237,.15)"><dt style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#9699a4"><span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span> since</dt><dd style="margin:10px 0 0;font:400 clamp(24px,2.2vw,34px)/1 'At Amiga',Impact,sans-serif;color:#e8a1b8">2020</dd></div>
-    </dl>
-  </div>
 
-  <div style="position:relative;z-index:1;display:flex;justify-content:center;min-width:0">
-    <div onClick="{{ boop }}" data-cursor="SAY CHEESE" role="button" aria-label="Portrait of Milena Mikić inside the MIUX ring mark. Click to spin." style="position:relative;width:min(100%,640px,78vh);aspect-ratio:1049/935;cursor:pointer">
-      <div ref="{{ ringsRef }}" aria-hidden="true" style="position:absolute;inset:0"></div>
-      <div ref="{{ portraitRef }}" style="position:absolute;left:22%;top:22%;width:56%;height:56%;clip-path:url(#miuxHex);background:linear-gradient(145deg,#61caf8,#8b79b4 53%,#e8a1b8);transition:transform 700ms cubic-bezier(.16,1,.3,1)">
-        <div style="position:absolute;inset:3px;clip-path:url(#miuxHex);overflow:hidden;background:#121314">
-          <img src="assets/miu-profile.webp" alt="Portrait of Milena Mikić, founder of MIUX Creative" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:saturate(1.04) contrast(1.03)">
-        </div>
+<section id="log-00" data-screen-label="00 Vision" style="position:relative;isolation:isolate;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(120px,16vh,160px) clamp(22px,5vw,74px) clamp(56px,8vh,96px);text-align:center;background:#08090d">
+  <div ref="{{ fieldRef }}" aria-hidden="true" style="position:absolute;inset:0;z-index:-1;pointer-events:none"></div>
+  <div ref="{{ mechRef }}" aria-hidden="true" style="position:relative;width:clamp(64px,7vw,104px);aspect-ratio:1"></div>
+  <div data-reveal="0" style="margin-top:clamp(18px,2.4vw,32px);font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#e8a1b8">00 / The vision</div>
+  <h1 data-reveal="1" style="max-width:13ch;margin:clamp(20px,2.4vw,32px) 0 0;font-size:clamp(56px,8.4vw,150px);font-weight:400;line-height:.88;letter-spacing:-.05em;color:#f5f2ed;text-wrap:balance">A more <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">human</em> digital world.</h1>
+  <p data-reveal="2" style="max-width:32ch;margin:clamp(28px,3.4vw,48px) 0 0;color:#e4e4e8;font-size:clamp(20px,2.2vw,34px);line-height:1.22;letter-spacing:-.02em;text-wrap:balance">One where brands have character, products make sense, and the systems people rely on leave more room for confidence, creativity, and meaningful work.</p>
+</section>
+
+<section id="log-01" data-screen-label="01 The studio" style="position:relative;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);background:#08090d;color:#f5f2ed;border-top:1px solid rgba(245,242,237,.12)">
+  <span aria-hidden="true" style="position:absolute;top:48px;right:clamp(22px,5vw,74px);font:400 clamp(120px,16vw,260px)/1 'At Amiga',Impact,sans-serif;color:rgba(97,202,248,.05);pointer-events:none;user-select:none">01</span>
+  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(40px,6vw,110px);align-items:center">
+    <div style="min-width:0">
+      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#e8a1b8">About the studio</span><span style="color:#9699a4">Log 01 · founder-led, no middle layer</span></div>
+      <h2 data-reveal="1" style="max-width:13ch;margin:24px 0 0;font-size:clamp(48px,6.6vw,108px);font-weight:400;line-height:.88;letter-spacing:-.05em;text-wrap:balance">One connected way of <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">working.</em></h2>
+      <p data-reveal="2" style="max-width:46ch;margin:36px 0 0;font-size:clamp(18px,1.6vw,23px);line-height:1.45;text-wrap:pretty">Connecting the parts of a business that are too often designed separately, from identity and customer experience to products, tools, and internal workflows.</p>
+      <p data-reveal="3" style="max-width:46ch;margin:18px 0 0;color:#c8c9ce;font-size:clamp(16px,1.3vw,18px);line-height:1.55;text-wrap:pretty"><span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span> often works directly with the person whose name is on the door, while fitting comfortably inside wider teams, partner studios, and existing systems. When a project needs more hands, I bring in specialists I've worked with for years.</p>
+      <div data-reveal="3" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:32px">
+        <sc-for list="{{ disciplines }}" as="d" hint-placeholder-count="4"><span style="padding:7px 9px;border:.5px solid rgba(232,161,184,.45);background:rgba(232,161,184,.08);color:#e8a1b8;font:400 10px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">{{ d }}</span></sc-for>
       </div>
-      <div ref="{{ miniRef }}" aria-hidden="true" style="position:absolute;left:50%;top:17%;width:13%;transform:translate(-50%,-50%);transition:transform 600ms cubic-bezier(.34,1.56,.64,1)">
-        <div style="animation:miux-bob 2.6s ease-in-out infinite"><svg viewBox="0 0 152 95" style="display:block;width:100%;height:auto;color:#61caf8;overflow:visible"><use href="#miuxMiniM"></use></svg></div>
-      </div>
-      <span aria-hidden="true" style="position:absolute;right:2%;bottom:6%;padding:7px 10px;border:1px solid rgba(245,242,237,.15);background:rgba(8,9,13,.78);font:400 10px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#9699a4">ID · MM-2006 · <span style="color:#61caf8">verified human</span></span>
     </div>
+    <figure data-reveal="1" style="position:relative;margin:0">
+      <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:#08090d;border:1px solid rgba(245,242,237,.16)"><img src="assets/miu-canon-pitch.png" alt="Milena Mikić presenting Canon, a policy OS for HR, at a Miami hackathon" style="display:block;width:100%;height:100%;object-fit:cover;object-position:70% 50%"></div>
+      <figcaption style="display:flex;justify-content:space-between;gap:16px;margin-top:14px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#9699a4"><span>Fig. 01 · close to the decision</span><span>Miami, FL</span></figcaption>
+    </figure>
   </div>
 </section>
 
-<section id="log-01" data-screen-label="01 Dossier" style="position:relative;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);background:#f2eee8;color:#121314">
-  <span aria-hidden="true" style="position:absolute;top:48px;right:clamp(22px,5vw,74px);font:400 clamp(120px,16vw,260px)/1 'At Amiga',Impact,sans-serif;color:rgba(168,67,107,.07);pointer-events:none;user-select:none">01</span>
-  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(40px,6vw,110px);align-items:end">
-    <figure data-reveal="0" style="position:relative;margin:0;max-width:560px">
-      <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#121314;border:1px solid rgba(18,19,20,.25)">
-        <img src="assets/miu-profile.webp" alt="Portrait of Milena Mikić, founder of MIUX Creative" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 25%">
-      </div>
-      <figcaption style="display:flex;justify-content:space-between;gap:16px;margin-top:14px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#55565c"><span>Fig. 01 · the operator</span><span>Miami, FL</span></figcaption>
+<section id="log-02" data-screen-label="02 About me" style="position:relative;overflow:hidden;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);background:#f2eee8;color:#121314">
+  <span aria-hidden="true" style="position:absolute;top:48px;right:clamp(22px,5vw,74px);font:400 clamp(120px,16vw,260px)/1 'At Amiga',Impact,sans-serif;color:rgba(168,67,107,.07);pointer-events:none;user-select:none">02</span>
+  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(32px,4vw,64px);align-items:center">
+    <figure data-reveal="0" style="position:relative;margin:0;max-width:520px;justify-self:start">
+      <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#121314;border:1px solid rgba(18,19,20,.25)"><img src="assets/miu-profile.png" alt="Portrait of Milena Mikić, founder of MIUX Creative" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 25%"></div>
+      <figcaption style="display:flex;justify-content:space-between;gap:16px;margin-top:14px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#55565c"><span>Fig. 02 · the operator</span><span>ID · MM-2006 · <span style="color:#176b96">verified human</span></span></figcaption>
     </figure>
     <div style="min-width:0">
-      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">
-        <span style="color:#a8436b">Miami · Freelancing since 2006 · <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#176b96">MIUX</span> since 2020</span>
-      </div>
-      <h2 data-reveal="1" style="max-width:12ch;margin:24px 0 0;font-size:clamp(48px,6.6vw,108px);font-weight:400;line-height:.88;letter-spacing:-.05em;text-wrap:balance">One connected way of <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300">working.</em></h2>
-      <p data-reveal="2" style="max-width:40ch;margin:36px 0 0;font-size:clamp(19px,1.7vw,25px);line-height:1.4;letter-spacing:-.01em;text-wrap:pretty"><span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#176b96">MIUX</span> was founded by Milena Mikić, a multidisciplinary designer working across brand systems, digital experiences, product design, and AI systems.</p>
-      <p data-reveal="3" style="max-width:52ch;margin:22px 0 0;color:#55565c;font-size:clamp(16px,1.3vw,18px);line-height:1.55;text-wrap:pretty">Based in <a href="miami.html" style="color:#176b96;text-decoration:underline;text-underline-offset:3px" style-hover="color:#a8436b">Miami</a> and freelancing since 2006, Milena works directly with founders and teams to connect the parts of a business that are too often designed separately—from identity and customer experience to products, tools, and internal workflows.</p>
-      <div data-reveal="3" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:32px">
-        <sc-for list="{{ disciplines }}" as="d" hint-placeholder-count="4">
-          <span style="padding:7px 9px;border:.5px solid rgba(168,67,107,.4);background:rgba(232,161,184,.14);color:#a8436b;font:400 10px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">{{ d }}</span>
-        </sc-for>
-      </div>
+      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#a8436b">About me</span><span style="color:#55565c">Log 02 · Freelancing since 2006 · <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#176b96">MIUX</span> since 2020</span></div>
+      <h2 data-reveal="1" style="margin:24px 0 0;font-weight:400;color:#121314">
+        <span onMouseEnter="{{ nameIn }}" onMouseLeave="{{ nameOut }}" onClick="{{ nameTap }}" data-cursor="POKE IT" style="display:block;margin-left:-.06em;font:400 clamp(40px,5.4vw,104px)/.86 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.04em;cursor:default"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Milena Mikić.</span>{{ nameTitle }}</span>
+        <span style="display:inline-block;margin-top:clamp(14px,1.6vw,22px);font:300 italic clamp(30px,3.4vw,58px)/1.05 'PP Eiko','Instrument Serif',serif;letter-spacing:-.02em;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">Founder and designer.</span>
+      </h2>
+      <p data-reveal="2" style="max-width:46ch;margin:32px 0 0;color:#55565c;font-size:clamp(17px,1.5vw,21px);line-height:1.5;text-wrap:pretty">A multidisciplinary designer working across brand systems, digital experiences, product design, and AI systems. Based in <a href="miami.html" style="color:#176b96;text-decoration:underline;text-underline-offset:3px" style-hover="color:#a8436b">Miami</a> and freelancing since 2006.</p>
     </div>
+
   </div>
 </section>
 
-<section id="log-02" data-screen-label="02 Two channels" style="position:relative;overflow:hidden;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.15)">
-  <span aria-hidden="true" style="position:absolute;top:48px;right:clamp(22px,5vw,74px);font:400 clamp(120px,16vw,260px)/1 'At Amiga',Impact,sans-serif;color:rgba(97,202,248,.05);pointer-events:none;user-select:none">02</span>
-  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(56px,7vw,96px)">
-    <div>
-      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">
-        <span style="color:#e8a1b8"><span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span> + <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">Made by Miu</span></span><span style="color:#9699a4">Log 02 · two channels, one signal</span>
-      </div>
-      <h2 data-reveal="1" style="margin:24px 0 0;font-size:clamp(48px,7vw,112px);font-weight:400;line-height:.88;letter-spacing:-.05em">Studio on one side.<br><em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">Experiments on the other.</em></h2>
-    </div>
-    <p data-reveal="2" style="max-width:42ch;margin:0;color:#c8c9ce;font-size:clamp(17px,1.5vw,21px);line-height:1.5;text-wrap:pretty"><span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">MIUX</span> is the commercial studio. <span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:#61caf8">Made by Miu</span> is where the art, motion, code, science-fiction detours, and stranger ideas live. Both come from the same curiosity; each has a different job.</p>
+<section data-screen-label="02b Studio and experiments" style="position:relative;overflow:hidden;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);background:#08090d;color:#f5f2ed;border-top:1px solid rgba(245,242,237,.12)">
+  <div style="position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px 48px;margin-bottom:clamp(32px,4vw,56px)">
+    <h3 data-reveal="0" style="margin:0;font-size:clamp(48px,7vw,112px);font-weight:400;line-height:.88;letter-spacing:-.045em">Studio on one side. <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">Experiments on the other.</em></h3>
   </div>
-
   <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(12px,1.4vw,20px)">
     <a href="services.html" target="_self" rel="noopener" data-reveal="0" data-cursor="VIEW" onMouseEnter="{{ ch1.enter }}" onMouseLeave="{{ ch1.leave }}" onFocus="{{ ch1.enter }}" onBlur="{{ ch1.leave }}" style="position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:clamp(520px,50vw,720px);padding:clamp(22px,2.6vw,40px);overflow:hidden;background:#08090d;color:#f5f2ed;border:1px solid rgba(245,242,237,.16)">
-      <div style="position:absolute;inset:0;z-index:-3;filter:{{ ch1.filter }};transform:scale({{ ch1.scale }});transition:filter 600ms ease,transform 1100ms cubic-bezier(.18,.8,.22,1)"><image-slot id="about-ch-miux" src="assets/hero-miux6.webp" shape="rect" fit="cover" placeholder="Drop: MIUX studio image" style="position:absolute;inset:0;width:100%;height:100%;color:#9699a4"></image-slot></div>
+      <div style="position:absolute;inset:0;z-index:-3;filter:{{ ch1.filter }};transform:scale({{ ch1.scale }});transition:filter 600ms ease,transform 1100ms cubic-bezier(.18,.8,.22,1)"><image-slot id="about-ch-miux" src="assets/hero-miux6.png" shape="rect" fit="cover" placeholder="Drop: MIUX studio image" style="position:absolute;inset:0;width:100%;height:100%;color:#9699a4"></image-slot></div>
       <span aria-hidden="true" style="position:absolute;inset:0;z-index:-2;pointer-events:none;background:#61caf8;mix-blend-mode:multiply;opacity:{{ ch1.tint }};transition:opacity 500ms ease"></span>
       <span aria-hidden="true" style="position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(to top,rgba(8,9,13,.94) 0%,rgba(8,9,13,.55) 45%,rgba(8,9,13,.15) 100%)"></span>
       <span style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;pointer-events:none">
@@ -175,61 +144,47 @@ a:hover{color:#e8a1b8}
       </span>
     </a>
   </div>
+
 </section>
 
-<section id="log-03" data-screen-label="03 Founder-led" style="position:relative;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);background:#61caf8;color:#121314">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(40px,6vw,110px);align-items:center">
-    <div style="min-width:0">
-      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">
-        <span>Founder-led</span><span style="color:rgba(18,19,20,.65)">Log 03 · no middle layer</span>
-      </div>
-      <h2 data-reveal="1" style="margin:24px 0 0;font-size:clamp(48px,6.6vw,108px);font-weight:400;line-height:.88;letter-spacing:-.05em">Close to the work.<br><em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300">Close to the decision.</em></h2>
-      <p data-reveal="2" style="max-width:44ch;margin:36px 0 0;color:rgba(18,19,20,.82);font-size:clamp(17px,1.5vw,22px);line-height:1.45;text-wrap:pretty"><span style="font-family:'At Amiga',Impact,sans-serif;letter-spacing:0;text-transform:none;color:inherit">MIUX</span> often works directly with the person whose name is on the door, while fitting comfortably inside wider teams, partner studios, and existing systems.</p>
-      <p data-reveal="3" style="max-width:44ch;margin:18px 0 0;color:rgba(18,19,20,.82);font-size:clamp(17px,1.5vw,22px);line-height:1.45;text-wrap:pretty">When a project needs more hands, I bring in specialists I've worked with for years.</p>
-    </div>
-    <figure data-reveal="1" style="position:relative;margin:0">
-      <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:#08090d;border:1px solid rgba(18,19,20,.3)">
-        <img src="assets/miu-presenting.webp" alt="Milena Mikić presenting product research in Miami" style="display:block;width:100%;height:100%;object-fit:cover">
-      </div>
-      <div aria-hidden="true" style="position:absolute;left:clamp(14px,2vw,24px);top:-22px;animation:miux-bob 2.4s ease-in-out infinite"><svg viewBox="0 0 152 95" style="display:block;width:46px;height:auto;color:#121314"><use href="#miuxMiniM"></use></svg></div>
-      <figcaption style="display:flex;justify-content:space-between;gap:16px;margin-top:14px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(18,19,20,.72)"><span>Fig. 03 · presenting product research</span><span>Miami</span></figcaption>
-    </figure>
-  </div>
-</section>
-
-<section data-screen-label="03b Miami" style="position:relative;isolation:isolate;overflow:hidden;min-height:clamp(520px,80vh,820px);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px) clamp(48px,6vw,88px);background:#0b0c14;color:#f5f2ed">
-  <img src="assets/photos/miami-brickell-night.webp" alt="" loading="lazy" style="position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover">
-  <div aria-hidden="true" style="position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#61caf8,#8b79b4 55%,#e8a1b8);mix-blend-mode:color;opacity:.55"></div>
-  <div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,9,13,.6) 0%,rgba(8,9,13,.1) 35%,rgba(8,9,13,.55) 65%,#08090d 100%)"></div>
-  <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px 64px">
-    <div style="min-width:0;max-width:900px">
-      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#e8a1b8">Belgrade, Serbia → Miami, FL</span><span style="color:#dcdde0">44.79° N · 20.45° E → 25.76° N · 80.19° W</span></div>
-      <h2 data-reveal="1" style="margin:24px 0 0;font-size:clamp(56px,8vw,140px);font-weight:400;line-height:.86;letter-spacing:-.05em;text-wrap:balance">Made in Belgrade.<br><em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;letter-spacing:-.04em">Based in Miami.</em></h2>
-      <p data-reveal="2" style="max-width:44ch;margin:28px 0 0;color:#e4e4e8;font-size:clamp(17px,1.5vw,21px);line-height:1.45;text-wrap:pretty">In the room with Miami teams. On the call with everyone else.</p>
-    </div>
-    <a href="miami.html" data-reveal="3" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:0;background:#61caf8;color:#08090d;text-decoration:none;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;transition:background 200ms ease" style-hover="background:#e8a1b8">Explore Miami ↗</a>
-  </div>
-</section>
-
-<section id="log-04" data-screen-label="04 Transmission" style="position:relative;overflow:hidden;min-height:78vh;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);display:flex;flex-direction:column;justify-content:flex-end;background:#e8a1b8;color:#121314">
-  <i aria-hidden="true" style="position:absolute;right:-8vw;top:50%;width:min(56vw,720px);aspect-ratio:1049/935;transform:translateY(-50%);clip-path:url(#miuxHex);background:rgba(18,19,20,.06)"></i>
-  <i aria-hidden="true" style="position:absolute;right:calc(-8vw + min(56vw,720px) * .22);top:50%;width:calc(min(56vw,720px) * .56);aspect-ratio:1049/935;transform:translateY(-50%);clip-path:url(#miuxHex);background:rgba(18,19,20,.06)"></i>
+<section id="log-03" data-screen-label="03 Values" style="position:relative;overflow:hidden;padding:clamp(96px,12vw,170px) clamp(22px,5vw,74px);border-top:1px solid rgba(245,242,237,.12);background:#08090d">
+  <span aria-hidden="true" style="position:absolute;top:48px;right:clamp(22px,5vw,74px);font:400 clamp(120px,16vw,260px)/1 'At Amiga',Impact,sans-serif;color:rgba(97,202,248,.05);pointer-events:none;user-select:none">03</span>
   <div style="position:relative">
-    <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase">
-      <span>Log 04 / Transmission</span><span style="color:rgba(18,19,20,.65)">channel open · Miami, FL</span>
-    </div>
-    <h2 data-reveal="1" style="max-width:12ch;margin:24px 0 0;font-size:clamp(58px,8vw,140px);font-weight:400;line-height:.84;letter-spacing:-.07em;text-wrap:balance">Bring the thing that needs <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;letter-spacing:-.03em">connecting.</em></h2>
-    <div data-reveal="2" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(32px,4vw,52px)">
-      <a href="mailto:hello@miuxcreative.com" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:15px 22px;border-radius:0;background:#121314;color:#f5f2ed;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 160ms ease,color 160ms ease,transform 160ms ease" style-hover="background:#61caf8;color:#121314;transform:translateY(-2px)">Start a conversation ↗</a>
+    <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#e8a1b8">Values</span><span style="color:#9699a4">Log 03 · how the work gets judged</span></div>
+    <h2 data-reveal="1" style="margin:24px 0 0;font-size:clamp(48px,7.4vw,118px);font-weight:400;line-height:.88;letter-spacing:-.05em">Values you can see <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">in the work.</em></h2>
+    <div style="margin-top:clamp(56px,7vw,100px);border-top:1px solid rgba(245,242,237,.16)" onMouseLeave="{{ valOut }}">
+      <sc-for list="{{ vals }}" as="x" hint-placeholder-count="7">
+        <div onMouseEnter="{{ x.enter }}" data-cursor="POKE IT" style="position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:clamp(64px,8vw,120px) minmax(0,1.3fr) minmax(0,1fr);gap:12px clamp(20px,3vw,48px);align-items:center;min-height:clamp(96px,9vw,132px);padding:0 clamp(12px,1.6vw,24px);border-bottom:1px solid rgba(245,242,237,.16);color:{{ x.fg }};transform:{{ x.rowT }};transition:color 220ms ease,transform 500ms cubic-bezier(.34,1.56,.64,1)">
+          <span aria-hidden="true" style="position:absolute;inset:0;z-index:-2;background:{{ x.fill }};transform:{{ x.fillT }};transform-origin:{{ x.origin }};transition:transform 520ms cubic-bezier(.7,0,.2,1)"></span>
+          {{ x.marq }}
+          <span style="display:inline-block;font:400 clamp(22px,2.2vw,34px)/1 'At Amiga',Impact,sans-serif;color:{{ x.numC }};transform:{{ x.numT }};transform-origin:left center;transition:transform 560ms cubic-bezier(.34,1.8,.64,1),color 220ms ease">{{ x.n }}</span>
+          <strong style="display:block;font-family:{{ x.titleF }};font-style:{{ x.titleS }};font-size:clamp(26px,3.2vw,52px);font-weight:{{ x.titleW }};line-height:1;letter-spacing:-.045em;transform:{{ x.titleT }};transition:transform 520ms cubic-bezier(.34,1.56,.64,1)">{{ x.t }}</strong>
+          <p style="max-width:38ch;margin:0;color:{{ x.dC }};font-size:clamp(15px,1.3vw,18px);line-height:1.45;text-wrap:pretty;transform:{{ x.dT }};transition:transform 520ms cubic-bezier(.18,.8,.22,1) 60ms,color 220ms ease">{{ x.d }}</p>
+        </div>
+      </sc-for>
     </div>
   </div>
 </section>
 
-<dc-import name="MIUX Footer" cta-title="Let's work together." cta-body="Tell me what you're building and what's in the way." hint-size="100%,1100px"></dc-import>
+<section id="log-04" data-screen-label="04 Miami" style="position:relative;isolation:isolate;overflow:hidden;background:#0b0c14;color:#f5f2ed">
+  <div style="position:relative;width:100%;aspect-ratio:2475/1484;min-height:520px">
+    <img src="assets/photos/miami-miu-night.jpg" alt="Miami at night: Port of Miami cranes, the causeway light trails and two lit towers" loading="lazy" style="position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:60% 100%">
+    <div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;background:linear-gradient(160deg,rgba(8,9,13,.55) 0%,rgba(8,9,13,0) 45%)"></div>
+    <div style="position:absolute;left:clamp(22px,5vw,74px);top:clamp(48px,7vw,110px);right:clamp(22px,5vw,74px);max-width:820px">
+      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#e8a1b8">Belgrade, Serbia → Miami, FL</span><span style="color:#dcdde0">44.79° N · 20.45° E → 25.76° N · 80.19° W</span></div>
+      <h2 data-reveal="1" style="margin:24px 0 0;font-weight:400;letter-spacing:-.05em;text-wrap:balance"><span style="display:block;font-size:clamp(24px,2.8vw,46px);line-height:1">Made in Belgrade.</span><em style="display:block;margin-top:.12em;font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;font-size:clamp(56px,8vw,140px);line-height:.9;letter-spacing:-.04em">Based in <span style="display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">Miami.</span></em></h2>
+      <p data-reveal="2" style="max-width:40ch;margin:24px 0 0;color:#e4e4e8;font-size:clamp(16px,1.4vw,20px);line-height:1.45;text-wrap:pretty">In the room with Miami teams. On the call with everyone else.</p>
+      <a href="miami.html" data-reveal="3" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;margin-top:28px;padding:0 24px;border-radius:0;background:#61caf8;color:#08090d;text-decoration:none;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;transition:background 200ms ease" style-hover="background:#e8a1b8">Explore Miami ↗</a>
+    </div>
+  </div>
+</section>
+
+
+<dc-import name="MIUX Footer" cta-title="Let's work together." cta-body="Tell me what you're building and what's in the way." cta-button="Work directly with Miu" hint-size="100%,1100px"></dc-import>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;cursor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;guide&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mini M&quot;}}">
 const GRADED = [1, .92, .8, .65, .5, .36, .24, .14];
-const CHAPTERS = ['Operator', 'Dossier', 'Two channels', 'Founder-led', 'Transmission'];
+const CHAPTERS = ['Vision', 'Studio', 'About me', 'Values', 'Miami'];
 const QUIPS = [
   "that's the boss. I just live here.",
   "the short bio. she wrote it, I approved it.",
@@ -239,6 +194,7 @@ const QUIPS = [
 ];
 const GUIDE_COLORS = ['#61caf8', '#a8436b', '#e8a1b8', '#121314', '#121314'];
 
+const VALUES = [["Curiosity leads the way.","No pretending to have all the answers. Asking the right questions."],["Structure is the playground.","Rules give room to innovate."],["Respect the brand.","Guidelines aren't suggestions. They're the blueprint."],["Bold ≠ loud.","Design with edge, not ego."],["Collaboration is everything.","Great work is never solo."],["Weird ideas welcome.","Got a wild one? I'll help you build it."],["No shortcuts.","Built to last, because anything else is just decoration."]];
 const NAME_WORDS = [
   [['M','amiga','blue','.8em'],['i','eiko','pink','.3em'],['l','mono','white','.5em'],['e','montreal','white','.52em'],['n','amiga','pink','.58em'],['a','eiko','blue','.5em']],
   [['M','amiga','pink','.8em'],['i','mono','blue','.5em'],['k','eiko','white','.48em'],['i','montreal','white','.24em'],['ć','amiga','blue','.5em'],['.','eiko','pink','.26em']]
@@ -249,7 +205,7 @@ const CHAN_WORDS = [
 ];
 class Component extends DCLogic {
   state = { namePhase: 'rest', chapter: 0, quip: null, bubble: true, chan: -1, narrow: typeof window !== 'undefined' && window.innerWidth < 1100 };
-  ringsRef = React.createRef(); portraitRef = React.createRef(); miniRef = React.createRef();
+  ringsRef = React.createRef(); portraitRef = React.createRef(); miniRef = React.createRef(); fieldRef = React.createRef(); mechRef = React.createRef();
   guideMini = React.createRef(); navBar = React.createRef();
 
   componentDidMount() {
@@ -257,6 +213,8 @@ class Component extends DCLogic {
       if (!window.MIUXFX || !window.MIUX_GEO) { this._w = setTimeout(go, 40); return; }
       MIUXFX.injectDefs();
       this.buildRings();
+      const mk = () => { if (!window.MIUX_MECH) { this._mw = setTimeout(mk, 40); return; } if (this.mechRef.current && MIUXFX.mech) this.unMech = MIUXFX.mech(this.mechRef.current, { now: true }); }; mk();
+      if (this.fieldRef.current && this.mechRef.current && MIUXFX.ringField) this.unField = MIUXFX.ringField(this.fieldRef.current, this.mechRef.current, { N: 24, G: 1.13, frac: .58, alpha: .75, period: 6400, introMs: 2200, skip: MIUXFX.reduced() });
       if (this.props.cursor !== false) this.unCursor = MIUXFX.mountCursor();
       this.unReveal = MIUXFX.observeReveals(document);
       this.onScroll();
@@ -269,6 +227,7 @@ class Component extends DCLogic {
     this.flashBubble();
   }
   componentWillUnmount() {
+    clearTimeout(this._mw); this.unMech && this.unMech(); this.unField && this.unField();
     removeEventListener('scroll', this._s); removeEventListener('resize', this._r);
     clearTimeout(this._w); clearTimeout(this._bt); cancelAnimationFrame(this._raf);
     this.unCursor && this.unCursor(); this.unReveal && this.unReveal();
@@ -364,18 +323,18 @@ class Component extends DCLogic {
   nameEl() {
     const h = React.createElement, phase = this.state.namePhase, on = phase !== 'rest';
     const SANS = "'PP Neue Montreal','Helvetica Neue',Helvetica,Arial,sans-serif", MONO = "'PP Neue Montreal Mono','IBM Plex Mono',ui-monospace,monospace", AMIGA = "'At Amiga',Impact,sans-serif", EIKO = "'PP Eiko','Instrument Serif',serif";
-    const F = { amiga: AMIGA, eiko: EIKO, montreal: SANS, mono: MONO }, C = { blue: '#61caf8', pink: '#e8a1b8', white: '#f5f2ed' };
+    const F = { amiga: AMIGA, eiko: EIKO, montreal: SANS, mono: MONO }, C = { blue: '#176b96', pink: '#a8436b', white: '#121314' };
     const LIFT = { amiga: '.035em', eiko: '.025em', montreal: '.01em', mono: '.025em' };
     const glyph = (g, j) => {
-      const s = { display: 'inline-flex', alignItems: 'flex-end', justifyContent: 'center', width: g[3], height: '.86em', lineHeight: .72, fontFamily: SANS, fontWeight: 400, fontStyle: 'normal', color: '#f5f2ed', transition: 'color 90ms ease, transform 240ms cubic-bezier(.16,1,.3,1)' };
+      const s = { display: 'inline-flex', alignItems: 'flex-end', justifyContent: 'center', width: g[3], height: '.86em', lineHeight: .72, fontFamily: SANS, fontWeight: 400, fontStyle: 'normal', color: '#121314', transition: 'color 90ms ease, transform 240ms cubic-bezier(.16,1,.3,1)' };
       if (phase === 'a') { if (j % 3 === 0) Object.assign(s, { fontFamily: MONO, color: C.pink, transform: 'translateY(-.03em)' }); else if (j % 3 === 1) Object.assign(s, { fontFamily: EIKO, fontStyle: 'italic', color: C.blue, transform: 'translateY(.035em)' }); }
       if (phase === 'b') { if (j % 2 === 0) Object.assign(s, { fontFamily: AMIGA, color: C.blue, transform: 'translateY(.02em)' }); else Object.assign(s, { fontFamily: MONO, color: C.pink, transform: 'translateY(-.025em)' }); }
       if (phase === 'rev') Object.assign(s, { fontFamily: F[g[1]], color: C[g[2]], paddingBottom: LIFT[g[1]], fontStyle: g[1] === 'eiko' ? 'italic' : 'normal', fontWeight: g[1] === 'eiko' ? 300 : 400 });
       return h('span', { key: j, style: s }, g[0]);
     };
     return h('span', { 'aria-hidden': true, style: { display: 'inline-grid', alignItems: 'end', maxWidth: '100%', padding: '.14em 0' } },
-      h('span', { style: { gridArea: '1/1', opacity: on ? 0 : 1, transform: on ? 'translateY(-.06em)' : 'none', transition: 'opacity 180ms ease, transform 420ms cubic-bezier(.16,1,.3,1)' } }, 'Milena Mikić.'),
-      h('span', { style: { gridArea: '1/1', display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', gap: '.1em .3em', opacity: on ? 1 : 0, transform: on ? 'none' : 'translateY(.04em)', transition: 'opacity 180ms ease, transform 520ms cubic-bezier(.16,1,.3,1)' } },
+      h('span', { style: { gridArea: '1/1', opacity: on ? 0 : 1, transform: on ? 'translateY(-.06em)' : 'none', transition: 'opacity 180ms ease, transform 420ms cubic-bezier(.16,1,.3,1)', whiteSpace: 'nowrap' } }, 'Milena Mikić.'),
+      h('span', { style: { gridArea: '1/1', display: 'flex', flexWrap: 'nowrap', alignItems: 'flex-end', gap: '.1em .3em', whiteSpace: 'nowrap', opacity: on ? 1 : 0, transform: on ? 'none' : 'translateY(.04em)', transition: 'opacity 180ms ease, transform 520ms cubic-bezier(.16,1,.3,1)' } },
         NAME_WORDS.map((w, k) => h('span', { key: k, style: { display: 'flex', alignItems: 'flex-end', height: '.86em', whiteSpace: 'nowrap' } }, w.map(glyph)))));
   }
 
@@ -402,7 +361,7 @@ class Component extends DCLogic {
       nameIn: () => { if (!matchMedia('(pointer:coarse)').matches) this.nameReveal(); },
       nameOut: () => { if (!matchMedia('(pointer:coarse)').matches) this.nameRest(); },
       nameTap: () => { if (matchMedia('(pointer:coarse)').matches) (this.state.namePhase === 'rev' ? this.nameRest() : this.nameReveal()); },
-      navBar: this.navBar, guideMini: this.guideMini, ringsRef: this.ringsRef, portraitRef: this.portraitRef, miniRef: this.miniRef,
+      navBar: this.navBar, guideMini: this.guideMini, ringsRef: this.ringsRef, portraitRef: this.portraitRef, miniRef: this.miniRef, fieldRef: this.fieldRef, mechRef: this.mechRef,
       heroMove: e => this.heroPointer(e), heroLeave: () => this.heroPointer(null), boop: () => this.boop(),
       guideOn: this.props.guide === true && !st.narrow,
       guideColor: GUIDE_COLORS[st.chapter],
@@ -411,6 +370,20 @@ class Component extends DCLogic {
       chapters: CHAPTERS.map((c, i) => ({ top: (i / n * 100) + '%', bg: i === st.chapter ? '#61caf8' : (i < st.chapter ? 'rgba(97,202,248,.45)' : 'rgba(245,242,237,.22)'), aria: `Log 0${i} ${c}`, cursor: c.toUpperCase().slice(0, 8), go: () => this.scrollTo(i) })),
       disciplines: ['Brand systems', 'Digital experiences', 'Product design', 'AI systems'],
       ch1: this.chanCard(0, CH[0]), ch2: this.chanCard(1, CH[1]),
+      valOut: () => this.setState({ hv: null }),
+      vals: VALUES.map((x, i) => { const on = st.hv === i, pink = i % 2 === 1;
+        const TW = [-1, 1.2, -.8, 1, -1.4, .9, -.6][i];
+        return { n: '00' + (i + 1), t: x[0], d: x[1], enter: () => this.setState({ hv: i }),
+          fill: pink ? '#e8a1b8' : '#61caf8', fillT: on ? 'scaleX(1)' : 'scaleX(0)', origin: i % 2 ? 'right center' : 'left center',
+          fg: on ? '#08090d' : '#f5f2ed', numC: on ? '#08090d' : (pink ? '#e8a1b8' : '#61caf8'), dC: on ? '#08090d' : '#c8c9ce',
+          rowT: on ? `rotate(${TW * .5}deg) scale(1.015)` : 'none',
+          numT: on ? `rotate(${TW * 14}deg) scale(1.9)` : 'none',
+          titleF: on ? "'PP Eiko','Instrument Serif',serif" : "'PP Neue Montreal','Helvetica Neue',sans-serif", titleS: on ? 'italic' : 'normal', titleW: on ? 300 : 400,
+          titleT: on ? 'translateX(.4em) skewX(-6deg)' : 'none', dT: on ? 'translateX(-.6em)' : 'none',
+          marq: on ? React.createElement('span', { 'aria-hidden': true, style: { position: 'absolute', left: 0, top: '50%', zIndex: -1, display: 'flex', whiteSpace: 'nowrap', transform: 'translateY(-50%)', pointerEvents: 'none' } },
+            React.createElement('span', { style: { display: 'flex', gap: '.5em', paddingRight: '.5em', font: "400 clamp(80px,9vw,150px)/1 'At Amiga',Impact,sans-serif", color: 'transparent', WebkitTextStroke: '1px rgba(8,9,13,.22)', animation: `miux-marq ${8 + i}s linear infinite${i % 2 ? ' reverse' : ''}` } },
+              ...Array.from({ length: 8 }, (_, k) => React.createElement('span', { key: k }, x[0].replace(/\.$/, ''))))) : null };
+      }),
       channels: CH.map((c, i) => Object.assign({}, c, {
         bg: st.chan === i ? '#121314' : '#08090d',
         hexBg: c.hex, hexOp: st.chan === i ? .9 : .35, spin: st.chan === i ? '30deg' : '0deg',
