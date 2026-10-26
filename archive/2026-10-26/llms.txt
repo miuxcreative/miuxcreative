@@ -1,0 +1,29 @@
+# MIUX Creative
+
+> MIUX Creative is a Miami design studio founded by Milena Mikić (freelancing since 2006, MIUX since 2020). It designs brand systems, websites and digital experiences, product design, and practical AI workflows as one connected system, for founders, startups and teams. Work happens remotely across time zones and in person with Miami clients.
+
+## Services
+- [Services overview](https://miuxcreative.com/services): Brand, web, product and AI, and how they connect.
+- [Brand Systems](https://miuxcreative.com/brand-systems): Identity systems, guidelines, templates, tokens and AI brand skills.
+- [Digital Experiences](https://miuxcreative.com/digital-experiences): Websites, landing pages, ecommerce and service journeys.
+- [Product Design](https://miuxcreative.com/product-design): UX flows, prototypes, design systems and developer handoff.
+- [AI Systems](https://miuxcreative.com/ai-systems): Practical AI workflows and automation that clear the busywork and keep a person on the final call.
+- [Agency Spillover](https://miuxcreative.com/agency-spillover): Senior white-label design and front-end overflow for agencies and studios.
+
+## Work
+- [All case files](https://miuxcreative.com/work)
+- [Kaleidoscope Teams](https://miuxcreative.com/work-kaleidoscope): Brand, web and media for a team-building company.
+- [Omnis Marine](https://miuxcreative.com/work-omnis): Identity, web and print for a maritime security company.
+- [RF Studios](https://miuxcreative.com/work-rf-studios): Identity, booking site and product for a South Beach studio.
+- [RoyaFit](https://miuxcreative.com/work-royafit): Brand, photography and web for Miami's first fitness concierge.
+
+## Studio
+- [About](https://miuxcreative.com/about): Vision, founder, values.
+- [Process](https://miuxcreative.com/process): The five-stage MIUX Blueprint.
+- [Miami](https://miuxcreative.com/miami): Local collaboration in Miami.
+- [Fintech](https://miuxcreative.com/fintech): Design for fintech products.
+- [Contact](https://miuxcreative.com/contact): Start a project. No formal brief required.
+
+## Optional
+- [Made by Miu](https://www.madebymiu.com/): The founder's experimental lab: art, motion and code.
+- [Privacy](https://miuxcreative.com/privacy)

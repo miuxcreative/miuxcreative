@@ -20,7 +20,7 @@
 <meta property="og:description" content="Brand systems, digital experiences, product design and AI systems from a Miami studio.">
 <meta property="og:image" content="https://miuxcreative.com/assets/og-preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"MIUX Creative services","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Service","name":"Brand Systems","url":"https://miuxcreative.com/brand-systems"}},{"@type":"ListItem","position":2,"item":{"@type":"Service","name":"Digital Experiences","url":"https://miuxcreative.com/digital-experiences"}},{"@type":"ListItem","position":3,"item":{"@type":"Service","name":"Product Design","url":"https://miuxcreative.com/product-design"}},{"@type":"ListItem","position":4,"item":{"@type":"Service","name":"AI Systems","url":"https://miuxcreative.com/services/ai-systems/"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"MIUX Creative services","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Service","name":"Brand Systems","url":"https://miuxcreative.com/brand-systems"}},{"@type":"ListItem","position":2,"item":{"@type":"Service","name":"Digital Experiences","url":"https://miuxcreative.com/digital-experiences"}},{"@type":"ListItem","position":3,"item":{"@type":"Service","name":"Product Design","url":"https://miuxcreative.com/product-design"}},{"@type":"ListItem","position":4,"item":{"@type":"Service","name":"AI Systems","url":"https://miuxcreative.com/ai-systems"}}]}</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=Instrument+Serif:ital@1&amp;display=swap">
@@ -42,6 +42,7 @@ a:hover{color:#e8a1b8}
 @media (hover:hover) and (pointer:fine){html[data-miux-cursor],html[data-miux-cursor] *{cursor:none!important}}
 @keyframes miux-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@keyframes svcPop{from{opacity:0;transform:translateY(.25em)}to{opacity:1;transform:none}}
 </style>
 <script src="assets/miux-nav.js"></script>
 </helmet>
@@ -56,111 +57,81 @@ a:hover{color:#e8a1b8}
   <a href="contact.html" data-analytics="start_project_click" style="justify-self:end;color:#61caf8;white-space:nowrap" style-hover="color:#e8a1b8">Make your move ↗</a>
 </nav>
 
-<section data-screen-label="01 Services" style="padding:clamp(140px,16vw,220px) clamp(22px,5vw,74px) clamp(56px,7vw,96px)">
-  <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 24px;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#e8a1b8">Services</span><span style="color:#9699a4">Four ways in</span></div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px clamp(24px,6vw,96px);align-items:end;margin-top:24px">
-    <h1 data-reveal="1" style="margin:0;font:400 clamp(44px,6vw,100px)/.9 'PP Neue Montreal','Helvetica Neue',sans-serif;letter-spacing:-.05em">Come in for one.<br>Stay for the <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;letter-spacing:-.04em;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">system.</em></h1>
-    <div>
-      <p data-seo-line="" data-reveal="2" style="margin:0;color:#a3a7b3;font:400 12px/1.5 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase">Brand identity, web design, product design and AI systems · Miami, FL</p>
-      <p data-reveal="2" style="max-width:40ch;margin:18px 0 0;color:#c8c9ce;font-size:clamp(17px,1.5vw,21px);line-height:1.45;text-wrap:pretty">Start with the one you need. They're built to plug into each other when you need more.</p>
+<section data-screen-label="01 Services" style="position:relative;padding:clamp(110px,14vh,150px) clamp(22px,5vw,74px) 0;background:#08090d;color:#f5f2ed">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:28px clamp(24px,4vw,64px);align-items:end;padding-bottom:clamp(32px,4vw,52px);border-bottom:1px solid rgba(245,242,237,.12)">
+    <div style="min-width:0">
+      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:8px 18px;white-space:nowrap;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase"><span style="color:#f5f2ed">Services</span><span style="color:#55565c">/</span><span style="color:#9699a4">Four ways in</span></div>
+      <h1 data-reveal="1" style="margin:22px 0 0;font-size:clamp(40px,6.2vw,110px);font-weight:400;line-height:.9;letter-spacing:-.05em">Come in for one.<br><em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;letter-spacing:-.03em;white-space:nowrap;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">Stay for the system.</em></h1>
+    </div>
+    <div data-reveal="2" style="display:grid;gap:22px;min-width:0">
+      
+      <p style="max-width:44ch;margin:0;color:#c8c9ce;font-size:clamp(17px,1.5vw,21px);line-height:1.5;text-wrap:pretty">Start with the one you need. They're built to plug into each other when you need more.</p>
     </div>
   </div>
-</section>
 
-<section data-screen-label="02 The four" aria-label="Services" style="padding:0 clamp(22px,5vw,74px) clamp(80px,10vw,140px)">
-  <div style="display:flex;flex-direction:column;gap:clamp(28px,4vw,56px)">
-    <article id="brand-systems" data-reveal="0" data-cursor="POKE IT" onMouseEnter="{{ c1.enter }}" onMouseLeave="{{ leave }}" onFocus="{{ c1.enter }}" onBlur="{{ leave }}" style="position:sticky;top:calc(84px + 0 * 28px);isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;gap:40px;height:min(calc(100vh - 120px - 0 * 28px),760px);min-height:460px;padding:clamp(22px,2.6vw,40px);overflow:hidden;background:#08090d;color:#f5f2ed;border:1px solid rgba(245,242,237,.16)">
-      <img src="assets/rf/rf-mandala-wall-web.jpg" alt="" loading="lazy" style="position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;filter:{{ c1.filter }};transform:scale({{ c1.scale }});transition:filter 600ms ease,transform 1100ms cubic-bezier(.18,.8,.22,1)">
-      <span aria-hidden="true" style="position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,9,13,.7) 0%,rgba(8,9,13,0) 22%,rgba(8,9,13,.35) 42%,rgba(8,9,13,.82) 68%,rgba(8,9,13,.97) 100%)"></span>
-      <span style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
-        <span style="padding:6px 9px;background:#08090d;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:{{ c1.num }};transition:color 300ms ease">01</span>
-        <span aria-hidden="true" style="position:relative;display:block;width:1em;height:.8em;font:400 clamp(36px,3.4vw,56px)/.8 'At Amiga',Impact,sans-serif">
-          <span style="position:absolute;left:0;top:0;color:#61caf8;opacity:{{ c1.gOp2 }};transform:{{ c1.g2 }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),opacity 300ms ease">↗</span>
-          <span style="position:absolute;left:0;top:0;color:#61caf8;opacity:{{ c1.gOp1 }};transform:{{ c1.g1 }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),opacity 300ms ease">↗</span>
-          <span style="position:relative;display:block;color:{{ c1.arrowC }};transform:{{ c1.arrow }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),color 300ms ease">↗</span>
-        </span>
-      </span>
-      <span style="display:grid;gap:18px;min-width:0">
-        <h2 aria-label="Brand Systems" style="margin:0;font-size:clamp(48px,6vw,104px);font-weight:400;line-height:.86;letter-spacing:-.04em;color:#f5f2ed;text-shadow:0 2px 28px rgba(8,9,13,.65)">{{ c1.title }}</h2>
-        <span style="max-width:44ch;font-size:clamp(15px,1.3vw,18px);line-height:1.45;color:#dcdde0;text-wrap:pretty;text-shadow:0 1px 14px rgba(8,9,13,.8)">Bold identities built as working systems, from screens to storefronts to shirts.</span>
-        <span style="display:flex;flex-wrap:wrap;gap:6px"><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Identity and voice</span><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Design tokens</span><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Live brand skills</span></span>
-        <span style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px"><a href="brand-systems.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:0;text-decoration:none;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,border-color 200ms ease;border:1px solid #f5f2ed;color:#f5f2ed" style-hover="background:#f5f2ed;color:#08090d">More info</a><a href="contact.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:0;text-decoration:none;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,border-color 200ms ease;border:1px solid #61caf8;background:#61caf8;color:#08090d" style-hover="background:#e8a1b8;border-color:#e8a1b8">Choose this adventure</a></span>
-      </span>
-    </article>
-    <article id="digital-experiences" data-reveal="1" data-cursor="POKE IT" onMouseEnter="{{ c2.enter }}" onMouseLeave="{{ leave }}" onFocus="{{ c2.enter }}" onBlur="{{ leave }}" style="position:sticky;top:calc(84px + 1 * 28px);isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;gap:40px;height:min(calc(100vh - 120px - 1 * 28px),760px);min-height:460px;padding:clamp(22px,2.6vw,40px);overflow:hidden;background:#08090d;color:#f5f2ed;border:1px solid rgba(245,242,237,.16)">
-      <img src="assets/omnis/omnis-hero-laptop-web.jpg" alt="" loading="lazy" style="position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;filter:{{ c2.filter }};transform:scale({{ c2.scale }});transition:filter 600ms ease,transform 1100ms cubic-bezier(.18,.8,.22,1)">
-      <span aria-hidden="true" style="position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,9,13,.7) 0%,rgba(8,9,13,0) 22%,rgba(8,9,13,.35) 42%,rgba(8,9,13,.82) 68%,rgba(8,9,13,.97) 100%)"></span>
-      <span style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
-        <span style="padding:6px 9px;background:#08090d;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:{{ c2.num }};transition:color 300ms ease">02</span>
-        <span aria-hidden="true" style="position:relative;display:block;width:1em;height:.8em;font:400 clamp(36px,3.4vw,56px)/.8 'At Amiga',Impact,sans-serif">
-          <span style="position:absolute;left:0;top:0;color:#61caf8;opacity:{{ c2.gOp2 }};transform:{{ c2.g2 }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),opacity 300ms ease">↗</span>
-          <span style="position:absolute;left:0;top:0;color:#61caf8;opacity:{{ c2.gOp1 }};transform:{{ c2.g1 }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),opacity 300ms ease">↗</span>
-          <span style="position:relative;display:block;color:{{ c2.arrowC }};transform:{{ c2.arrow }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),color 300ms ease">↗</span>
-        </span>
-      </span>
-      <span style="display:grid;gap:18px;min-width:0">
-        <h2 aria-label="Digital Experiences" style="margin:0;font-size:clamp(48px,6vw,104px);font-weight:400;line-height:.86;letter-spacing:-.04em;color:#f5f2ed;text-shadow:0 2px 28px rgba(8,9,13,.65)">{{ c2.title }}</h2>
-        <span style="max-width:44ch;font-size:clamp(15px,1.3vw,18px);line-height:1.45;color:#dcdde0;text-wrap:pretty;text-shadow:0 1px 14px rgba(8,9,13,.8)">Websites and journeys that make the offer clear and the next step obvious.</span>
-        <span style="display:flex;flex-wrap:wrap;gap:6px"><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Websites and ecommerce</span><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Campaigns</span><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Responsive builds</span></span>
-        <span style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px"><a href="digital-experiences.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:0;text-decoration:none;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,border-color 200ms ease;border:1px solid #f5f2ed;color:#f5f2ed" style-hover="background:#f5f2ed;color:#08090d">More info</a><a href="contact.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:0;text-decoration:none;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,border-color 200ms ease;border:1px solid #61caf8;background:#61caf8;color:#08090d" style-hover="background:#e8a1b8;border-color:#e8a1b8">Choose this adventure</a></span>
-      </span>
-    </article>
-    <article id="product-design" data-reveal="0" data-cursor="POKE IT" onMouseEnter="{{ c3.enter }}" onMouseLeave="{{ leave }}" onFocus="{{ c3.enter }}" onBlur="{{ leave }}" style="position:sticky;top:calc(84px + 2 * 28px);isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;gap:40px;height:min(calc(100vh - 120px - 2 * 28px),760px);min-height:460px;padding:clamp(22px,2.6vw,40px);overflow:hidden;background:#08090d;color:#f5f2ed;border:1px solid rgba(245,242,237,.16)">
-      <img src="assets/royafit/royafit-site-web.jpg" alt="" loading="lazy" style="position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;filter:{{ c3.filter }};transform:scale({{ c3.scale }});transition:filter 600ms ease,transform 1100ms cubic-bezier(.18,.8,.22,1)">
-      <span aria-hidden="true" style="position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,9,13,.7) 0%,rgba(8,9,13,0) 22%,rgba(8,9,13,.35) 42%,rgba(8,9,13,.82) 68%,rgba(8,9,13,.97) 100%)"></span>
-      <span style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
-        <span style="padding:6px 9px;background:#08090d;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:{{ c3.num }};transition:color 300ms ease">03</span>
-        <span aria-hidden="true" style="position:relative;display:block;width:1em;height:.8em;font:400 clamp(36px,3.4vw,56px)/.8 'At Amiga',Impact,sans-serif">
-          <span style="position:absolute;left:0;top:0;color:#61caf8;opacity:{{ c3.gOp2 }};transform:{{ c3.g2 }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),opacity 300ms ease">↗</span>
-          <span style="position:absolute;left:0;top:0;color:#61caf8;opacity:{{ c3.gOp1 }};transform:{{ c3.g1 }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),opacity 300ms ease">↗</span>
-          <span style="position:relative;display:block;color:{{ c3.arrowC }};transform:{{ c3.arrow }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),color 300ms ease">↗</span>
-        </span>
-      </span>
-      <span style="display:grid;gap:18px;min-width:0">
-        <h2 aria-label="Product Design" style="margin:0;font-size:clamp(48px,6vw,104px);font-weight:400;line-height:.86;letter-spacing:-.04em;color:#f5f2ed;text-shadow:0 2px 28px rgba(8,9,13,.65)">{{ c3.title }}</h2>
-        <span style="max-width:44ch;font-size:clamp(15px,1.3vw,18px);line-height:1.45;color:#dcdde0;text-wrap:pretty;text-shadow:0 1px 14px rgba(8,9,13,.8)">Products that do the job, guide the next step and look considered doing it.</span>
-        <span style="display:flex;flex-wrap:wrap;gap:6px"><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Flows and prototypes</span><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">UX and UI systems</span><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Developer handoff</span></span>
-        <span style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px"><a href="product-design.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:0;text-decoration:none;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,border-color 200ms ease;border:1px solid #f5f2ed;color:#f5f2ed" style-hover="background:#f5f2ed;color:#08090d">More info</a><a href="contact.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:0;text-decoration:none;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,border-color 200ms ease;border:1px solid #61caf8;background:#61caf8;color:#08090d" style-hover="background:#e8a1b8;border-color:#e8a1b8">Choose this adventure</a></span>
-      </span>
-    </article>
-    <article id="ai-systems" data-reveal="1" data-cursor="POKE IT" onMouseEnter="{{ c4.enter }}" onMouseLeave="{{ leave }}" onFocus="{{ c4.enter }}" onBlur="{{ leave }}" style="position:sticky;top:calc(84px + 3 * 28px);isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;gap:40px;height:min(calc(100vh - 120px - 3 * 28px),760px);min-height:460px;padding:clamp(22px,2.6vw,40px);overflow:hidden;background:#08090d;color:#f5f2ed;border:1px solid rgba(245,242,237,.16)">
-      <img src="assets/kaleidoscope/kt-main.png" alt="" loading="lazy" style="position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;filter:{{ c4.filter }};transform:scale({{ c4.scale }});transition:filter 600ms ease,transform 1100ms cubic-bezier(.18,.8,.22,1)">
-      <span aria-hidden="true" style="position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,9,13,.7) 0%,rgba(8,9,13,0) 22%,rgba(8,9,13,.35) 42%,rgba(8,9,13,.82) 68%,rgba(8,9,13,.97) 100%)"></span>
-      <span style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
-        <span style="padding:6px 9px;background:#08090d;font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:{{ c4.num }};transition:color 300ms ease">04</span>
-        <span aria-hidden="true" style="position:relative;display:block;width:1em;height:.8em;font:400 clamp(36px,3.4vw,56px)/.8 'At Amiga',Impact,sans-serif">
-          <span style="position:absolute;left:0;top:0;color:#61caf8;opacity:{{ c4.gOp2 }};transform:{{ c4.g2 }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),opacity 300ms ease">↗</span>
-          <span style="position:absolute;left:0;top:0;color:#61caf8;opacity:{{ c4.gOp1 }};transform:{{ c4.g1 }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),opacity 300ms ease">↗</span>
-          <span style="position:relative;display:block;color:{{ c4.arrowC }};transform:{{ c4.arrow }};transition:transform 720ms cubic-bezier(.18,.8,.22,1),color 300ms ease">↗</span>
-        </span>
-      </span>
-      <span style="display:grid;gap:18px;min-width:0">
-        <h2 aria-label="AI Systems" style="margin:0;font-size:clamp(48px,6vw,104px);font-weight:400;line-height:.86;letter-spacing:-.04em;color:#f5f2ed;text-shadow:0 2px 28px rgba(8,9,13,.65)">{{ c4.title }}</h2>
-        <span style="max-width:44ch;font-size:clamp(15px,1.3vw,18px);line-height:1.45;color:#dcdde0;text-wrap:pretty;text-shadow:0 1px 14px rgba(8,9,13,.8)">Practical workflows that clear the busywork and keep a person on the final call.</span>
-        <span style="display:flex;flex-wrap:wrap;gap:6px"><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Workflow mapping</span><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Knowledge vaults</span><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Human approvals</span></span>
-        <span style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px"><a href="ai-systems.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:0;text-decoration:none;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,border-color 200ms ease;border:1px solid #f5f2ed;color:#f5f2ed" style-hover="background:#f5f2ed;color:#08090d">More info</a><a href="contact.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:0;text-decoration:none;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,border-color 200ms ease;border:1px solid #61caf8;background:#61caf8;color:#08090d" style-hover="background:#e8a1b8;border-color:#e8a1b8">Choose this adventure</a></span>
-      </span>
-    </article>
-    <article id="uplink" data-reveal="0" onMouseEnter="{{ c5.enter }}" onMouseLeave="{{ leave }}" style="position:sticky;top:calc(84px + 4 * 28px);isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;gap:40px;height:min(calc(100vh - 120px - 4 * 28px),760px);min-height:460px;padding:clamp(22px,2.6vw,40px);overflow:hidden;background:#08090d;color:#f5f2ed;border:1px solid rgba(245,242,237,.16)">
-      <span aria-hidden="true" style="position:absolute;inset:0;z-index:-3;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#08090d;filter:{{ c5.filter }};transform:scale({{ c5.scale }});transition:filter 600ms ease,transform 1100ms cubic-bezier(.18,.8,.22,1)"><img src="assets/rf/rf-mandala-wall-web.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;min-width:0"><img src="assets/omnis/omnis-hero-laptop-web.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;min-width:0"><img src="assets/royafit/royafit-site-web.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;min-width:0"><img src="assets/kaleidoscope/kt-main.png" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;min-width:0"></span>
-      <span aria-hidden="true" style="position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,9,13,.7) 0%,rgba(8,9,13,0) 22%,rgba(8,9,13,.35) 42%,rgba(8,9,13,.82) 68%,rgba(8,9,13,.97) 100%)"></span>
-      <span style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
-        <span></span>
-      </span>
-      <span style="display:grid;gap:18px;min-width:0">
-        <h2 aria-label="Uplink" style="margin:0;font-size:clamp(48px,6vw,104px);font-weight:400;line-height:.86;letter-spacing:-.04em;color:#f5f2ed;text-shadow:0 2px 28px rgba(8,9,13,.65)">{{ c5.title }}</h2>
-        <span style="max-width:44ch;font-size:clamp(15px,1.3vw,18px);line-height:1.45;color:#dcdde0;text-wrap:pretty;text-shadow:0 1px 14px rgba(8,9,13,.8)">Everything connected, documented and handed over, so the system keeps working after launch.</span>
-        <span style="display:flex;flex-wrap:wrap;gap:6px"><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Onboarding</span><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Launch support</span><span style="white-space:nowrap;padding:6px 9px;border:1px solid currentColor;color:#f5f2ed;font:400 9px/1.2 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase">Handoff files</span></span>
-        <span style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px"><a href="contact.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:0;text-decoration:none;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:background 200ms ease,color 200ms ease,border-color 200ms ease;border:1px solid #61caf8;background:#61caf8;color:#08090d" style-hover="background:#e8a1b8;border-color:#e8a1b8">Choose this adventure</a></span>
-      </span>
-    </article>
+  <div style="display:flex;flex-wrap:wrap;border-bottom:1px solid rgba(245,242,237,.12)">
+    <div role="tablist" aria-label="Services" style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;border-right:1px solid rgba(245,242,237,.12)">
+      <sc-for list="{{ svcs }}" as="s" hint-placeholder-count="4">
+        <a href="{{ s.href }}" role="tab" aria-selected="{{ s.sel }}" onMouseEnter="{{ s.pick }}" onFocus="{{ s.pick }}" style="position:relative;flex:1;display:grid;grid-template-columns:36px minmax(0,1fr) auto;align-items:center;gap:16px;isolation:isolate;overflow:hidden;min-height:clamp(72px,6.4vw,96px);padding:0 clamp(18px,2.4vw,34px);border-bottom:1px solid rgba(245,242,237,.12);color:{{ s.fg }};transition:color 300ms ease">
+          <span aria-hidden="true" style="position:absolute;left:0;top:-1px;bottom:-1px;width:2px;background:#61caf8;transform:{{ s.bar }};transform-origin:top;transition:transform 420ms cubic-bezier(.16,1,.3,1)"></span>
+          <span style="font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;color:{{ s.numC }};transition:color 300ms ease">{{ s.n }}</span>
+          <span style="font-size:clamp(20px,1.9vw,28px);line-height:1.1;letter-spacing:-.025em;transform:{{ s.nameT }};transition:transform 420ms cubic-bezier(.16,1,.3,1)" aria-label="{{ s.name }}">{{ s.nameEl }}</span>
+          <span aria-hidden="true" style="font-size:18px;color:{{ s.arC }};transform:{{ s.arT }};transition:transform 400ms cubic-bezier(.34,1.56,.64,1),color 300ms ease">↗</span>
+        </a>
+      </sc-for>
+    </div>
+    <div style="flex:2 1 520px;display:grid;gap:clamp(20px,2.4vw,30px);min-width:0;padding:clamp(18px,2.4vw,32px)">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) clamp(64px,8vw,104px);gap:12px">
+        <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid rgba(245,242,237,.12);background:#121314">
+          <sc-for list="{{ svcs }}" as="s" hint-placeholder-count="1"><img data-src="{{ s.img }}" alt="{{ s.alt }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ s.op }};transform:{{ s.zoom }};transition:opacity 600ms ease,transform 1400ms cubic-bezier(.18,.8,.22,1)"></sc-for>
+        </div>
+        <div style="display:grid;grid-template-rows:repeat(3,1fr);gap:12px">
+          <sc-for list="{{ thumbs }}" as="t" hint-placeholder-count="3"><div style="position:relative;overflow:hidden;border:1px solid {{ t.b }};transition:border-color 300ms ease"><img data-src="{{ t.src }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div></sc-for>
+        </div>
+      </div>
+      <p style="margin:0;font-size:clamp(24px,2.6vw,40px);font-weight:400;line-height:1.08;letter-spacing:-.03em;text-wrap:balance">{{ act.lead }} <em style="font-family:'PP Eiko','Instrument Serif',serif;font-weight:300;display:inline-block;padding:.1em .24em .32em .06em;margin:-.1em -.2em -.32em -.06em;background:linear-gradient(90deg,#61caf8,#8b79b4 50%,#e8a1b8);-webkit-background-clip:text;background-clip:text;color:transparent">{{ act.tail }}</em></p>
+      <div style="display:flex;flex-wrap:wrap;align-items:stretch;justify-content:space-between;gap:16px">
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));flex:1 1 420px;min-width:0">
+          <sc-for list="{{ act.tags }}" as="g" hint-placeholder-count="3"><div style="display:grid;gap:6px;padding:4px 14px;border-left:1px solid rgba(245,242,237,.22);font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase"><span style="color:#9699a4">{{ g.n }}</span><span>{{ g.t }}</span></div></sc-for>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a href="{{ act.href }}" style="display:inline-flex;align-items:center;min-height:52px;padding:0 20px;border:1px solid rgba(245,242,237,.4);border-radius:0;color:#f5f2ed;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap" style-hover="border-color:#61caf8;color:#61caf8">More info</a>
+          <a href="contact.html" data-cursor="JUST DO THE THING" style="display:inline-flex;align-items:center;gap:14px;min-height:52px;padding:0 22px;border-radius:0;background:#61caf8;color:#08090d;font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;transition:background 200ms ease" style-hover="background:#e8a1b8">Choose this adventure ↗</a>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
 
-<section data-screen-label="03 Blueprint" style="padding:0 clamp(22px,5vw,74px) clamp(80px,10vw,140px)">
-  <a href="process.html" data-reveal="0" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;padding:clamp(24px,3vw,40px) 0;border-top:1px solid rgba(245,242,237,.16);border-bottom:1px solid rgba(245,242,237,.16);color:#f5f2ed;text-decoration:none;transition:color 200ms ease" style-hover="color:#61caf8">
-    <span style="display:grid;gap:10px"><span style="font:400 10px/1.4 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#e8a1b8">The Blueprint</span><span style="font-size:clamp(32px,4vw,64px);line-height:.95;letter-spacing:-.04em">How a project runs</span></span>
-    <span aria-hidden="true" style="font-size:clamp(32px,4vw,64px);line-height:1">→</span>
+  <div data-screen-label="Connected system" style="display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:24px 16px;padding:clamp(36px,4vw,56px) 0;border-bottom:1px solid rgba(245,242,237,.12)">
+    <p style="align-self:start;margin:0;color:#9699a4;font:400 10px/1.6 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase">Four entry points.<br>One connected system.</p>
+    <div style="position:relative;order:3;flex-basis:100%;grid-column:1/-1;min-width:0;padding-top:56px">
+      <div style="position:absolute;inset:0 0 auto;height:44px">
+        <button type="button" onMouseEnter="{{ ln0.pick }}" onClick="{{ ln0.pick }}" style="position:absolute;left:9.17%;bottom:0;transform:translateX(-10px);display:flex;align-items:baseline;gap:10px;padding:0;border:0;background:none;text-align:left;color:{{ ln0.lab }};cursor:pointer;transition:color 200ms ease"><span style="font:400 clamp(18px,1.8vw,26px)/1 'At Amiga',Impact,sans-serif;color:#61caf8">01</span><span style="max-width:9ch;font-size:clamp(13px,1.1vw,16px);line-height:1.15;letter-spacing:-.01em">{{ ln0.name }}</span></button>
+        <button type="button" onMouseEnter="{{ ln1.pick }}" onClick="{{ ln1.pick }}" style="position:absolute;left:27.50%;bottom:0;transform:translateX(-10px);display:flex;align-items:baseline;gap:10px;padding:0;border:0;background:none;text-align:left;color:{{ ln1.lab }};cursor:pointer;transition:color 200ms ease"><span style="font:400 clamp(18px,1.8vw,26px)/1 'At Amiga',Impact,sans-serif;color:#e8a1b8">02</span><span style="max-width:9ch;font-size:clamp(13px,1.1vw,16px);line-height:1.15;letter-spacing:-.01em">{{ ln1.name }}</span></button>
+        <button type="button" onMouseEnter="{{ ln2.pick }}" onClick="{{ ln2.pick }}" style="position:absolute;left:45.83%;bottom:0;transform:translateX(-10px);display:flex;align-items:baseline;gap:10px;padding:0;border:0;background:none;text-align:left;color:{{ ln2.lab }};cursor:pointer;transition:color 200ms ease"><span style="font:400 clamp(18px,1.8vw,26px)/1 'At Amiga',Impact,sans-serif;color:#61caf8">03</span><span style="max-width:9ch;font-size:clamp(13px,1.1vw,16px);line-height:1.15;letter-spacing:-.01em">{{ ln2.name }}</span></button>
+        <button type="button" onMouseEnter="{{ ln3.pick }}" onClick="{{ ln3.pick }}" style="position:absolute;left:64.17%;bottom:0;transform:translateX(-10px);display:flex;align-items:baseline;gap:10px;padding:0;border:0;background:none;text-align:left;color:{{ ln3.lab }};cursor:pointer;transition:color 200ms ease"><span style="font:400 clamp(18px,1.8vw,26px)/1 'At Amiga',Impact,sans-serif;color:#e8a1b8">04</span><span style="max-width:9ch;font-size:clamp(13px,1.1vw,16px);line-height:1.15;letter-spacing:-.01em">{{ ln3.name }}</span></button>
+      </div>
+      <svg viewBox="0 0 1200 180" role="img" aria-label="Brand, web, product and AI connect into your business engine" style="display:block;width:100%;height:auto;overflow:visible">
+        <path d="M110 90 L156.1 43.9 Q166 34 180 34 L870 34 Q884 34 893.9 43.9 L940 90" fill="none" stroke="#61caf8" stroke-width="{{ ln0.w }}" stroke-opacity="{{ ln0.o }}" stroke-linejoin="round" style="transition:stroke-opacity 300ms ease,stroke-width 300ms ease"></path><path d="M110 90 L156.1 43.9 Q166 34 180 34 L870 34 Q884 34 893.9 43.9 L940 90" fill="none" stroke="#61caf8" stroke-width="2" stroke-dasharray="2 18" stroke-linecap="round" stroke-opacity="{{ ln0.o }}"><animate attributeName="stroke-dashoffset" from="0" to="-200" dur="2.6s" repeatCount="indefinite"></animate></path>
+        <path d="M330 90 L376.1 136.1 Q386 146 400 146 L870 146 Q884 146 893.9 136.1 L940 90" fill="none" stroke="#e8a1b8" stroke-width="{{ ln1.w }}" stroke-opacity="{{ ln1.o }}" stroke-linejoin="round" style="transition:stroke-opacity 300ms ease,stroke-width 300ms ease"></path><path d="M330 90 L376.1 136.1 Q386 146 400 146 L870 146 Q884 146 893.9 136.1 L940 90" fill="none" stroke="#e8a1b8" stroke-width="2" stroke-dasharray="2 18" stroke-linecap="round" stroke-opacity="{{ ln1.o }}"><animate attributeName="stroke-dashoffset" from="0" to="-200" dur="3s" repeatCount="indefinite"></animate></path>
+        <path d="M550 90 L568.1 71.9 Q578 62 592 62 L898 62 Q912 62 921.9 71.9 L940 90" fill="none" stroke="#61caf8" stroke-width="{{ ln2.w }}" stroke-opacity="{{ ln2.o }}" stroke-linejoin="round" style="transition:stroke-opacity 300ms ease,stroke-width 300ms ease"></path><path d="M550 90 L568.1 71.9 Q578 62 592 62 L898 62 Q912 62 921.9 71.9 L940 90" fill="none" stroke="#61caf8" stroke-width="2" stroke-dasharray="2 18" stroke-linecap="round" stroke-opacity="{{ ln2.o }}"><animate attributeName="stroke-dashoffset" from="0" to="-200" dur="3.4000000000000004s" repeatCount="indefinite"></animate></path>
+        <path d="M770 90 L788.1 108.1 Q798 118 812 118 L898 118 Q912 118 921.9 108.1 L940 90" fill="none" stroke="#e8a1b8" stroke-width="{{ ln3.w }}" stroke-opacity="{{ ln3.o }}" stroke-linejoin="round" style="transition:stroke-opacity 300ms ease,stroke-width 300ms ease"></path><path d="M770 90 L788.1 108.1 Q798 118 812 118 L898 118 Q912 118 921.9 108.1 L940 90" fill="none" stroke="#e8a1b8" stroke-width="2" stroke-dasharray="2 18" stroke-linecap="round" stroke-opacity="{{ ln3.o }}"><animate attributeName="stroke-dashoffset" from="0" to="-200" dur="3.8000000000000003s" repeatCount="indefinite"></animate></path>
+        <line x1="940" y1="90" x2="1040" y2="90" stroke="#f5f2ed" stroke-width="1.4"></line>
+        <path d="M1030 83 L1042 90 L1030 97" fill="none" stroke="#f5f2ed" stroke-width="1.4" stroke-linejoin="round"></path>
+        <circle cx="940" cy="90" r="5" fill="#f5f2ed"></circle>
+        <text x="1058" y="84" fill="#f5f2ed" style="font:400 15px 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase">Your business</text>
+        <text x="1058" y="104" fill="#f5f2ed" style="font:400 15px 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase">engine</text>
+        <g onMouseEnter="{{ ln0.pick }}" onClick="{{ ln0.pick }}" style="cursor:pointer"><circle cx="110" cy="90" r="20" fill="transparent"></circle><circle cx="110" cy="90" r="{{ ln0.halo }}" fill="#61caf8" fill-opacity=".18" style="transition:r 300ms ease"></circle><circle cx="110" cy="90" r="{{ ln0.r }}" fill="#61caf8" style="transition:r 300ms cubic-bezier(.34,1.56,.64,1)"></circle></g><g onMouseEnter="{{ ln1.pick }}" onClick="{{ ln1.pick }}" style="cursor:pointer"><circle cx="330" cy="90" r="20" fill="transparent"></circle><circle cx="330" cy="90" r="{{ ln1.halo }}" fill="#e8a1b8" fill-opacity=".18" style="transition:r 300ms ease"></circle><circle cx="330" cy="90" r="{{ ln1.r }}" fill="#e8a1b8" style="transition:r 300ms cubic-bezier(.34,1.56,.64,1)"></circle></g><g onMouseEnter="{{ ln2.pick }}" onClick="{{ ln2.pick }}" style="cursor:pointer"><circle cx="550" cy="90" r="20" fill="transparent"></circle><circle cx="550" cy="90" r="{{ ln2.halo }}" fill="#61caf8" fill-opacity=".18" style="transition:r 300ms ease"></circle><circle cx="550" cy="90" r="{{ ln2.r }}" fill="#61caf8" style="transition:r 300ms cubic-bezier(.34,1.56,.64,1)"></circle></g><g onMouseEnter="{{ ln3.pick }}" onClick="{{ ln3.pick }}" style="cursor:pointer"><circle cx="770" cy="90" r="20" fill="transparent"></circle><circle cx="770" cy="90" r="{{ ln3.halo }}" fill="#e8a1b8" fill-opacity=".18" style="transition:r 300ms ease"></circle><circle cx="770" cy="90" r="{{ ln3.r }}" fill="#e8a1b8" style="transition:r 300ms cubic-bezier(.34,1.56,.64,1)"></circle></g>
+      </svg>
+    </div>
+    
+  </div>
+
+  <a href="contact.html" onMouseEnter="{{ upIn }}" onMouseLeave="{{ upOut }}" style="display:grid;grid-template-columns:auto auto minmax(0,1fr) auto;align-items:center;gap:clamp(18px,3vw,48px);padding:clamp(26px,3vw,40px) 0;color:#f5f2ed">
+    <svg viewBox="0 0 152 95" aria-hidden="true" style="width:clamp(34px,3vw,48px);height:auto;color:{{ upC }};transform:{{ upT }};transition:transform 600ms cubic-bezier(.34,1.56,.64,1),color 300ms ease"><use href="#miuxMiniM"></use></svg>
+    <span style="padding-left:clamp(18px,3vw,48px);border-left:1px solid rgba(245,242,237,.22);font:400 clamp(30px,4vw,58px)/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:{{ upLs }};text-transform:uppercase;transition:letter-spacing 600ms cubic-bezier(.16,1,.3,1)">Uplink</span>
+    <span style="max-width:52ch;padding-left:clamp(18px,3vw,48px);border-left:1px solid rgba(245,242,237,.22);color:#c8c9ce;font:400 11px/1.6 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;text-wrap:pretty">Everything connected, documented and handed over, so the system keeps working after launch.</span>
+    <span style="display:flex;align-items:center;gap:clamp(14px,2vw,28px);font:400 11px/1 'PP Neue Montreal Mono','IBM Plex Mono',monospace;letter-spacing:.12em;white-space:nowrap"><span style="color:#55565c">[</span><sc-for list="{{ upNums }}" as="u" hint-placeholder-count="4"><span style="color:{{ u.c }};transition:color 200ms ease {{ u.d }}">{{ u.n }}</span></sc-for><span style="color:#55565c">]</span><span style="color:#61caf8">↗</span></span>
   </a>
 </section>
 
@@ -204,6 +175,7 @@ class Component extends DCLogic {
         SVC_WORDS[i].map((w, k) => h('span', { key: k, style: { display: 'flex', alignItems: 'flex-end', height: '.86em', whiteSpace: 'nowrap' } }, w.map(glyph)))));
   }
   componentDidMount() {
+    requestAnimationFrame(() => this.syncImgs());
     const go = () => {
       if (!window.MIUXFX) { this._w = setTimeout(go, 40); return; }
       MIUXFX.injectDefs && MIUXFX.injectDefs(); document.documentElement.lang = 'en';
@@ -223,7 +195,35 @@ class Component extends DCLogic {
     addEventListener('scroll', this._scroll, { passive: true }); this._scroll();
   }
   componentWillUnmount() { removeEventListener('scroll', this._scroll); clearTimeout(this._w); this.unCursor && this.unCursor(); this.unReveal && this.unReveal(); }
+  componentDidUpdate() { this.syncImgs(); }
+  mixName(t, on, seed) {
+    if (!on) return t;
+    const h = React.createElement;
+    const F = [["'At Amiga',Impact,sans-serif", 'normal', 400, '#61caf8', '.04em'], ["'PP Eiko','Instrument Serif',serif", 'italic', 300, '#e8a1b8', '.02em'], ["'PP Neue Montreal Mono','IBM Plex Mono',monospace", 'normal', 400, '#f5f2ed', '.03em'], ["'PP Neue Montreal','Helvetica Neue',sans-serif", 'normal', 400, '#f5f2ed', '0']];
+    return h('span', { 'aria-hidden': true, style: { display: 'inline-flex', flexWrap: 'wrap', alignItems: 'baseline' } }, [...t].map((c, j) => {
+      if (c === ' ') return h('span', { key: j, style: { width: '.3em' } });
+      const up = c !== c.toLowerCase(), safe = /[MnX]/.test(c); const f = (up || safe) && (j + seed) % 2 === 0 ? F[0] : F[1 + ((j * 5 + seed) % 3)];
+      return h('span', { key: j, style: { fontFamily: f[0], fontStyle: f[1], fontWeight: f[2], color: f[3], paddingBottom: f[4], animation: 'svcPop 360ms cubic-bezier(.34,1.56,.64,1) both', animationDelay: (j * 18) + 'ms' } }, c);
+    }));
+  }
+  syncImgs() { document.querySelectorAll('img[data-src]').forEach(el => { const s = el.getAttribute('data-src'); if (s && !s.includes('{{') && el.getAttribute('src') !== s) el.setAttribute('src', s); }); }
   renderVals() {
+    const SV = [
+      { name: 'Brand Systems', href: 'brand-systems.html', img: 'assets/rf/rf-mandala-wall-web.jpg', alt: 'RF Studios mandala wall', lead: 'Bold identities built as working systems,', tail: 'from screens to storefronts to shirts.', tags: ['Identity and voice', 'Design tokens', 'Live brand skills'], th: ['assets/rf/rf-poster-web.jpg', 'assets/rf/rf-tote-web.jpg', 'assets/omnis/omnis-identity.jpg'] },
+      { name: 'Digital Experiences', href: 'digital-experiences.html', img: 'assets/omnis/omnis-hero-laptop-web.jpg', alt: 'Omnis Marine website on a laptop', lead: 'Websites and journeys that make the offer clear', tail: 'and the next step obvious.', tags: ['Websites and ecommerce', 'Campaigns', 'Responsive builds'], th: ['assets/omnis/omnis-home-web.jpg', 'assets/omnis/omnis-web-tablet-web.jpg', 'assets/rf/rf-schedule-web.jpg'] },
+      { name: 'Product Design', href: 'product-design.html', img: 'assets/royafit/royafit-site-web.jpg', alt: 'RoyaFit site screens', lead: 'Products that do the job, guide the next step', tail: 'and look considered doing it.', tags: ['Flows and prototypes', 'UX and UI systems', 'Developer handoff'], th: ['assets/royafit/ss-classes-web.jpg', 'assets/royafit/ss-squad-web.jpg', 'assets/kaleidoscope/kt-3.png'] },
+      { name: 'AI Systems', href: 'ai-systems.html', img: 'assets/kaleidoscope/kt-main.png', alt: 'Kaleidoscope Teams app screens', lead: 'Practical workflows that clear the busywork', tail: 'and keep a person on the final call.', tags: ['Workflow mapping', 'Knowledge vaults', 'Human approvals'], th: ['assets/kaleidoscope/kt-2.png', 'assets/kaleidoscope/kt-4.png', 'assets/kaleidoscope/kt-5.png'] }
+    ];
+    const sel = this.state.sel2 || 0, A = SV[sel], up = !!this.state.up, pick = i => () => { if (this.state.sel2 !== i) this.setState({ sel2: i }); };
+    const v2 = {
+      svcs: SV.map((s, i) => ({ ...s, n: '0' + (i + 1), sel: i === sel ? 'true' : 'false', pick: pick(i), fg: i === sel ? '#f5f2ed' : '#7d808a', bar: i === sel ? 'scaleY(1)' : 'scaleY(0)', numC: i === sel ? '#61caf8' : '#55565c', nameT: i === sel ? 'translateX(6px)' : 'none', nameEl: this.mixName(s.name, i === sel, i), arC: i === sel ? '#61caf8' : 'transparent', arT: i === sel ? 'translate(3px,-3px)' : 'none', op: i === sel ? 1 : 0, zoom: i === sel ? 'scale(1.03)' : 'scale(1)' })),
+      thumbs: A.th.map((src, i) => ({ src, b: i === 0 ? '#61caf8' : 'rgba(245,242,237,.12)' })),
+      act: { lead: A.lead, tail: A.tail, href: A.href, tags: A.tags.map((t, i) => ({ n: '0' + (i + 1), t })) },
+      upIn: () => this.setState({ up: true }), upOut: () => this.setState({ up: false }),
+      upC: up ? '#e8a1b8' : '#61caf8', upT: up ? 'rotate(-12deg) scale(1.15)' : 'none', upLs: up ? '.62em' : '.42em',
+      upNums: [0, 1, 2, 3].map(i => ({ n: '0' + (i + 1), c: up || i === sel ? '#f5f2ed' : '#55565c', d: up ? (i * 80) + 'ms' : '0ms' }))
+    };
+    SV.forEach((s, i) => { const on = i === sel; v2['ln' + i] = { name: s.name, pick: pick(i), c: i % 2 ? '#e8a1b8' : '#61caf8', w: on ? 2 : 1.2, o: on ? 1 : .55, r: on ? 6 : 4.5, halo: on ? 13 : 0, lab: on ? '#f5f2ed' : '#9699a4' }; });
     const act = this.state.h > -1 ? this.state.h : this.state.f;
     const card = i => { const on = act === i; return {
       enter: () => { const cur = this.state.h > -1 ? this.state.h : this.state.f; if (cur > -1 && cur !== i) this.rest(cur); this.setState({ h: i }); if (cur !== i) this.reveal(i); },
@@ -234,7 +234,8 @@ class Component extends DCLogic {
       arrow: on ? 'translate(.06em,-.06em)' : 'none', arrowC: on ? '#e8a1b8' : '#f5f2ed',
       g1: on ? 'translate(-.13em,.13em)' : 'none', g2: on ? 'translate(-.26em,.26em)' : 'none', gOp1: on ? .34 : 0, gOp2: on ? .2 : 0,
        }; };
-    return { c1: card(0), c2: card(1), c3: card(2), c4: card(3), c5: card(4), leave: () => { const h = this.state.h, f = this.state.f; if (h > -1 && h !== f) { this.rest(h); if (f > -1) this.reveal(f); } this.setState({ h: -1 }); } };
+    return {
+      ...v2, c1: card(0), c2: card(1), c3: card(2), c4: card(3), c5: card(4), leave: () => { const h = this.state.h, f = this.state.f; if (h > -1 && h !== f) { this.rest(h); if (f > -1) this.reveal(f); } this.setState({ h: -1 }); } };
   }
 }
 </script>
